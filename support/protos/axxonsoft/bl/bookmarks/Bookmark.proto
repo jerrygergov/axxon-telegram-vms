@@ -1,0 +1,175 @@
+syntax = "proto3";
+package axxonsoft.bl.bookmarks;
+
+import "google/protobuf/duration.proto";
+import "google/protobuf/timestamp.proto";
+import "axxonsoft/bl/primitive/Primitives.proto";
+
+option go_package = "bitbucket.org/Axxonsoft/bl/bookmarks";
+
+// Geometry describes geometric figures which can be used with bookmarks.
+message Geometry
+{
+    message Point
+    {
+        google.protobuf.Timestamp timestamp = 1;
+        primitive.Point point = 2;
+    }
+
+    message Points
+    {
+        repeated Point points = 1;
+    }
+
+    message Rectangle
+    {
+        google.protobuf.Timestamp timestamp = 1;
+        primitive.Rectangle rectangle = 2;
+    }
+
+    message Rectangles
+    {
+        repeated Rectangle rectangles = 1;
+    }
+
+    message Ellipse
+    {
+        google.protobuf.Timestamp timestamp = 1;
+        primitive.Ellipse ellipse = 2;
+    }
+
+    message Ellipses
+    {
+        repeated Ellipse ellipses = 1;
+    }
+
+    enum EPrimitiveType
+    {
+        PT_NONE = 0;
+        PT_POINT = 1;
+        PT_RECTANGLE = 2;
+        PT_ELLIPSE = 3;
+    };
+
+    string id = 1;
+    oneof value
+    {
+        Points points = 20;
+        Rectangles rectangles = 21;
+        Ellipses ellipses = 22;
+    };
+}
+
+enum EAreaType
+{
+    AREA_TYPE_UNSPECIFIED = 0;
+    AREA_OF_INTEREST = 1;
+    PRIVACY_MASK = 2;
+}
+
+enum EProtectionStatus
+{
+    PS_IN_PROGRESS = 0;
+    PS_EXPIRED = 1;
+    PS_PROTECTED = 2;
+    PS_FAILED = 3;
+}
+
+message ArchiveBinding
+{
+    // Access point of archive binding.
+    string access_point = 1;
+    EProtectionStatus status = 2;
+}
+
+message CameraDescription
+{
+    // Access point of camera.
+    string camera_access_point = 1;
+    Geometry area = 2;
+    EAreaType area_type = 3;
+
+    repeated ArchiveBinding bindings = 4;
+
+    // Calculated track based on provided area.
+    // Output only field.
+    Geometry track = 5;
+}
+
+message CameraDescriptions
+{
+    repeated CameraDescription descriptions = 1;
+}
+
+enum EAccess
+{
+    PUBLIC = 0;
+    CONFIDENTIAL = 1;
+}
+
+enum EProtection
+{
+    NOT_PROTECTED = 0;
+    PROTECTED = 1;
+}
+
+// Boundary is a rectangle defined by a point with coordinates (x,y)
+// and sides height, width (w, h).
+message Boundary
+{
+    double x = 1;
+    double y = 2;
+    double w = 3;
+    double h = 4;
+}
+
+message Bookmark
+{
+    // Сomment to bookmark.
+    string message = 1;
+
+    // Boundary on the screen where the message will be displayed.
+    Boundary boundary = 2;
+
+    // Archive range covered by the bookmark.
+    primitive.TimeRangeTS range = 3;
+
+    // Indicates whether archive in the specified range must be protected.
+    EProtection protection = 4;
+
+    // Storage period of the protected section of the archive,
+    // without limit, if omitted.
+    // The archive will be stored infinitely,
+    // if protected and storage_period is omitted.
+    google.protobuf.Duration storage_period = 5;
+
+    // Indicates access level of the bookmark.
+    EAccess access = 6;
+
+    // 1 bookmark could be associated with several cameras.
+    CameraDescriptions camera_descriptions = 7;
+
+    // Client defined categories.
+    repeated string categories = 8;
+
+    // Id of the bookmark.
+    // output only field.
+    string id = 9;
+
+    // Id of a user who creates or changes the bookmark.
+    // output only field.
+    string user_id = 10;
+
+    // The time of modifying of the bookmark.
+    // output only field.
+    google.protobuf.Timestamp timestamp = 11;
+
+    // The field exported_time is sets by SetExportedTime method,
+    // when export of the bookmark is completed.
+    google.protobuf.Timestamp exported_time = 12;
+
+    // The time of creation of the bookmark.
+    // output only field.
+    google.protobuf.Timestamp creation_time = 13;
+}
+

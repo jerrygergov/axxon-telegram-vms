@@ -1,0 +1,19 @@
+[Unit]
+Description=Axxon Telegram Bot
+After=network-online.target axxon-archive-relay.service
+Wants=network-online.target axxon-archive-relay.service
+Requires=axxon-archive-relay.service
+
+[Service]
+Type=simple
+User=%u
+Environment=APP_DIR=%h/axxon-telegram-vms
+EnvironmentFile=%E{APP_DIR}/.env
+WorkingDirectory=%E{APP_DIR}
+Environment=AXXON_RELAY_AUTOSTART=0
+ExecStart=%E{APP_DIR}/scripts/run_axxon_tg_bot.sh
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

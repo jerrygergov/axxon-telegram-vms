@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.env
+tmp/
+.runtime/
+bot.log
+detectors_payload.json
+smoke_test_results.json
+FACE_SEARCH_IMAGE_PROCESSING_EXAMPLE.md

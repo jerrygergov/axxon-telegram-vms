@@ -1,0 +1,22 @@
+syntax = "proto3";
+package axxonsoft.bl.logic;
+
+option go_package = "bitbucket.org/Axxonsoft/bl/logic";
+
+message MacroConfigEvent
+{
+    enum EventCase
+    {
+        UNSPECIFIED = 0;
+        ADDED = 1;
+        CHANGED = 2;
+        REMOVED = 3;
+    }
+
+    // macro identifier
+    string macro = 1;
+    // what happened
+    EventCase incident = 2;
+    // shared config revision
+    string etag = 3;
+}

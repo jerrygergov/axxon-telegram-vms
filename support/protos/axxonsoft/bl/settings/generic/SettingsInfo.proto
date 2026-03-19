@@ -1,0 +1,13 @@
+syntax = "proto3";
+package axxonsoft.bl.settings.generic;
+
+option go_package = "bitbucket.org/Axxonsoft/bl/settings/generic";
+
+message SettingsInfo
+{
+  // UUID representing an identifier for a group of settings
+  string context = 1;
+
+  // Current revision of the settings stored on the server side
+  string revision = 2;
+}

@@ -1,0 +1,21 @@
+syntax = "proto3";
+package axxonsoft.bl.media;
+
+option go_package = "bitbucket.org/Axxonsoft/bl/media";
+
+import "axxonsoft/bl/primitive/OSDSettings.proto";
+import "axxonsoft/bl/primitive/Font.proto";
+
+message TextRenderingInfo
+{
+    message TextDataDetail
+    {
+        // timestamp - total milliseconds from 01.01.1900
+        uint64 timestamp = 1;
+        string text = 2;
+        primitive.Font font = 3;
+    }
+
+    primitive.OSDSettings osd_settings = 1;
+    repeated TextDataDetail fragments = 2;
+}

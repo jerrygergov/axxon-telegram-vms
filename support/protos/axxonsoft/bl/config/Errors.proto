@@ -1,0 +1,21 @@
+syntax = "proto3";
+package axxonsoft.bl.config;
+
+option go_package = "bitbucket.org/Axxonsoft/bl/config";
+
+enum EConfigurationError
+{
+    CONFIG_ERROR_UNKNOWN = 0;
+    CONFIG_ERROR_NOT_FOUND = 1;
+    CONFIG_ERROR_PERMISSION_DENIED = 2;
+    CONFIG_ERROR_UNIMPLEMENTED = 3;
+    CONFIG_ERROR_INVALID_ARGUMENT = 4;
+}
+
+message DetailedConfigurationError
+{
+    EConfigurationError code = 1;
+    string description = 2;
+    // Array should contain the property name if it is a reason of error.
+    repeated string properties = 3;
+}

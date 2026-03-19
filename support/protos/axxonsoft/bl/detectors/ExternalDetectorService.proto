@@ -1,0 +1,100 @@
+syntax = "proto3";
+package axxonsoft.bl.detectors;
+
+import "axxonsoft/bl/detectors/PeriodicalEventData.proto";
+import "google/api/annotations.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/struct.proto";
+
+option go_package = "bitbucket.org/Axxonsoft/bl/detectors";
+
+service ExternalDetectorService
+{
+    rpc RaiseOccasionalEvent(RaiseOccasionalEventRequest) returns (RaiseOccasionalEventResponse) {
+        option (google.api.http) = {
+            post: "/v1/detectors/external:raiseOccasionalEvent"
+            body: "*"
+        };
+    }
+
+    rpc RaisePeriodicalEvent(RaisePeriodicalEventRequest) returns (RaisePeriodicalEventResponse) {
+        option (google.api.http) = {
+            post: "/v1/detectors/external:raisePeriodicalEvent"
+            body: "*"
+        };
+    }
+}
+
+message RaiseOccasionalEventRequest
+{
+    // The detector access point.
+    string access_point = 1;
+
+    // The event type.
+    string event_type = 2;
+
+    // The moment of occurrence of the event.
+    google.protobuf.Timestamp timestamp = 3;
+
+    // The event itself.
+    google.protobuf.Struct data = 4;
+
+    // The event identifier.
+    // Should not be empty if overlapping events are assumed.
+    string event_id = 5;
+
+    enum EventState
+    {
+        // The momentary event.
+        HAPPENED = 0;
+    
+        // The start of the prolonged event.
+        BEGAN = 1;
+    
+        // The end of the prolonged event.
+        ENDED = 2;
+    }
+
+    // The state of event.
+    EventState event_state = 6;
+}
+
+message RaiseOccasionalEventResponse
+{
+    RaiseEventError error = 1;
+}
+
+message RaisePeriodicalEventRequest
+{
+    // The detector access point.
+    string access_point = 1;
+
+    // The event type
+    string event_type = 2;
+
+    // The moment of occurrence of the event.
+    google.protobuf.Timestamp timestamp = 3;
+
+    // The event itself
+    PeriodicalEventData data = 4;
+}
+
+message RaisePeriodicalEventResponse
+{
+    RaiseEventError error = 1;
+}
+
+enum RaiseEventError
+{
+    // No error occurred.
+    OK = 0;
+
+    // Incorrect event type: empty or unsupported .
+    BAD_EVENT_TYPE = 1;
+
+    // Incorrect timestamp.
+    BAD_TIMESTAMP = 2;
+
+    // Bad format of data
+    BAD_DATA = 3;
+}

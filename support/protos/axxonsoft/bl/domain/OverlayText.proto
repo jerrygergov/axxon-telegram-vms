@@ -1,0 +1,23 @@
+syntax = "proto3";
+package axxonsoft.bl.domain;
+
+option go_package = "bitbucket.org/Axxonsoft/bl/domain";
+
+import "axxonsoft/bl/primitive/Primitives.proto";
+import "axxonsoft/bl/primitive/Color.proto";
+
+message OverlayText
+{
+  // Plain text to be displayed
+  string text = 1;
+
+  // Position of the text on the video frame in relative coordinates ([0, 1])
+  primitive.Rectangle rectangle = 2;
+
+  primitive.Color color = 3;
+}
+
+message OverlayTextSettings
+{
+  repeated OverlayText texts = 1;
+}

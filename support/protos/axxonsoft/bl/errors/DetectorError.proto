@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package axxonsoft.bl.errors;
+
+option go_package = "bitbucket.org/Axxonsoft/bl/errors";
+
+message DetectorError
+{
+    enum EErrorCode
+    {
+        NOT_ERROR = 0;
+
+        // DetectorPack errors.
+        GENERAL = 2;
+        // Couldn't allocate blob.
+        BAD_BLOB_ALLOC = 3;
+        // Couldn't find an object.
+        OBJECT_NOT_FOUND = 4;
+        // The image quality is insufficient.
+        IMAGE_QUALITY_INSUFFICIENT = 5;
+
+        UNKNOWN = 10000;
+    }
+
+    EErrorCode error = 1;
+}

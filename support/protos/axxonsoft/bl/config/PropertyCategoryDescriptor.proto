@@ -1,0 +1,27 @@
+syntax = "proto3";
+package axxonsoft.bl.config;
+
+option go_package = "bitbucket.org/Axxonsoft/bl/config";
+
+// Provides repository property attributes. 
+message RepositoryMetaInformation
+{
+    message Attribute
+    {
+        string name = 1;
+        string value = 2;
+    }
+
+    repeated Attribute attributes = 1;
+}
+
+message PropertyCategoryDescriptor
+{
+    message Category
+    {
+        string name = 1;
+        RepositoryMetaInformation repository_meta_information = 2;
+    }
+
+    repeated Category categories = 1;
+}

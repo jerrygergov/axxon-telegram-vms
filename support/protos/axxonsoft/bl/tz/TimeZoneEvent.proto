@@ -1,0 +1,32 @@
+syntax = "proto3";
+package axxonsoft.bl.tz;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "bitbucket.org/Axxonsoft/bl/tz";
+
+// Notification about crossing of a time zone boundary.
+message TimeZoneEvent
+{
+    // ID of the time zone.
+    string id = 1;
+
+    // Boundary of the time zone.
+    EBoundary boundary = 2;
+
+    // Time of the event.
+    google.protobuf.Timestamp time = 3;
+
+    // Name of the node which generated the event. 
+    string node_name = 4;
+
+    // Enumeration of types of boundary crossing.
+    enum EBoundary
+    {
+        // The start of the time zone.
+        BEGINNING = 0;
+
+        // The end of the time zone.
+        ENDING = 1;
+    }
+}

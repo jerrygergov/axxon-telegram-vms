@@ -1,0 +1,522 @@
+# WORKLOG
+
+## 2026-03-10
+
+- Ran a narrow Telegram UX productization pass so the already-shipped investigation features are reachable from `/start` and callback menus:
+  - home menu now exposes `🔎 Search` and `🎬 Archive` as first-class entry points instead of leaving event/plate/face search and export mostly slash-command-only
+  - added a truthful `Search & lookup` submenu with explicit entry/help surfaces for event search, plate search, and reply-photo face search
+  - split the archive menu into separate `Jump help` and `Export help` surfaces so typed flows are disclosed honestly before command entry
+  - refreshed `/help`, `README.md`, and runtime docs to reflect the richer menu tree and new callback families
+  - extended Telegram payload/menu tests to cover submenu reachability and back/main behavior for the newly exposed flows
+
+- Ran a scoped Telegram UI/admin UX review/refactor pass against the local keyboard guidance plus checked-in Axxon refs/raw bundle mirrors:
+  - UI callback rendering now refuses `adm:*` requests unless the caller is already in admin mode, so the read-only admin surface no longer relies only on bot-side gating
+  - trimmed top-level server labels to the current shorter mobile-first set: `🖥 Server`, `🌐 Domain`, `📈 Stats`, `🛠 Health`
+  - replaced misleading top-level `⬅️ Back` labels on alerts/LPR cards with truthful sibling navigation labels, and replaced the duplicate status `Back`/`Main` pair with `🔄 Refresh` + `🏠 Main`
+  - updated `README.md` and architecture notes to match the current labels and to leave a clear TODO for the first package-owned UI navigation seam
+  - validation: `python3 -m unittest tests.test_ui_payloads -v`, `python3 -m unittest discover -s tests -p 'test_*.py' -v`, and `./scripts/self_check.sh` all passed; integration smoke remained env-skipped because `AXXON_HOST` / `AXXON_PASS` were unset
+
+- Executed Step 30 future extension foundation as an additive contract-only pass:
+  - added `axxon_telegram_vms.models.request_envelopes` for:
+    - cross-surface actor/audit/dry-run request envelopes
+    - low-risk log/audit context shaping that future Telegram, web, and API surfaces can share
+  - added `axxon_telegram_vms.services.external_analysis` for:
+    - exported image/clip artifact references
+    - prompt preset and provider capability contracts
+    - dry-run/audit-aware submission evaluation and result summary shaping
+    - explicit provider-adapter interface only; no fake provider integration shipped
+  - added `axxon_telegram_vms.jobs.external_analysis` for:
+    - async analysis job records covering planned/submitted/running/succeeded/failed/dry-run states
+  - added `axxon_telegram_vms.client.session` for:
+    - observed auth/session endpoint contracts from the checked-in web bundle references
+    - token bundle normalization and safe session summaries for future web/API work
+  - updated lane exports/architecture registry and added targeted tests/docs for the new seams
+  - runtime ownership remains in `scripts/`; no new Telegram/UI/runtime control surface was added in this pass
+
+- Executed Step 29 admin-view foundation as a read-only admin visibility slice:
+  - added `axxon_telegram_vms.services.admin_view` for:
+    - host/domain inventory shaping over documented `/hosts` and `/hosts/{host}` surfaces
+    - role/user/global-permission summary shaping over `SecurityService.ListConfig` and `ListGlobalPermissions`
+    - future-write foundation metadata that keeps dry-run/audit/admin-gate requirements explicit while config writes remain disabled
+  - extended `scripts/axxon_web_api.py` with `admin-view`:
+    - reads current web user, host inventory, security inventory, and server/version capability state without adding an admin write plane
+    - folds existing guarded macro/PTZ runtime state into the admin capability surface for truthful visibility
+  - added Telegram `/admin` in `scripts/axxon_tg_bot.py` as an admin-only, non-menu command with guarded `adm:*` callbacks
+  - added `scripts/tg_admin_ui.py` and callback routing in `scripts/axxon_tg_ui.py` for overview, host, access, and capability sections
+  - extended runtime read-cache coverage for admin callbacks and added targeted tests for shaping, payload formatting, cache scope, and command surfaces
+
+- Executed Step 28 PTZ control MVP with a guardrail-first preset-only path:
+  - added `axxon_telegram_vms.services.ptz_control` for:
+    - exact camera/preset selector parsing with Telegram-safe multi-token support
+    - PTZ camera/preset inventory normalization and explicit allowlist/admin guardrail evaluation
+    - preview/result shaping that keeps capability readback, preset inventory, guardrail reasons, and execution state visible
+  - extended `scripts/axxon_web_api.py` with `ptz-preview` and `ptz-execute`:
+    - reads camera PTZ inventory from the existing camera list plus the checked-in `/v1/telemetry/presets` and `TelemetryService.GetPositionInformation` clues
+    - executes exactly one preset jump through `TelemetryService.AcquireSessionId` + `TelemetryService.GoPreset`
+    - writes audit lines for PTZ execution attempts, success, and failure
+  - added Telegram `/ptz` in `scripts/axxon_tg_bot.py` as an admin-only, non-menu command:
+    - preview first, explicit confirm/cancel callback flow, short-lived confirmation drafts
+    - runtime remains truthful and blocked when PTZ inventory, preset inventory, or capability readback is insufficient
+  - added `ptz-control` preview rendering in `scripts/axxon_tg_ui.py`
+  - added bot config knobs for the guarded PTZ path:
+    - `TG_PTZ_CONTROL_ENABLED`
+    - `TG_PTZ_ALLOWED_CAMERA_APS`
+    - `TG_PTZ_ALLOWED_CAMERA_NAMES`
+    - `TG_PTZ_CONFIRM_TTL_SEC`
+  - added targeted coverage for PTZ parsing, guardrails, payload formatting, command surfaces, and config parsing
+
+- Executed Step 27 macro execution MVP with a strict guardrail-first control path:
+  - added `axxon_telegram_vms.services.macro_execution` for:
+    - exact `id=` / `name=` selector parsing with Telegram-safe multi-token name support
+    - macro inventory normalization, action-family extraction, and explicit allow/deny policy evaluation
+    - preview/result shaping that keeps request, macro metadata, guardrail reasons, and execution state visible
+  - extended `scripts/axxon_web_api.py` with `macro-preview` and `macro-execute`:
+    - reads full macro inventory through documented/reversed macro surfaces with conservative fallbacks
+    - executes exactly one macro through the documented HTTP `macro/execute/{id}` path only after guardrails pass
+    - writes audit lines for macro execution attempts, success, and failure
+  - added Telegram `/macro` in `scripts/axxon_tg_bot.py` as an admin-only, non-menu command:
+    - preview first, explicit confirm/cancel callback flow, short-lived confirmation drafts
+    - no home/menu shortcut added to avoid accidental triggering
+  - added `macro-execution` preview rendering in `scripts/axxon_tg_ui.py`
+  - added bot config knobs for the guarded path:
+    - `TG_MACRO_EXECUTION_ENABLED`
+    - `TG_MACRO_ALLOWED_IDS`
+    - `TG_MACRO_ALLOWED_NAMES`
+    - `TG_MACRO_CONFIRM_TTL_SEC`
+  - added targeted coverage plus a full `scripts/self_check.sh` pass for parsing, guardrails, payload formatting, and command surfaces
+
+- Executed Step 26 face search MVP with a narrow uploaded-image flow grounded on the checked-in gRPC `FindSimilarObjects` surface:
+  - added `axxon_telegram_vms.services.face_search` for:
+    - reply-photo/reference JPEG validation and bounded face-search request shaping
+    - face-capable detector discovery/capability reporting from the existing detector inventory
+    - similarity-ranked result shaping with archive/export follow-up commands
+  - extended `scripts/axxon_web_api.py` with `face-search`:
+    - reuses the existing `/grpc` transport rather than adding a new HTTP search stack
+    - scopes searches to discovered face-capable cameras and returns explicit capability/error metadata when search cannot start truthfully
+  - added Telegram `/face` in `scripts/axxon_tg_bot.py` and matching `face-search` payload rendering in `scripts/axxon_tg_ui.py`
+    - MVP input is a reply to a Telegram photo or JPEG image document
+- Added targeted coverage for:
+  - face-search term parsing, JPEG input validation, capability detection, backend request shaping
+  - operator-facing payload formatting and command surface regression
+
+- Executed Step 25 license plate search MVP with a narrow LPR-specific search path:
+  - added `axxon_telegram_vms.services.license_plate_search` for:
+    - bounded `/plate` term parsing with exact / contains / mask validation
+    - native `ReadLprEvents` backend request shaping with practical default search windows
+    - operator-facing result shaping with time, camera, plate, confidence, and pagination metadata
+  - rewired `scripts/axxon_web_api.py` `plate-search` onto the typed service:
+    - keeps the existing LPR transport and optional frame/crop generation
+    - now returns a first-class request/summary/items payload instead of an ad hoc list
+  - added Telegram `/plate` in `scripts/axxon_tg_bot.py` and matching `plate-search` payload rendering in `scripts/axxon_tg_ui.py`
+  - refreshed the existing `LPR` menu to point operators at the new search flow with examples
+- Added targeted coverage for:
+  - exact / contains / mask parsing and backend request shaping
+  - result pagination and operator-friendly payload formatting
+  - Telegram `/plate` command registration and adapter surface regression
+
+- Executed Step 24 multi-camera export MVP foundation as a planning-only batch model:
+  - added `axxon_telegram_vms.services.multi_camera_export` for:
+    - explicit multi-camera bounded-range request validation with conservative camera caps
+    - exact-timestamp image-set vs ranged clip-batch mode shaping
+    - per-camera backend request plans and aggregated batch/result summaries
+  - extended `scripts/axxon_web_api.py` with `multi-camera-export-plan`:
+    - resolves explicit camera selections through the existing single-camera/archive foundations
+    - emits a reviewable batch plan without starting multi-camera export jobs
+- Added targeted coverage for:
+  - exact-timestamp and bounded-range request parsing
+  - unique camera resolution and safe cap enforcement
+  - batch result aggregation and runtime planner command surface
+
+- Executed Step 23 single-camera export MVP with one explicit bounded-range runtime path:
+  - added `axxon_telegram_vms.services.single_camera_export` for:
+    - `/export` term parsing with explicit `from`/`to` and one camera selector
+    - narrow camera resolution through the existing archive jump selection foundation
+    - export request/result shaping with artifact path and status metadata
+  - extended `scripts/axxon_web_api.py` with `single-camera-export`:
+    - one-camera clip export over the existing HTTP `/export/archive/...` surface
+    - additive export session polling/download summary for the new flow
+    - more robust file download naming from returned export status metadata
+  - added Telegram `/export` in `scripts/axxon_tg_bot.py` and matching export payload rendering in `scripts/axxon_tg_ui.py`
+- Added targeted coverage for:
+  - export term parsing and API arg shaping
+  - explicit camera resolution without archive search rows
+  - export payload/result formatting and command surface regression
+
+- Executed Step 22 archive jump/search MVP with a narrow single-camera runtime path:
+  - added `axxon_telegram_vms.services.archive_jump` for:
+    - `/archive` term parsing into the shared query model
+    - single-camera context resolution from explicit camera selectors or bounded event-search matches
+    - exact-point, matching-event, and range-midpoint timestamp derivation
+    - archive context-handle shaping with preview/depth/interval metadata
+  - extended `scripts/axxon_web_api.py` with `archive-jump`:
+    - bounded archive request shaping over the Step 21 search foundation
+    - archive list/depth/interval lookups through existing HTTP surfaces
+    - preview frame fetch with archive/media first and export fallback
+  - added Telegram `/archive` in `scripts/axxon_tg_bot.py` and matching archive payload rendering in `scripts/axxon_tg_ui.py`
+  - event and alert cards now expose an `Archive` action that preserves open-card context on the way back
+- Added targeted coverage for:
+  - archive term parsing and API arg shaping
+  - camera/timestamp derivation from search matches or midpoint fallback
+  - archive result/context-handle shaping
+  - `/archive` payload rendering and contextual archive callback navigation
+
+- Executed Step 21 time-range event search MVP with a narrow bounded-history runtime path:
+  - added `axxon_telegram_vms.services.event_search` for:
+    - `/search` term parsing into the shared `EventQuery` model
+    - backend request hints over `ReadEvents`
+    - summary/list result shaping and pagination metadata
+  - extended `axxon_telegram_vms.models.query_filters.EventScopeFilter` with camera-name scoping so operator-facing search terms do not require raw access points
+  - added `search-events` to `scripts/axxon_web_api.py`:
+    - explicit `--begin/--end` bounded history search
+    - practical host/domain/camera/detector/category/type/state filters
+    - bounded scan limit with explicit truncation metadata
+  - added `/search` in `scripts/axxon_tg_bot.py` and a matching `event-search` payload builder in `scripts/axxon_tg_ui.py`
+  - archive menu now links to stateless search help via `sea:help`
+- Added targeted coverage for:
+  - query-term parsing into shared filters
+  - backend request shaping hints
+  - summary/list pagination behavior
+  - Telegram `/search` and adapter surface regression
+
+- Executed Step 20 query/filter foundation as a small additive models/services seam:
+  - added `axxon_telegram_vms.models.query_filters` with typed reusable filters for:
+    - UTC time ranges
+    - host/domain/camera/detector scope
+    - category/type/state/severity/priority taxonomy
+    - text/contains/mask matching
+  - added aggregate `EventQuery` helpers for:
+    - legacy filter-dict normalization
+    - compact Axxon time-range serialization
+    - pure card matching for future search/archive workflows
+- Low-risk bridge only:
+  - `axxon_telegram_vms.services.subscriptions` now exposes `subscription_query_from_filters()`
+  - existing subscription card filtering now reuses the typed query matcher without changing bot handlers, callbacks, or transport calls
+  - generic `ET_DetectorEvent` subscription filters still match normalized detector cards that carry concrete detector event names
+- Added targeted coverage for:
+  - time-range parsing/UTC normalization
+  - legacy filter round-trip behavior
+  - scope/taxonomy/text/mask card matching
+  - subscription seam reuse of the shared query model
+
+- Executed the first safe caching slice with short TTLs and explicit invalidation:
+  - added `axxon_telegram_vms.client.runtime_cache.RuntimeReadCache` on top of `TTLCache`
+  - cache policy is intentionally narrow and bot-owned only:
+    - camera inventory and detector inventory: 15s TTL
+    - read-only camera catalog UI payloads (`cam:list`, `cam:open`, `cam:stream`): 15s TTL
+    - server overview/statistics payloads: 5s TTL
+    - server version payloads: 30s TTL
+  - current runtime adoption stays inside `scripts/axxon_tg_bot.py`; standalone script entrypoints remain unchanged
+  - invalidation is explicit via `invalidate_inventory()` and `invalidate_server_info()` on the runtime cache helper
+- Added targeted coverage for:
+  - runtime cache TTL expiry
+  - inventory/server invalidation boundaries
+  - conservative callback allowlist so dynamic event/media paths remain uncached
+  - copy-on-read behavior so cached payloads cannot be mutated by callers
+
+- Executed the first operator-facing label upgrade slice on top of the normalized models seam:
+  - `axxon_telegram_vms.models.event_normalization` now emits derived operator label fields on normalized cards:
+    - `label_primary`
+    - `label_secondary`
+    - `label_status`
+  - label priority now prefers meaningful localization text, then detector/camera context, then extracted entities such as plates
+  - `axxon_telegram_vms.models.detectors.NormalizedDetectorRow` now exposes `selection_label()` and passes a legacy `selection_label` through the bridge for detector-selection UIs
+- Low-risk runtime wiring only:
+  - `scripts/tg_camera_ui.py` now renders home latest alerts and alert/event button text from the normalized label fields
+  - `scripts/axxon_tg_ui.py` now upgrades detector-selection and detector-event list buttons with concise previews from normalized event labels
+  - `scripts/legacy_compat.py` keeps the current subscription callback flow but now prefers normalized detector selection labels when available
+- Added targeted regression coverage for:
+  - label priority semantics from checked-in live event/alert payloads
+  - detector selection labels with helpful detector-type context
+  - operator-facing button text for home alerts, alert feeds, detector lists, and detector event lists
+
+- Added `support/docs/ROADMAP_AUDIT_2026-03-10.md` with a step-by-step audit of `support/docs/IMPLEMENTATION_PLAN_NEXT.md` against the checked-in repo state:
+  - status summary: `done` 10, `partial` 15, `not done` 5
+  - key gaps called out: no standalone feasibility matrix, no favorites/digest/topic routing, no ACFA read-only slice, and several MVP-only implementations that remain narrower than the plan
+  - verification: ran `./scripts/self_check.sh` after the doc-only audit update
+
+## 2026-03-09
+
+- Executed foundation pass 4 with a small additive services/jobs seam only:
+  - seeded `axxon_telegram_vms.services` with pure subscription orchestration helpers in `services.subscriptions`
+  - added `SubscriptionRecord`, `SubscriptionPolicy`, and `SubscriptionLedger` as runtime-independent state containers
+  - extracted pure subscription filter/state-match/fallback-poll helpers for later notifier/search/digest work
+  - seeded `axxon_telegram_vms.jobs` with package-owned `LiveSessionRecord` and `LiveSessionRuntime`
+- Low-risk runtime bridges only:
+  - `scripts/live_session_runtime.py` now re-exports the package jobs seam
+  - `scripts/axxon_tg_bot.py` still owns handlers, callbacks, bot delivery, and API calls, but now delegates subscription ledger/filter logic to the package seam
+  - runtime remains script-based; no command/callback ownership changed
+- Added targeted coverage for:
+  - subscription ledger limits, dedupe, rollover, and filter semantics
+  - package live-session runtime replacement/stop/cleanup behavior
+  - architecture registry updates for seeded `services` and `jobs`
+- Updated architecture docs to reflect what moved and what remains pending before any larger runtime migration
+
+- Executed foundation pass 3 with a small additive client seam only:
+  - seeded `axxon_telegram_vms.client` with package-owned config loading in `client.config`
+  - extracted pure transport helpers into `client.transport`:
+    - gRPC response parsing
+    - server-info payload shaping
+    - media URL/query builders
+    - ffmpeg auth-header rendering
+  - added `axxon_telegram_vms.client.cache.TTLCache` as a pure utility only; no runtime caching behavior was turned on
+- Low-risk runtime bridges only:
+  - `scripts/config_loader.py` now re-exports the package config seam
+  - `scripts/axxon_web_api.py` now uses package transport helpers for parsing and media URL construction
+  - `AxxonClient`, subprocess execution, bot handlers, and Telegram callbacks remain script-based
+- Added targeted coverage for:
+  - direct package config loading
+  - direct package transport helper behavior
+  - TTL cache expiry/invalidation semantics
+- Updated architecture docs to reflect that `client` and `models` are seeded, while broader transport migration is still pending
+
+- Executed foundation pass 2 with a small additive extraction only:
+  - added real normalized-model seam under `axxon_telegram_vms.models`
+  - added `axxon_telegram_vms.models.detectors.NormalizedDetectorRow`
+  - added `axxon_telegram_vms.models.event_normalization.NormalizedEvent` and event-phase helpers
+  - normalized event seam now carries detector-vs-alert lifecycle semantics without changing Telegram callback/runtime ownership
+- Low-risk runtime bridges only:
+  - `scripts/unification_helpers.py` now delegates detector row shaping to the package seam
+  - `scripts/axxon_web_api.py` now delegates compact event/alert card shaping to the package seam
+  - transport, bot handlers, subscriptions, and UI routing remain script-based
+- Added targeted coverage for:
+  - detector row normalization from checked-in live data samples
+  - detector event phase normalization (`BEGAN` / `ENDED` / one-phase `HAPPENED`)
+  - alert normalization including embedded trigger semantics
+- Updated architecture and migration docs to reflect that only the `models` lane is seeded so far
+
+## 2026-03-08
+
+- Substantial Telegram UX and architecture refactor:
+  - split large UI builder into focused modules:
+    - `scripts/tg_ui_common.py`
+    - `scripts/tg_camera_ui.py`
+    - `scripts/tg_server_ui.py`
+    - `scripts/camera_catalog.py`
+  - kept the existing callback surface while making `scripts/axxon_tg_ui.py` a thinner router
+  - improved operator-facing copy/layout for:
+    - home dashboard
+    - camera workspace
+    - events feed
+    - alerts feed
+    - server overview/version/statistics cards
+- Fixed in-chat live camera refresh flow:
+  - live sessions no longer depend on repeated `cam:lsnap` UI subprocess calls
+  - bot now fetches live frames directly via `live-snapshot`
+  - `scripts/axxon_web_api.py` now requests live media through ffmpeg with HTTP auth headers and cache-busting query params
+  - snapshot fallback path also adds cache-busting query params
+  - live session updates now:
+    - pace to configured interval from cycle start
+    - default to 3-second cadence (~0.33 fps)
+    - fall back to sending a fresh photo when Telegram media edit fails instead of terminating immediately
+    - clean up temporary live-frame files after each update
+- Tests added:
+  - `tests/test_camera_catalog.py`
+  - `tests/test_live_snapshot_transport.py`
+  - `tests/test_ui_payloads.py`
+- Validation:
+  - `python3 -m py_compile scripts/*.py tests/*.py`
+  - `python3 -m unittest discover -s tests -p 'test_*.py' -v`
+  - `./scripts/self_check.sh` (integration smoke skipped because `AXXON_HOST` / `AXXON_PASS` were not set)
+
+## 2026-02-28
+
+- Added Telegram `Server info` feature (menu + callback flow + runtime command):
+  - home menu now includes the server overview action (currently `🖥 Server`)
+  - new callbacks in `scripts/axxon_tg_ui.py`: `srv:menu`, `srv:domain`, `srv:version`, `srv:stats`
+  - new runtime command aliases in `scripts/axxon_tg_bot.py`: `/server`, `/serverinfo`
+  - polished concise card view with version, usage, and top statistics counters
+- Added Axxon Web API server info commands in `scripts/axxon_web_api.py` using documented endpoints:
+  - `server-usage` -> `GET /info/usage` (and optional `--domain` => `?domain=1`)
+  - `server-version` -> `GET /info/version`
+  - `server-statistics` -> `GET /statistics/server`
+  - `server-info` combined payload for Telegram UI
+- Updated support/docs/tests:
+  - `README.md` usage section for Server info flow
+  - `tests/test_web_api_surface.py`, `tests/test_unification_parity.py` coverage updates
+
+- Legacy artifact audit and dead-code cleanup:
+  - removed dead compatibility alias `normalize_legacy_detector_rows` from `scripts/unification_helpers.py`
+  - removed unused `sys` import from `scripts/axxon_web_api.py`
+  - re-validated runtime/test path with `./scripts/self_check.sh` (integration smoke still env-gated by `AXXON_HOST` + `AXXON_PASS`)
+  - no additional script/test file deletions were applied because all remaining files are referenced by runtime, tests, CI, or launcher docs
+
+- Full project cleanup and runtime path consolidation:
+  - removed legacy runtime dependency from `scripts/axxon_tg_bot.py`:
+    - dropped `sys.path` injection and imports from `unified/legacy_from_axxon_telegram_bot`
+    - switched to local `scripts/legacy_compat.py` for:
+      - `UserManager` ACL behavior (unchanged default: empty allowlist allows all)
+      - detector keyboard builder for `/subscribe` flow
+  - normalized detector naming in active runtime:
+    - `fetch_legacy_detectors` -> `fetch_detectors`
+    - `normalize_legacy_detector_rows` was temporarily aliased to `normalize_detector_rows`
+    - removed legacy-prefixed in-memory context keys for detector selection state
+  - removed stale artifacts:
+    - deleted `unified/legacy_from_axxon_telegram_bot/` tree
+    - deleted tracked bytecode caches (`scripts/__pycache__`, `tests/__pycache__`)
+    - deleted obsolete migration planning doc `support/docs/UNIFICATION_PLAN.md`
+  - refreshed project documentation for single-path runtime:
+    - updated `README.md`
+    - updated `support/docs/ROADMAP.md`
+    - updated `support/docs/MIGRATION_PARITY.md`
+    - regenerated `support/docs/REVIEW_CODEX.md` with cleanup report and risk assessment
+  - validation:
+    - compile check, unit tests, and `scripts/self_check.sh` executed after cleanup
+
+- Deep-dive implementation pass (alerts lifecycle + live media composition):
+  - studied Axxon refs for alarm lifecycle and review semantics:
+    - `grpc_manage_alerts_using_grpc_api_methods.md`
+    - `grpc_manage_events_using_grpc_api_methods.md`
+    - `http_get_camera_events_using_websocket.md`
+    - `grpc_roles_and_users.md`
+  - added API command in `scripts/axxon_web_api.py`:
+    - `alert-review` (`BeginAlertReview` -> optional `ContinueAlertReview` -> `CompleteAlertReview`)
+    - supports severities for operator flags: `SV_ALARM`, `SV_WARNING`, `SV_FALSE`
+    - returns explicit limitation text when review is not permitted/possible
+  - added Telegram UI alarm actions in `scripts/axxon_tg_ui.py`:
+    - alarm card buttons: Confirmed / Suspicious / False alarm
+    - callback flow `al:flag:*:<event_id>` with read-only fallback when `alert_id`/`camera_ap` is unavailable
+  - fixed live merged media composition in `scripts/axxon_tg_bot.py`:
+    - introduced normalized rectangle extraction helper module `scripts/media_utils.py`
+    - robust rectangle variants: detector `details.rectangle`, detector `data.rectangles`, LPR `PlateRectangle`, `Hypotheses`, and recognition dict variants
+    - consistent merged output chain: boxed-or-frame main panel + crop panel (fallback panel = full frame)
+  - added tests:
+    - `tests/test_alert_actions.py`
+    - `tests/test_media_utils.py`
+    - extended `tests/test_web_api_surface.py` and `tests/test_subscription_runtime.py`
+  - validation:
+    - `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest -v ...` passed
+    - `./scripts/self_check.sh` passed (integration smoke skipped without `AXXON_HOST/AXXON_PASS`)
+
+- Performed full technical review across:
+  - architecture/module boundaries
+  - Telegram UX flows (home/events/alerts/cameras/subscriptions)
+  - subscription anti-spam/reliability
+  - event/media pipeline
+  - error handling/observability
+  - security defaults/secrets/storage
+  - test/CI quality
+  - docs parity
+- Added `support/docs/REVIEW_CODEX.md` with prioritized findings, concrete fixes, quick wins vs refactors, and production readiness checklist.
+- Applied high-confidence runtime fixes:
+  - `scripts/axxon_tg_bot.py`: notifier timeout now respects config (removed hard 5s cap).
+  - `scripts/axxon_tg_bot.py`: sanitized event IDs for `/tmp` media artifact paths.
+  - `scripts/axxon_web_api.py`: robust gRPC response parsing for SSE and plain JSON bodies.
+- Added behavioral tests for gRPC parser fallback:
+  - new `tests/test_web_api_parsing.py`.
+- Validation:
+  - `./scripts/self_check.sh` passed (unit + syntax, integration smoke skipped without env).
+
+## 2026-02-27
+
+- Bootstrapped project repo skeleton from working skill scripts.
+- Added Telegram callback executor flow:
+  - `home`, `ev:feed:*`, `ev:open:*`, `ev:frame:*`, `ev:clip30:*`
+- Added clip export command (`clip-from-event`) in Axxon adapter.
+- Simplified events UX to one-button-per-event selection flow.
+- Normalized timestamps to explicit UTC format in Telegram UI.
+- Fixed LPR parsing for `listed_lpr_detected` (plate extraction from multiple fields).
+- Updated LPR menu to prefer rich recognized rows.
+- Started unification with `axxon-telegram-bot`:
+  - imported legacy `axxon_bot` modules into `unified/legacy_from_axxon_telegram_bot/`
+  - added `support/docs/UNIFICATION_PLAN.md` with staged merge strategy
+- Integrated legacy authorization manager into runtime bot:
+  - `scripts/axxon_tg_bot.py` now imports legacy `UserManager`
+  - added ACL guard for `/start`, `/events`, and callback actions
+  - supports `AUTHORIZED_USERS` and `ADMIN_USERS` env vars
+- Added autonomous validation stack:
+  - `scripts/self_check.sh` (py_compile + unit tests + optional integration smoke)
+  - unit tests: `tests/test_config_loader.py`, `tests/test_secure_profile_storage.py`
+  - CI workflow: `.github/workflows/self-check.yml`
+  - README updated with self-check usage and env-driven smoke mode
+- Added unified config loader:
+  - new `scripts/config_loader.py` for env parsing/defaults
+  - refactored `axxon_tg_bot.py`, `axxon_tg_ui.py`, `axxon_web_api.py` to use shared config
+- Added encrypted secure profile storage:
+  - new `scripts/secure_profile_storage.py` with encrypted per-`user`/`server` profile persistence
+  - `scripts/axxon_web_api.py session-init` now writes encrypted profiles when `AXXON_SECURE_PROFILE_ENABLED=1`
+  - safe default remains disabled; plaintext profile behavior is preserved when secure mode is off
+- Added anti-spam/throttling in `scripts/axxon_tg_bot.py`:
+  - per-user rate limiting for outgoing Telegram sends
+  - duplicate suppression window for repeated text/media payloads
+  - configurable via `TG_SEND_RATE_LIMIT_COUNT`, `TG_SEND_RATE_LIMIT_PERIOD_SEC`, `TG_DUPLICATE_WINDOW_SEC`
+- Merged practical legacy Telegram UX flows into runtime scripts:
+  - `scripts/axxon_tg_ui.py`: paged cameras list, camera action screen, latest camera incidents, latest snapshot action
+  - added richer back navigation (`⬅️`) across camera/events/alerts flows
+  - added compact `ET_Alert` feed with open/frame/clip actions
+- Extended runtime command set in `scripts/axxon_tg_bot.py`:
+  - added `/help`, `/status`, `/alerts`, `/cameras` shortcuts
+- Integrated safe legacy-like event helpers in API adapter:
+  - `scripts/axxon_web_api.py`: compact alert card extraction for `telegram-cards --event-type ET_Alert`
+  - added optional `telegram-cards` filters: `--state`, `--contains`
+- Continued legacy feature migration (incremental UX/handlers/utilities):
+  - `scripts/axxon_tg_ui.py`:
+    - added subscription-like event filter toggles in feed (`LPR` / `Motion` / `Alerts`)
+    - added callback paging/filter state (`ev:feedf:*`, `ev:flt:*`) with backward-compatible `ev:feed:*`
+    - improved keyboard consistency with explicit `⬅️ Back` + `🏠 Main` actions
+    - improved alert formatting with priority/state badges in alerts feed and alert card
+  - `scripts/axxon_tg_bot.py`:
+    - added `/stats` (`/stat`) runtime command
+    - added `/stop` (`/cancel`) alias mapped to unified pull-mode runtime
+    - compact help text grouped by workflows
+    - optional in-memory daily runtime counters (`TG_ENABLE_DAILY_COUNTERS`, default on)
+  - `scripts/config_loader.py`:
+    - added `TG_ENABLE_DAILY_COUNTERS` config flag
+- Full remaining practical parity pass:
+  - `scripts/axxon_tg_bot.py`:
+    - integrated legacy detector selection pattern callbacks using reused `axxon_bot.bot.keyboards.get_detector_keyboard`
+    - added `/subscribe` command for paged detector toggle + state selection flow
+    - upgraded `/stop` to clear active detector/state subscription profile in unified runtime
+    - extended `/stats` with subscription profile summary
+  - `scripts/axxon_tg_ui.py`:
+    - added home menu entry for legacy-style subscription flow (`sub:det:list`)
+  - tests:
+    - added `tests/test_unification_parity.py` for detector row normalization and home menu callback parity
+  - docs:
+    - added `support/docs/MIGRATION_PARITY.md` checklist with feature mapping/status
+    - clarified single runtime path and archived legacy tree role
+
+- Priority feature pass: on-demand async subscriptions inspired by legacy `EventService` patterns, implemented in current runtime architecture:
+  - `scripts/axxon_tg_bot.py`:
+    - added `SubscriptionRuntime` with per-user async tasks and safe guardrails
+    - added `/subscriptions` command
+    - upgraded `/stop` to support all-or-by-id semantics (`/stop` and `/stop <id>`)
+    - `/subscribe` now drives real async subscription creation after state selection + confirm
+    - callback UX for subscription creation from current filters (`sub:new:ev:*`, `sub:new:cam:*`, `sub:new:alert`) with state choose (`BEGAN/HAPPENED/ENDED/ALL`) and explicit confirm
+    - compact subscription notifications with optional frame attach when available
+    - optional secure metadata persistence hook via `SecureProfileStore` (enabled by env)
+  - `scripts/config_loader.py`:
+    - added subscription env config: max subscriptions/day cap/min interval/polling/media attach
+  - `scripts/axxon_tg_ui.py`:
+    - added subscription creation buttons in events/camera incidents/alerts views
+  - tests/self-check:
+    - updated config/parity tests and added subscription runtime surface tests
+    - `scripts/self_check.sh` run passed (unit + compile; integration smoke skipped without env)
+  - docs:
+    - updated `README.md`, `support/docs/ROADMAP.md`, `support/docs/MIGRATION_PARITY.md`
+
+- Production stabilization pass:
+  - fixed launcher path assumptions in `scripts/run_axxon_tg_bot.sh` (now runs local repo bot entrypoint)
+  - stabilized `/subscribe` callback flow by handling legacy `all_alerts` branch end-to-end
+  - added `DomainNotifier` adapter commands in `scripts/axxon_web_api.py`:
+    - `notifier-pull` (`axxonsoft.bl.events.DomainNotifier.PullEvents`)
+    - `notifier-disconnect` (`axxonsoft.bl.events.DomainNotifier.DisconnectEventChannel`)
+  - upgraded `SubscriptionRuntime` to prefer notifier channel pulls with robust fallback polling mode
+  - added notifier-related runtime config knobs in `scripts/config_loader.py`:
+    - `TG_SUBSCRIPTION_USE_NOTIFIER`
+    - `TG_SUBSCRIPTION_NOTIFIER_TIMEOUT_SEC`
+    - `TG_SUBSCRIPTION_FALLBACK_POLLING`
+  - expanded `scripts/self_check.sh`:
+    - no-pyc syntax pass for constrained environments
+    - wider integration smoke callbacks: home/events/alerts/cameras/lpr/status and conditional open/frame/clip
+  - added coverage for notifier command surface (`tests/test_web_api_surface.py`)
+
+## 2026-03-09
+
+- Added explicit execution-mode rule for Codex-driven work in `support/docs/EXECUTION_MODE.md`.
+- Promoted the active supervisor loop as the required mode for long-running roadmap execution:
+  - launch pass
+  - monitor logs/process
+  - inspect diff on completion
+  - run tests/self-checks
+  - reject/rework or immediately continue to the next phase
+- Watchdog/cron kept as backup observability, not as a replacement for active orchestration.

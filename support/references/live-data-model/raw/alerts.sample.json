@@ -1,0 +1,187 @@
+[
+  {
+    "event_type": "ET_Alert",
+    "subject": "",
+    "body": {
+      "@type": "type.googleapis.com/axxonsoft.bl.events.Alert",
+      "guid": "01d79954-c609-4737-811e-22ded72b27fc",
+      "timestamp": "20260308T224204.094721",
+      "node_info": {
+        "name": "VIDEO_SERVER",
+        "friendly_name": "VIDEO_SERVER"
+      },
+      "camera": {
+        "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "friendly_name": "Camera A",
+        "group": ""
+      },
+      "archive": {
+        "access_point": "hosts/VIDEO_SERVER/MultimediaStorage.STORAGE_A/MultimediaStorage",
+        "friendly_name": "STORAGE_A.Archive STORAGE_A",
+        "group": ""
+      },
+      "required_comment": {
+        "confirmed_alarm": false,
+        "suspicious_situation": true,
+        "false_alarm": false
+      },
+      "initiator_type": "AIT_MACRO",
+      "reason_mask": 24,
+      "initiator": "e4075b17-08e6-4dd6-9365-d43ab8743ea8",
+      "states": [
+        {
+          "guid": "e687066f-9266-4eea-a14b-bb66f23c07aa",
+          "timestamp": "20260308T224204.094721",
+          "node_info": {
+            "name": "VIDEO_SERVER",
+            "friendly_name": "VIDEO_SERVER"
+          },
+          "camera": {
+            "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+            "friendly_name": "Camera A",
+            "group": ""
+          },
+          "alert_id": "01d79954-c609-4737-811e-22ded72b27fc",
+          "offset": "00:00:00",
+          "state": "ST_WANT_REACTION",
+          "severity": "SV_UNCLASSIFIED",
+          "reviewer_type": "RT_SYSTEM",
+          "reviewer": "",
+          "priority": "AP_MEDIUM",
+          "user_roles": [],
+          "escalate_comment": "",
+          "bookmark": {
+            "guid": "",
+            "timestamp": "",
+            "is_protected": false,
+            "access_level": "PUBLIC",
+            "alert_id": "",
+            "group_id": "",
+            "user": "",
+            "message": "",
+            "boundary_deprecated": "",
+            "geometry_deprecated": ""
+          }
+        }
+      ],
+      "macro": {
+        "guid": "ac046351-d1cc-4ac2-8ec1-b201dd774b35",
+        "timestamp": "20260308T224204.092428",
+        "node_info": {
+          "name": "VIDEO_SERVER",
+          "friendly_name": "VIDEO_SERVER"
+        },
+        "camera": {
+          "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+          "friendly_name": "Camera A",
+          "group": ""
+        },
+        "macro": {
+          "guid": "e4075b17-08e6-4dd6-9365-d43ab8743ea8",
+          "friendly_name": "Camera A: Person detector"
+        },
+        "event_id": "187bfda9-7258-4dac-a80a-497b8428f7bd",
+        "initiator_type": "MIT_DETECTOR_EVENT",
+        "action_type": "RAT_RAISE_ALERT",
+        "phase": "AEP_STARTED"
+      },
+      "detector": {
+        "guid": "187bfda9-7258-4dac-a80a-497b8428f7bd",
+        "timestamp": "20260308T224204.007000",
+        "state": "BEGAN",
+        "origin_deprecated": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "detector_deprecated": "hosts/VIDEO_SERVER/AppDataDetector.2/EventSupplier",
+        "event_type": "moveInZone",
+        "details": [
+          {
+            "rectangle": {
+              "x": 0.705078125,
+              "y": 0.64453125,
+              "w": 0.0634765625,
+              "h": 0.22900390625,
+              "index": 134745
+            }
+          }
+        ],
+        "multi_phase_id": "b3eca530-7e72-4840-a646-5cfa0d3f2423",
+        "detectors_group": [
+          "DG_SITUATION_DETECTOR"
+        ],
+        "origin_ext": {
+          "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+          "friendly_name": "Camera A",
+          "group": ""
+        },
+        "detector_ext": {
+          "access_point": "hosts/VIDEO_SERVER/AppDataDetector.2/EventSupplier",
+          "friendly_name": "Person detector",
+          "group": ""
+        },
+        "node_info": {
+          "name": "VIDEO_SERVER",
+          "friendly_name": "VIDEO_SERVER"
+        },
+        "offline_analytics_source": "",
+        "data": {
+          "phase": 1,
+          "EventUuid": "b3eca530-7e72-4840-a646-5cfa0d3f2423",
+          "origin_id": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+          "Hypotheses": [
+            null
+          ],
+          "rectangles": [
+            [
+              0.705078125,
+              0.64453125,
+              0.7685546875,
+              0.87353515625,
+              134745
+            ]
+          ],
+          "module_name": "SituationDetector",
+          "detector_type": "moveInZone",
+          "DetectorsGroup": [
+            "SituationDetector"
+          ],
+          "ObjectClassEnum": 1
+        }
+      }
+    },
+    "subjects": [
+      "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "hosts/VIDEO_SERVER/MultimediaStorage.STORAGE_A/MultimediaStorage"
+    ],
+    "external": false,
+    "localization": {
+      "text": "Camera \"Camera A\": Alarm initiated by macro \"Camera A: Person detector\""
+    },
+    "required_permissions": {
+      "required_object_permissions": [
+        {
+          "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+          "camera_access": "CAMERA_ACCESS_ONLY_ARCHIVE"
+        }
+      ],
+      "required_global_permissions": {
+        "unrestricted_access": "UNRESTRICTED_ACCESS_UNSPECIFIED",
+        "maps_access": "MAP_ACCESS_UNSPECIFIED",
+        "feature_access": [],
+        "alert_access": "ALERT_ACCESS_UNSPECIFIED",
+        "bookmark_access": "BOOKMARK_ACCESS_UNSPECIFIED",
+        "user_rights_setup_access": "USER_RIGHTS_SETUP_ACCESS_UNSPECIFIED",
+        "default_camera_access": "CAMERA_ACCESS_UNSPECIFIED",
+        "default_microphone_access": "MICROPHONE_ACCESS_UNSPECIFIED",
+        "default_archive_access": "ARCHIVE_ACCESS_UNSPECIFIED",
+        "default_videowall_access": "VIDEOWALL_ACCESS_UNSPECIFIED",
+        "default_telemetry_priority": "TELEMETRY_PRIORITY_UNSPECIFIED",
+        "default_macros_access": "MACROS_ACCESS_UNSPECIFIED",
+        "default_acfa_access": "ACFA_ACCESS_UNSPECIFIED",
+        "restrictions": {
+          "personal_data": {}
+        },
+        "default_plugin_access": "PLUGIN_ACCESS_UNSPECIFIED"
+      }
+    },
+    "event_name": "axxonsoft.bl.events.Alert"
+  }
+]

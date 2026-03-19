@@ -1,0 +1,107 @@
+syntax = "proto3";
+package axxonsoft.bl.config;
+
+option go_package = "bitbucket.org/Axxonsoft/bl/config";
+
+// Additional characteristic of a property.
+message PropertyAttribute {
+    // Specific attribute.
+    oneof attribute {
+        // Property is a file path.
+        FilePathPropertyAttribute file_path = 1;
+
+        // Property is a directory path.
+        DirectoryPathPropertyAttribute directory_path = 2;
+
+        // Property is a extern enumeration.
+        ExternEnumerationPropertyAttribute extern_enumeration = 3;
+
+        // A device property.
+        DevicePropertyAttribute device_property = 4;
+
+        // A secret property.
+        SecretPropertyAttribute secret = 5;
+
+        // A property can have multiple values at the same time.
+        AllowMultipleValuesPropertyAttribute allow_multiple_values = 7;
+
+        // A cipher key property.
+        CipherKeyPropertyAttribute cipher_key = 8;
+
+        // The property is a JSON representation of a proto message.
+        JsonProtoMessageAttribute json_proto_message = 9;
+
+        // The property represents a reference to another object in the system
+        ReferencePropertyAttribute reference = 10;
+    }
+
+    reserved 6;
+}
+
+// Indicates that a property stores a value that refers to a file path. 
+message FilePathPropertyAttribute {
+}
+
+// Indicates that a property stores a value that refers to a directory path.
+message DirectoryPathPropertyAttribute {
+}
+
+// Indicates that a property has extern description of its enumeration constrains.
+message ExternEnumerationPropertyAttribute {
+    string name = 1;
+}
+
+// Indicates that a property relates to a device.
+message DevicePropertyAttribute {
+}
+
+// Indicates that property should be kept in secret. The returned value is not the actual one
+message SecretPropertyAttribute {
+}
+
+// Indicates that a property can have several values at the same time. 
+message AllowMultipleValuesPropertyAttribute {
+}
+
+// Indicates that a property is cipher info.
+message CipherKeyPropertyAttribute {
+    // Exact key size for cipher.
+    int32 size_bytes = 1;
+
+    // Algorithm name for cipher, for example  "AES-256-GCM".
+    string algorithm_name = 2;
+}
+
+// Indicates that a property is a JSON representation of a proto message.
+message JsonProtoMessageAttribute {
+    // Fully qualified name of the proto message.
+    string message_name = 1;
+}
+
+// Indicates that a property represents a reference to the components in the system
+message ReferencePropertyAttribute {
+    message Constraints
+    {
+        // Constrain to the child's of the nearest parent component with given type
+        // examples: ACFA, EMULATOR_PAD
+        string scope_internal_type = 1;
+
+        message Type {
+            oneof criteria {
+                // Type of the referenced component
+                // examples: ACFAFence, AcfaReader
+                string criteria_type = 1;
+
+                // Internal type of the referenced component
+                // examples: EMULATOR_ROOT, AXACFA_PERCO
+                string criteria_internal_type = 2;
+            }
+        }
+
+        // A list of possible component types references to which are allowed
+        repeated Type criteria_types = 2;
+    }
+
+    // Indicates constraints the property's value should satisfy
+    Constraints constraints = 1;
+}

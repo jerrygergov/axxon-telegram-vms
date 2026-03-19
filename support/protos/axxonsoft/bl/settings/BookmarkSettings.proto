@@ -1,0 +1,49 @@
+syntax = "proto3";
+package axxonsoft.bl.settings;
+
+option go_package = "bitbucket.org/Axxonsoft/bl/settings";
+
+import "google/protobuf/duration.proto";
+
+enum ERetentionPeriodDisplayMode
+{
+    INDEFINITELY = 0;  /// Unlimited retention
+    MINUTES_SCALE = 1; /// Scale in minutes
+    HOURS_SCALE = 2;   /// Scale in hours
+    DAYS_SCALE = 3;    /// Scale in days
+    WEEKS_SCALE = 4;   /// Scale in weeks
+    MONTHS_SCALE = 5;  /// Scale in months
+    YEARS_SCALE = 6;   /// Scale in years
+};
+
+// Describes bookmark category.
+message BookmarkCategory
+{
+    // Unique id for category. Do not modify after adding, because it used in database.
+    string id = 1;
+ 
+    // Editable name to display at user interface.
+    string name = 2;
+
+    // Hide category.
+    bool hidden = 3;
+}
+
+// Describes the settings of the bookmarks.
+message BookmarkSettings
+{
+    // Bookmark max duration.
+    google.protobuf.Duration bookmark_max_duration = 1;
+
+    // Mandatory archive protection from deletion.
+    bool mandatory_protection = 2;
+
+    // Retention type for protected archive.
+    ERetentionPeriodDisplayMode retention_period_display_mode = 3;
+
+    // Retention period for protected archive. Need show value on user interface in scale from "retention_period_display_mode".
+    google.protobuf.Duration retention_period  = 4;
+
+    // Bookmark category list.
+    repeated BookmarkCategory bookmark_category = 5;
+}

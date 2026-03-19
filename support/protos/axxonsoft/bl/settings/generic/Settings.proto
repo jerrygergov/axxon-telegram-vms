@@ -1,0 +1,17 @@
+syntax = "proto3";
+package axxonsoft.bl.settings.generic;
+
+import "axxonsoft/bl/settings/generic/SettingsInfo.proto";
+import "google/protobuf/struct.proto";
+
+option go_package = "bitbucket.org/Axxonsoft/bl/settings/generic";
+
+message Settings
+{
+  SettingsInfo info = 1;
+
+  // The data in this field will be stored without modifications and provided back as is in 'get' operations.
+  // Please keep the data relevant to the purpose of storing settings
+  // and do not store large volume data, such as big images
+  google.protobuf.Struct values = 2;
+}

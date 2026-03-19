@@ -1,0 +1,16 @@
+syntax = "proto3";
+package axxonsoft.bl.primitive;
+
+// Field mask for `google.protobuf.Struct` messages
+// The behavior is required to be the same as `google.protobuf.FieldMask`
+// with the following differences:
+//  - the items in a path represent the keys in the JSON representation of `google.protobuf.Struct`
+//    and not the message fields (i.e. path doesn't include items named 'bool_value', 'string_value' and so on.
+//  - the behavior for updating `google.protobuf.ListValue` is the same as for
+//    repeated fields in `google.protobuf.FieldMask`
+//  - the behavior for updating `google.protobuf.Struct` is the same as for
+//    message fields in `google.protobuf.FieldMask`
+message StructFieldMask {
+  // The set of field mask paths.
+  repeated string paths = 1;
+}

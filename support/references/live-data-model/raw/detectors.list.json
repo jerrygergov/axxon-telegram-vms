@@ -1,0 +1,108 @@
+[
+  {
+    "camera_access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+    "camera_name": "Camera A",
+    "camera_display_id": "1",
+    "detector_name": "1.Neurotracker",
+    "detector_display_id": "1",
+    "detector_access_point": "hosts/VIDEO_SERVER/AVDetector.1/EventSupplier",
+    "parent_detector": "",
+    "detector_type": "NeuroTracker",
+    "detector_type_name": "Neural tracker",
+    "is_activated": true,
+    "events": [
+      "ObjectAttributesEvent",
+      "ObjectDescriptorEvent",
+      "TargetList"
+    ]
+  },
+  {
+    "camera_access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+    "camera_name": "Camera A",
+    "camera_display_id": "1",
+    "detector_name": "Vehicle detector",
+    "detector_display_id": "1",
+    "detector_access_point": "hosts/VIDEO_SERVER/AppDataDetector.1/EventSupplier",
+    "parent_detector": "hosts/VIDEO_SERVER/AVDetector.1/EventSupplier",
+    "detector_type": "MoveInZone",
+    "detector_type_name": "Motion in area",
+    "is_activated": true,
+    "events": [
+      "moveInZone",
+      "moveInZoneGroup"
+    ]
+  },
+  {
+    "camera_access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+    "camera_name": "Camera A",
+    "camera_display_id": "1",
+    "detector_name": "Person detector",
+    "detector_display_id": "2",
+    "detector_access_point": "hosts/VIDEO_SERVER/AppDataDetector.2/EventSupplier",
+    "parent_detector": "hosts/VIDEO_SERVER/AVDetector.1/EventSupplier",
+    "detector_type": "MoveInZone",
+    "detector_type_name": "Motion in area",
+    "is_activated": true,
+    "events": [
+      "moveInZone",
+      "moveInZoneGroup"
+    ]
+  },
+  {
+    "camera_access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+    "camera_name": "Camera A",
+    "camera_display_id": "1",
+    "detector_name": "License plate recognition RR",
+    "detector_display_id": "2",
+    "detector_access_point": "hosts/VIDEO_SERVER/AVDetector.2/EventSupplier",
+    "parent_detector": "",
+    "detector_type": "LprDetector_Roadar",
+    "detector_type_name": "License plate recognition RR",
+    "is_activated": true,
+    "events": [
+      "TargetList",
+      "plateRecognized",
+      "plateUnrecognized"
+    ]
+  },
+  {
+    "camera_access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+    "camera_name": "Camera A",
+    "camera_display_id": "1",
+    "detector_name": "Traffic analyzer RR",
+    "detector_display_id": "3",
+    "detector_access_point": "hosts/VIDEO_SERVER/AVDetector.3/EventSupplier",
+    "parent_detector": "",
+    "detector_type": "RRTrafficAnalyzer",
+    "detector_type_name": "Traffic analyzer RR",
+    "is_activated": true,
+    "events": [
+      "LostCargoDetected",
+      "OverspeedDetected",
+      "RoadAccidentDetected",
+      "RoadIntrusionDetected",
+      "SpeedDecreaseDetected",
+      "StatisticsInfo",
+      "TrafficJamDetected",
+      "VehicleStopDetected",
+      "VehicleTransitDetected",
+      "WrongDirectionDetected"
+    ]
+  },
+  {
+    "camera_access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+    "camera_name": "Camera A",
+    "camera_display_id": "1",
+    "detector_name": "4.Meta-detector",
+    "detector_display_id": "4",
+    "detector_access_point": "hosts/VIDEO_SERVER/AVDetector.4/EventSupplier",
+    "parent_detector": "",
+    "detector_type": "BlipDetector",
+    "detector_type_name": "Meta-detector",
+    "is_activated": true,
+    "events": [
+      "MetadetectorDescriptorEvent",
+      "QueryDetected"
+    ]
+  }
+]

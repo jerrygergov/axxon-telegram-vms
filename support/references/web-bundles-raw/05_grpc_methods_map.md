@@ -1,0 +1,30 @@
+# gRPC Methods Map (initial pass)
+
+- axxonsoft.bl.acfa.AcfaService.ListUnitsActions
+- axxonsoft.bl.acfa.AcfaService.ListUnitsEvents
+- axxonsoft.bl.auth.AuthenticationService.AuthenticateBySecondFactor
+- axxonsoft.bl.discovery.DiscoveryService.DiscoverNode
+- axxonsoft.bl.discovery.DiscoveryService.GetNodeDiscoveryProgress
+- axxonsoft.bl.domain.DomainService.BatchGetAcfaComponents
+- axxonsoft.bl.domain.DomainService.GetHostPlatformInfo
+- axxonsoft.bl.domain.DomainService.ListAcfaComponents2
+- axxonsoft.bl.domain.DomainService.ListComponents
+- axxonsoft.bl.logic.LogicService.BatchGetMacros
+- axxonsoft.bl.logic.LogicService.ListMacrosV2
+- axxonsoft.bl.ptz.TelemetryService.AbsoluteMove
+- axxonsoft.bl.ptz.TelemetryService.AcquireSessionId
+- axxonsoft.bl.ptz.TelemetryService.Focus
+- axxonsoft.bl.ptz.TelemetryService.GetPositionInformation
+- axxonsoft.bl.ptz.TelemetryService.GetTours
+- axxonsoft.bl.ptz.TelemetryService.GoPreset
+- axxonsoft.bl.ptz.TelemetryService.Iris
+- axxonsoft.bl.ptz.TelemetryService.KeepAlive
+- axxonsoft.bl.ptz.TelemetryService.Move
+- axxonsoft.bl.ptz.TelemetryService.RemovePreset
+- axxonsoft.bl.ptz.TelemetryService.RemoveTour
+- axxonsoft.bl.ptz.TelemetryService.SetPreset
+- axxonsoft.bl.ptz.TelemetryService.SetTourPoint
+- axxonsoft.bl.ptz.TelemetryService.StartFillTour
+- axxonsoft.bl.ptz.TelemetryService.StopFillTour
+- axxonsoft.bl.ptz.TelemetryService.Zoom
+- axxonsoft.bl.realtimerecognizer.RealtimeRecognizerService.GetLists

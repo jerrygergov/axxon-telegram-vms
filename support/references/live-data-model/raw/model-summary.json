@@ -1,0 +1,433 @@
+{
+  "cameras.full.json": {
+    "access_point": "str",
+    "alternative_view": {
+      "alternative_camera_name": "str",
+      "second_alternative_camera_name": "str"
+    },
+    "archive_bindings": [
+      {
+        "archive": {
+          "access_point": "str",
+          "archive_access": "str",
+          "bindings": [],
+          "display_id": "str",
+          "display_name": "str",
+          "enabled": "bool",
+          "incomplete": "bool",
+          "is_activated": "bool",
+          "is_embedded": "bool",
+          "storage_type": "str"
+        },
+        "has_live_sources": "bool",
+        "has_replica_sources": "bool",
+        "is_default": "bool",
+        "is_permanent": "bool",
+        "is_replica": "bool",
+        "name": "str",
+        "sources": [
+          {
+            "access_point": "...",
+            "binding": "...",
+            "media_source": "...",
+            "mimetype": "...",
+            "origin": "...",
+            "origin_storage": "...",
+            "origin_storage_source": "...",
+            "prerecording": "...",
+            "storage": "..."
+          }
+        ],
+        "storage": "str"
+      }
+    ],
+    "armed": "bool",
+    "breaks_unused_connections": "bool",
+    "camera_access": "str",
+    "comment": "str",
+    "detectors": [
+      {
+        "access_point": "str",
+        "display_id": "str",
+        "display_name": "str",
+        "enabled": "bool",
+        "events": [
+          {
+            "event_type": "...",
+            "id": "...",
+            "name": "..."
+          }
+        ],
+        "groups": [
+          "str"
+        ],
+        "is_activated": "bool",
+        "is_biometric_recognition_enabled": "bool",
+        "is_realtime_recognition_enabled": "bool",
+        "is_recording_objects_tracking_enabled": "bool",
+        "parent_detector": "str",
+        "scene_descriptions": [
+          {
+            "access_point": "...",
+            "mimetype": "..."
+          }
+        ],
+        "storyboard": "str",
+        "type": "str",
+        "type_name": "str"
+      }
+    ],
+    "device_id": "str",
+    "display_id": "str",
+    "display_name": "str",
+    "enabled": "bool",
+    "firmware": "str",
+    "geo_location_azimuth": "str",
+    "geo_location_latitude": "str",
+    "geo_location_longitude": "str",
+    "group_ids": [
+      "str"
+    ],
+    "has_archive_bindings": "bool",
+    "incomplete": "bool",
+    "ip_address": "str",
+    "is_activated": "bool",
+    "microphones": [
+      {
+        "access_point": "str",
+        "display_id": "str",
+        "display_name": "str",
+        "enabled": "bool",
+        "is_activated": "bool",
+        "microphone_access": "str"
+      }
+    ],
+    "model": "str",
+    "model_display_name": "str",
+    "offline_detectors": [],
+    "overlay_text_settings": {
+      "texts": []
+    },
+    "panomorph": {
+      "camera_lens": "str",
+      "camera_position": "int",
+      "enabled": "bool",
+      "fisheye_circles": {
+        "circle": [
+          {
+            "center": "...",
+            "radius": "..."
+          }
+        ]
+      },
+      "fit_to_frame": "bool",
+      "view_type": "int"
+    },
+    "privacy_mask": [],
+    "ptzs": [],
+    "ray": [],
+    "relay": [],
+    "serial_number": "str",
+    "speakers": [],
+    "text_sources": [],
+    "type": "str",
+    "vendor": "str",
+    "video_buffer_enabled": "bool",
+    "video_buffer_size": "int",
+    "video_streams": [
+      {
+        "decoder_acess_point": "str",
+        "display_id": "str",
+        "display_name": "str",
+        "enabled": "bool",
+        "fps": "int",
+        "is_activated": "bool",
+        "stream_acess_point": "str"
+      }
+    ]
+  },
+  "detectors.list.json": {
+    "camera_access_point": "str",
+    "camera_display_id": "str",
+    "camera_name": "str",
+    "detector_access_point": "str",
+    "detector_display_id": "str",
+    "detector_name": "str",
+    "detector_type": "str",
+    "detector_type_name": "str",
+    "events": [
+      "str"
+    ],
+    "is_activated": "bool",
+    "parent_detector": "str"
+  },
+  "alerts.sample.json": {
+    "body": {
+      "@type": "str",
+      "archive": {
+        "access_point": "str",
+        "friendly_name": "str",
+        "group": "str"
+      },
+      "camera": {
+        "access_point": "str",
+        "friendly_name": "str",
+        "group": "str"
+      },
+      "detector": {
+        "data": {
+          "DetectorsGroup": [
+            "..."
+          ],
+          "EventUuid": "str",
+          "Hypotheses": [
+            "..."
+          ],
+          "ObjectClassEnum": "int",
+          "detector_type": "str",
+          "module_name": "str",
+          "origin_id": "str",
+          "phase": "int",
+          "rectangles": [
+            "..."
+          ]
+        },
+        "details": [
+          {
+            "rectangle": "..."
+          }
+        ],
+        "detector_deprecated": "str",
+        "detector_ext": {
+          "access_point": "str",
+          "friendly_name": "str",
+          "group": "str"
+        },
+        "detectors_group": [
+          "str"
+        ],
+        "event_type": "str",
+        "guid": "str",
+        "multi_phase_id": "str",
+        "node_info": {
+          "friendly_name": "str",
+          "name": "str"
+        },
+        "offline_analytics_source": "str",
+        "origin_deprecated": "str",
+        "origin_ext": {
+          "access_point": "str",
+          "friendly_name": "str",
+          "group": "str"
+        },
+        "state": "str",
+        "timestamp": "str"
+      },
+      "guid": "str",
+      "initiator": "str",
+      "initiator_type": "str",
+      "macro": {
+        "action_type": "str",
+        "camera": {
+          "access_point": "str",
+          "friendly_name": "str",
+          "group": "str"
+        },
+        "event_id": "str",
+        "guid": "str",
+        "initiator_type": "str",
+        "macro": {
+          "friendly_name": "str",
+          "guid": "str"
+        },
+        "node_info": {
+          "friendly_name": "str",
+          "name": "str"
+        },
+        "phase": "str",
+        "timestamp": "str"
+      },
+      "node_info": {
+        "friendly_name": "str",
+        "name": "str"
+      },
+      "reason_mask": "int",
+      "required_comment": {
+        "confirmed_alarm": "bool",
+        "false_alarm": "bool",
+        "suspicious_situation": "bool"
+      },
+      "states": [
+        {
+          "alert_id": "str",
+          "bookmark": {
+            "access_level": "...",
+            "alert_id": "...",
+            "boundary_deprecated": "...",
+            "geometry_deprecated": "...",
+            "group_id": "...",
+            "guid": "...",
+            "is_protected": "...",
+            "message": "...",
+            "timestamp": "...",
+            "user": "..."
+          },
+          "camera": {
+            "access_point": "...",
+            "friendly_name": "...",
+            "group": "..."
+          },
+          "escalate_comment": "str",
+          "guid": "str",
+          "node_info": {
+            "friendly_name": "...",
+            "name": "..."
+          },
+          "offset": "str",
+          "priority": "str",
+          "reviewer": "str",
+          "reviewer_type": "str",
+          "severity": "str",
+          "state": "str",
+          "timestamp": "str",
+          "user_roles": []
+        }
+      ],
+      "timestamp": "str"
+    },
+    "event_name": "str",
+    "event_type": "str",
+    "external": "bool",
+    "localization": {
+      "text": "str"
+    },
+    "required_permissions": {
+      "required_global_permissions": {
+        "alert_access": "str",
+        "bookmark_access": "str",
+        "default_acfa_access": "str",
+        "default_archive_access": "str",
+        "default_camera_access": "str",
+        "default_macros_access": "str",
+        "default_microphone_access": "str",
+        "default_plugin_access": "str",
+        "default_telemetry_priority": "str",
+        "default_videowall_access": "str",
+        "feature_access": [],
+        "maps_access": "str",
+        "restrictions": {
+          "personal_data": {}
+        },
+        "unrestricted_access": "str",
+        "user_rights_setup_access": "str"
+      },
+      "required_object_permissions": [
+        {
+          "access_point": "str",
+          "camera_access": "str"
+        }
+      ]
+    },
+    "subject": "str",
+    "subjects": [
+      "str"
+    ]
+  },
+  "events.recent.json": {
+    "body": {
+      "@type": "str",
+      "data": {
+        "DetectorsGroup": [
+          "str"
+        ],
+        "EventUuid": "str",
+        "Hypotheses": [
+          "NoneType"
+        ],
+        "ObjectClassEnum": "int",
+        "detector_type": "str",
+        "module_name": "str",
+        "origin_id": "str",
+        "phase": "int",
+        "rectangles": [
+          [
+            "..."
+          ]
+        ]
+      },
+      "details": [
+        {
+          "rectangle": {
+            "h": "...",
+            "index": "...",
+            "w": "...",
+            "x": "...",
+            "y": "..."
+          }
+        }
+      ],
+      "detector_deprecated": "str",
+      "detector_ext": {
+        "access_point": "str",
+        "friendly_name": "str",
+        "group": "str"
+      },
+      "detectors_group": [
+        "str"
+      ],
+      "event_type": "str",
+      "guid": "str",
+      "multi_phase_id": "str",
+      "node_info": {
+        "friendly_name": "str",
+        "name": "str"
+      },
+      "offline_analytics_source": "str",
+      "origin_deprecated": "str",
+      "origin_ext": {
+        "access_point": "str",
+        "friendly_name": "str",
+        "group": "str"
+      },
+      "state": "str",
+      "timestamp": "str"
+    },
+    "event_name": "str",
+    "event_type": "str",
+    "external": "bool",
+    "localization": {
+      "text": "str"
+    },
+    "required_permissions": {
+      "required_global_permissions": {
+        "alert_access": "str",
+        "bookmark_access": "str",
+        "default_acfa_access": "str",
+        "default_archive_access": "str",
+        "default_camera_access": "str",
+        "default_macros_access": "str",
+        "default_microphone_access": "str",
+        "default_plugin_access": "str",
+        "default_telemetry_priority": "str",
+        "default_videowall_access": "str",
+        "feature_access": [],
+        "maps_access": "str",
+        "restrictions": {
+          "personal_data": {}
+        },
+        "unrestricted_access": "str",
+        "user_rights_setup_access": "str"
+      },
+      "required_object_permissions": [
+        {
+          "access_point": "str",
+          "camera_access": "str"
+        }
+      ]
+    },
+    "subject": "str",
+    "subjects": [
+      "str"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+syntax = "proto3";
+package axxonsoft.bl.settings;
+
+option go_package = "bitbucket.org/Axxonsoft/bl/settings";
+
+// General Data Protection Regulation (GDPR) Settings.
+message GDPRSettings
+{
+    // The type of the picture which hide the privacy object.
+    enum EPrivacyMaskType
+    {
+        // Do not use this default value.
+        PRIVACY_MASK_TYPE_UNSPECIFIED = 0;
+
+        // Mosaic blur.
+        MOSAIC = 1;
+
+        // Black picture.
+        BLACK  = 2;
+    }
+
+    EPrivacyMaskType privacy_mask_type = 1;
+}

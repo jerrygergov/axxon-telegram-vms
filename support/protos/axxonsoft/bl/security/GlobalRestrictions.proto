@@ -1,0 +1,35 @@
+syntax = "proto3";
+package axxonsoft.bl.security;
+
+import "google/protobuf/wrappers.proto";
+
+option go_package = "bitbucket.org/Axxonsoft/bl/security";
+
+message GlobalRestrictions
+{
+    // If restriction is active then a watermark with username information
+    // will be added to all video streams
+    google.protobuf.BoolValue force_username_watermarking = 1;
+
+    // Defines restrictions on personal data.
+    PersonalDataRestrictions personal_data = 2;
+
+    // If true, the setup of client special options is considered to be prohibited.
+    google.protobuf.BoolValue prohibit_client_special_options_setup = 3;
+}
+
+// Describes restrictions on personal data.
+message PersonalDataRestrictions
+{
+    // If true, face recognition is considered to be prohibited.
+    google.protobuf.BoolValue prohibit_face_recognition = 1;
+
+    // If true, license plate recognition is considered to be prohibited.
+    google.protobuf.BoolValue prohibit_license_plate_recognition = 2;
+
+    // If true, similarity search is considered to be prohibited.
+    google.protobuf.BoolValue prohibit_similarity_search = 3;
+
+    // If true, vehicle recognition is considered to be prohibited.
+    google.protobuf.BoolValue prohibit_vehicle_recognition = 4;
+}

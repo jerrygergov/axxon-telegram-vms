@@ -1,0 +1,65 @@
+syntax = "proto3";
+package axxonsoft.bl.detectors;
+
+import "google/protobuf/wrappers.proto";
+
+option go_package = "bitbucket.org/Axxonsoft/bl/detectors";
+
+message Tracklet
+{
+    // The object ID.
+    int32 object_id = 1;
+
+    // The unique ID of the object.
+    google.protobuf.Int32Value object_unique_id = 2;
+
+    // The object type, from 0 to 127.
+    int32 object_type = 3;
+
+    // The object's bounding box.
+    Rectangle rectangle = 4;
+
+    // The logical center of the location.
+    // Optional.
+    Point logical_center = 5;
+
+    // The HSV color of the object.
+    // Optional.
+    HsvColor color = 6;
+}
+
+message Rectangle
+{
+    // The x-coordinate of the upper-left corner of the rectangle.
+    double x = 1;
+
+    // The y-coordinate of the upper-left corner of the rectangle.
+    double y = 2;
+
+    // The width of the rectangle.
+    double width = 3;
+
+    // The height of the rectangle.
+    double height = 4;
+}
+
+message Point
+{
+    // The x-coordinate.
+    double x = 1;
+
+    // The y-coordinate.
+    double y = 2;
+}
+
+message HsvColor
+{
+    // The hue, from 0.0 to 360.0.
+    double hue = 1;
+
+    // The saturation, from 0.0 to 1.0.
+    double saturation = 2;
+
+    // The value, from 0.0 to 1.0.
+    double value = 3;
+}

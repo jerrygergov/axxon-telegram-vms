@@ -1,0 +1,19 @@
+syntax = "proto3";
+package axxonsoft.bl.mmexport;
+
+option go_package = "bitbucket.org/Axxonsoft/bl/mmexport";
+
+import "axxonsoft/bl/mmexport/ExportService.proto";
+
+message ExportEvent
+{
+    string guid = 1;
+    string timestamp = 2;
+
+    Session session = 3;
+    State state = 4;
+
+    string user_id = 5;
+    string user_name = 6;
+    repeated string user_roles = 7;
+}

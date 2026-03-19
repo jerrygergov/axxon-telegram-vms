@@ -1,0 +1,20 @@
+[Unit]
+Description=Axxon Telegram MJPEG Relay
+After=network-online.target
+Wants=network-online.target
+PartOf=axxon-tg-bot.service
+
+[Service]
+Type=simple
+User=%u
+Environment=APP_DIR=%h/axxon-telegram-vms
+EnvironmentFile=%E{APP_DIR}/.env
+WorkingDirectory=%E{APP_DIR}
+Environment=AXXON_RELAY_HOST=0.0.0.0
+Environment=AXXON_RELAY_PORT=8099
+ExecStart=%E{APP_DIR}/.venv-axxon-tg/bin/python %E{APP_DIR}/scripts/archive_stream_relay.py --serve --host ${AXXON_RELAY_HOST} --port ${AXXON_RELAY_PORT}
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

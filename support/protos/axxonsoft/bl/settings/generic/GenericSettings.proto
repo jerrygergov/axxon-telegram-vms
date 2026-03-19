@@ -1,0 +1,92 @@
+syntax = "proto3";
+package axxonsoft.bl.settings.generic;
+
+import "axxonsoft/bl/primitive/StructFieldMask.proto";
+import "axxonsoft/bl/settings/generic/Settings.proto";
+import "axxonsoft/bl/settings/generic/SettingsInfo.proto";
+
+option go_package = "bitbucket.org/Axxonsoft/bl/settings/generic";
+
+// No notification about config changes is provided
+// It can be implemented if necessary
+service GenericSettingsService
+{
+  rpc GetSettings(GetSettingsRequest) returns (GetSettingsResponse);
+  rpc SaveSettings(SaveSettingsRequest) returns (SaveSettingsResponse);
+  rpc RemoveSettings(RemoveSettingsRequest) returns (RemoveSettingsResponse);
+}
+
+enum ESettingsScope
+{
+  // If unspecified, then API is required to default to global scope
+  SETTINGS_SCOPE_UNSPECIFIED = 0;
+
+  // The API is required to use the settings from the global scope
+  SETTINGS_SCOPE_GLOBAL = 1;
+
+  // The API is required to use the settings from the scope of the current user
+  SETTINGS_SCOPE_CURRENT_USER = 2;
+}
+
+message GetSettingsRequest
+{
+  // see SettingsInfo.context
+  string context = 1;
+
+  ESettingsScope scope = 2;
+}
+
+message GetSettingsResponse
+{
+  Settings settings = 1;
+}
+
+message SaveSettingsRequest
+{
+  Settings settings = 1;
+
+  ESettingsScope scope = 2;
+
+  // Specify update_mask to partially update the settings
+  // If not specified, all fields will be replaced by incoming settings
+  primitive.StructFieldMask update_mask = 3;
+
+  // if true, then Struct fields referenced in update_mask will be fully replaced,
+  // otherwise the incoming Struct will be merged into an existing one
+  bool replace_structs = 4;
+
+  // if true, then List fields referenced in update_mask will be fully replaced,
+  // otherwise incoming values will be appended to the existing ones
+  bool replace_lists = 5;
+}
+
+enum EModificationResult
+{
+  // Shouldn't really happen
+  MODIFICATION_RESULT_UNSPECIFIED = 0;
+
+  MODIFICATION_RESULT_OK = 1;
+
+  // Unable to save tbe changes.
+  // The client should pull actual state of the settings and try again
+  MODIFICATION_RESULT_CONFLICT = 2;
+}
+
+message SaveSettingsResponse
+{
+  EModificationResult result = 1;
+
+  SettingsInfo updated = 2;
+}
+
+message RemoveSettingsRequest
+{
+  SettingsInfo to_remove = 1;
+
+  ESettingsScope scope = 2;
+}
+
+message RemoveSettingsResponse
+{
+  EModificationResult result = 1;
+}

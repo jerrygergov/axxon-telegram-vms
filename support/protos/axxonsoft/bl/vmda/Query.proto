@@ -1,0 +1,200 @@
+syntax = "proto3";
+package axxonsoft.bl.vmda;
+
+option go_package = "bitbucket.org/Axxonsoft/bl/vmda";
+
+import "axxonsoft/bl/primitive/Primitives.proto";
+
+
+message ObjectVal
+{
+  uint64 id = 1;
+  double left = 2;
+  double top = 3;
+  double right = 4;
+  double bottom = 5;
+}
+
+message Interval
+{
+  // Timerange of detected event
+  primitive.TimeRange limit = 1;
+  repeated ObjectVal objects = 2;
+}
+
+enum ObjectType
+{
+  OBJECT_TYPE_UNSPECIFIED = 0;
+  FACE = 1;
+  HUMAN = 2;
+  GROUP = 4;
+  VEHICLE = 8;
+};
+
+enum ObjectBehaviour
+{
+  OBJECT_BEHAVIOUR_UNSPECIFIED = 0;
+  MOVING = 1;
+  ABANDONED = 2;
+}
+
+enum EnterExit
+{
+  ENTEREXIT_UNSPECIFIED = 0;
+  Enter = 1;
+  Exit = 2;
+};
+
+enum Direction
+{
+  DIRECTION_UNSPECIFIED = 0;
+  Left = 1;
+  Right = 2;
+  Up = 3;
+  Down = 4;
+  LeftUp = 5;
+  LeftDown = 6;
+  RightUp = 7;
+  RightDown = 8;
+};
+
+enum DirectionMode
+{
+  DIRECTION_MODE_UNSPECIFIED = 0;
+  Fast = 1;
+  Precise = 2;
+}
+
+message DoubleValueRange
+{
+  double min = 1;
+  double max = 2;
+}
+
+// Aditional query constraints on found objects.
+message Constraints
+{
+  // Allowed range of object. Measured in fractions of frame width [0,1].
+  primitive.Size min_size = 1;
+  primitive.Size max_size = 2;
+
+  // Color range. Zero values means unspecified.
+  // Hue in range [0, 360.0]
+  // Saturation in [0, 1.0]
+  // Value in [0, 1.0]
+  primitive.HsvColorRange color = 3 [deprecated = true];
+  // An object meets this constraint if it's color falls into any of the specified ranges
+  repeated primitive.HsvColorRange colors = 11;
+
+  // Allowed object types.
+  repeated ObjectType object_types = 4;
+  // Allowed object behaviours
+  repeated ObjectBehaviour behaviours = 5;
+
+  // Array of allowed directions.
+  repeated Direction directions = 8;
+  DirectionMode direction_mode = 10;
+
+  // Zero value means that specific component (min/max) is not used.
+  // Velocity valid value range [0..100.0]
+  // Measures percent of scene per-second.
+  DoubleValueRange velocity = 9;
+}
+
+// Search for objects moving in specified area.
+message MotionInArea
+{
+  // Simple polygon is expected.
+  // Note. In a simple polygon the (side) lines don't intersect.
+  primitive.Polyline area = 1;
+
+  // Triggers only on entering/exiting zone (appearing or disappearing in the zone also counts)
+  EnterExit enter_exit = 2;
+}
+
+enum CrossDirection
+{
+  Both = 0; // Use the both.
+  Positive = 1; // Only crossing in positive direction
+  Negative = 2; // Only crossing in negative direction
+};
+
+// Search for passing through specified line segment.
+message LineCrossing
+{
+  // Oriented line segment. (begin)--->(end)
+  primitive.Polyline line = 1;
+
+  // Crossing line segment treated as oriented, i.e. it has direction from
+  // point Line.Begin to point Line.End.
+  // Consequently crossing direction (as vector) can have positive or negative angle
+  // with line segment treated as vector.
+  // We define crossing direction as *positive* if it's vector has positive angle
+  // with the oriented segment (trated as vector).
+  //
+  // Short math reminder: Counterclockwise is the positive rotation direction and
+  // clockwise is the negative direction.
+  // Examples:
+  //
+  //       ^                  ^                  ^
+  //       |                  |                  |
+  //       |                  |                  |
+  //       |             +----------->     <-----------+
+  //       |                  |                  |
+  //       |                  |                  |
+  //       +                  +                  +
+  //     Oriented          Positive          Negative
+  //      line             crossing          crossing
+  //     segment           direction         direction
+  CrossDirection direction = 2;
+};
+
+// Search for objects moving in specified area.
+message Loitering
+{
+  // Simple polygon is expected.
+  // Note. In a simple polygon the (side) lines don't intersect.
+  primitive.Polyline area = 1;
+
+  // Duration of stay in zone.
+  // Measured in seconds.
+  int32 duration = 2;
+}
+
+message MoveFromAreaToArea
+{
+  // Simple polygon is expected.
+  // Note. In a simple polygon the (side) lines don't intersect.
+  primitive.Polyline from = 1;
+
+  // Simple polygon is expected.
+  // Note. In a simple polygon the (side) lines don't intersect.
+  primitive.Polyline to = 2;
+
+  // Search in both directions.
+  bool bidirectional_search = 3;
+}
+
+message MultipleObjects
+{
+  // Simple polygon is expected.
+  // Note. In a simple polygon the (side) lines don't intersect.
+  primitive.Polyline area = 1;
+
+  int32 threshold = 2;
+}
+
+message QueryDescription
+{
+  Constraints additional_filters = 6;
+
+  oneof query
+  {
+    MotionInArea motion_in_area = 20;
+    LineCrossing line_crossing = 21;
+    Loitering loitering = 22;
+    MoveFromAreaToArea move_from_area_to_area = 23;
+    MultipleObjects multiple_objects = 24;
+  }
+
+}

@@ -1,0 +1,14 @@
+/home/%username%/support/references/axxon-web-bundles/00_inventory.md
+/home/%username%/support/references/axxon-web-bundles/01_webclient_overview.md
+/home/%username%/support/references/axxon-web-bundles/02_webconfig_overview.md
+/home/%username%/support/references/axxon-web-bundles/03_auth_and_session_flows.md
+/home/%username%/support/references/axxon-web-bundles/04_api_endpoints_map.md
+/home/%username%/support/references/axxon-web-bundles/05_grpc_methods_map.md
+/home/%username%/support/references/axxon-web-bundles/06_routes_and_ui_modules.md
+/home/%username%/support/references/axxon-web-bundles/README.md
+/home/%username%/support/references/axxon-web-bundles/raw/chunk_index.md
+/home/%username%/support/references/axxon-web-bundles/raw/generated_files.txt
+/home/%username%/support/references/axxon-web-bundles/raw/webclient_api_hits.txt
+/home/%username%/support/references/axxon-web-bundles/raw/webclient_strings.txt
+/home/%username%/support/references/axxon-web-bundles/raw/webconfig_api_hits.txt
+/home/%username%/support/references/axxon-web-bundles/raw/webconfig_strings.txt

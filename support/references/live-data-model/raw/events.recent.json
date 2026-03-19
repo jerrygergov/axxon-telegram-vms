@@ -1,0 +1,2388 @@
+[
+  {
+    "event_type": "ET_DetectorEvent",
+    "subject": "",
+    "body": {
+      "@type": "type.googleapis.com/axxonsoft.bl.events.DetectorEvent",
+      "guid": "0bba8476-39ed-40c3-ada1-f79c277be034",
+      "timestamp": "20260308T224310.527000",
+      "state": "ENDED",
+      "origin_deprecated": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "detector_deprecated": "hosts/VIDEO_SERVER/AppDataDetector.1/EventSupplier",
+      "event_type": "moveInZone",
+      "details": [
+        {
+          "rectangle": {
+            "x": 0,
+            "y": 0,
+            "w": 1,
+            "h": 1,
+            "index": 134794
+          }
+        }
+      ],
+      "multi_phase_id": "5879d8b2-ba7f-468e-b823-88b2851466ce",
+      "detectors_group": [
+        "DG_SITUATION_DETECTOR"
+      ],
+      "origin_ext": {
+        "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "friendly_name": "Camera A",
+        "group": ""
+      },
+      "detector_ext": {
+        "access_point": "hosts/VIDEO_SERVER/AppDataDetector.1/EventSupplier",
+        "friendly_name": "Vehicle detector",
+        "group": ""
+      },
+      "node_info": {
+        "name": "VIDEO_SERVER",
+        "friendly_name": "VIDEO_SERVER"
+      },
+      "offline_analytics_source": "",
+      "data": {
+        "phase": 2,
+        "EventUuid": "5879d8b2-ba7f-468e-b823-88b2851466ce",
+        "origin_id": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "Hypotheses": [
+          null
+        ],
+        "rectangles": [
+          [
+            0,
+            0,
+            1,
+            1,
+            134794
+          ]
+        ],
+        "module_name": "SituationDetector",
+        "detector_type": "moveInZone",
+        "DetectorsGroup": [
+          "SituationDetector"
+        ],
+        "ObjectClassEnum": 10
+      }
+    },
+    "subjects": [
+      "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "hosts/VIDEO_SERVER/AppDataDetector.1/EventSupplier"
+    ],
+    "external": false,
+    "localization": {
+      "text": "Camera \"Camera A\". End of detector \"Vehicle detector\" triggering Extended info: Event name \"Object moving in area detected\"; "
+    },
+    "required_permissions": {
+      "required_object_permissions": [
+        {
+          "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+          "camera_access": "CAMERA_ACCESS_ONLY_ARCHIVE"
+        }
+      ],
+      "required_global_permissions": {
+        "unrestricted_access": "UNRESTRICTED_ACCESS_UNSPECIFIED",
+        "maps_access": "MAP_ACCESS_UNSPECIFIED",
+        "feature_access": [],
+        "alert_access": "ALERT_ACCESS_UNSPECIFIED",
+        "bookmark_access": "BOOKMARK_ACCESS_UNSPECIFIED",
+        "user_rights_setup_access": "USER_RIGHTS_SETUP_ACCESS_UNSPECIFIED",
+        "default_camera_access": "CAMERA_ACCESS_UNSPECIFIED",
+        "default_microphone_access": "MICROPHONE_ACCESS_UNSPECIFIED",
+        "default_archive_access": "ARCHIVE_ACCESS_UNSPECIFIED",
+        "default_videowall_access": "VIDEOWALL_ACCESS_UNSPECIFIED",
+        "default_telemetry_priority": "TELEMETRY_PRIORITY_UNSPECIFIED",
+        "default_macros_access": "MACROS_ACCESS_UNSPECIFIED",
+        "default_acfa_access": "ACFA_ACCESS_UNSPECIFIED",
+        "restrictions": {
+          "personal_data": {}
+        },
+        "default_plugin_access": "PLUGIN_ACCESS_UNSPECIFIED"
+      }
+    },
+    "event_name": "axxonsoft.bl.events.DetectorEvent"
+  },
+  {
+    "event_type": "ET_DetectorEvent",
+    "subject": "",
+    "body": {
+      "@type": "type.googleapis.com/axxonsoft.bl.events.DetectorEvent",
+      "guid": "0f3d299d-3ccc-0d40-bf50-35fa774880dc",
+      "timestamp": "20260308T224310.396013",
+      "state": "HAPPENED",
+      "origin_deprecated": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "detector_deprecated": "hosts/VIDEO_SERVER/RealtimeRecognizer.0/Recognizer",
+      "event_type": "listed_lpr_detected",
+      "details": [
+        {
+          "listed_item_detected_result": {
+            "list_id": "00000000-0000-0000-0000-000000000000",
+            "listed_item_id": "00000000-0000-0000-0000-000000000000",
+            "matched_event_id": "0d4b5553-d2c2-4a52-9b56-625f3d2f52a5",
+            "matched_event_time": "20260308T224309.447000",
+            "list_name": "",
+            "name": "",
+            "lists_info": [],
+            "age": 0,
+            "gender": "UNKNOWN",
+            "listed_plate_info": {
+              "plate": "YZ45246",
+              "extra_data": {
+                "external_system_type_name": "ngp",
+                "additional_info": {
+                  "description": ""
+                }
+              }
+            }
+          }
+        },
+        {
+          "rectangle": {
+            "x": 0.275,
+            "y": 0.7703703703703704,
+            "w": 0.05104166666666665,
+            "h": 0.030555555555555558,
+            "index": 0
+          }
+        },
+        {
+          "auto_recognition_result_ex": {
+            "time_begin": "2026-03-08T22:43:09.447Z",
+            "time_end": "2026-03-08T22:43:09.447Z",
+            "hypotheses": [
+              {
+                "ocr_quality": 99,
+                "plate_full": "YZ45246",
+                "plate_rectangle": {
+                  "x": 0.275,
+                  "y": 0.7703703703703704,
+                  "w": 0.05104166666666665,
+                  "h": 0.030555555555555558,
+                  "index": 0
+                },
+                "time_best": "20260308T224309.447000",
+                "country": "Denmark",
+                "plate_state": ""
+              }
+            ],
+            "direction": {
+              "value": "Incoming"
+            },
+            "vehicle_class": {
+              "value": "Car"
+            },
+            "vehicle_color": {
+              "value": "Black"
+            },
+            "vehicle_brand": {
+              "value": "Audi"
+            },
+            "vehicle_model": {
+              "value": "A4"
+            },
+            "headlights_status": {
+              "value": "Enabled"
+            },
+            "plate_type": {
+              "value": "EUnknownPlateType"
+            }
+          }
+        }
+      ],
+      "multi_phase_id": "",
+      "detectors_group": [
+        "DG_LPR_DETECTOR"
+      ],
+      "origin_ext": {
+        "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "friendly_name": "Camera A",
+        "group": ""
+      },
+      "detector_ext": {
+        "access_point": "hosts/VIDEO_SERVER/RealtimeRecognizer.0/Recognizer",
+        "friendly_name": "0.Real-time recognizer",
+        "group": ""
+      },
+      "node_info": {
+        "name": "VIDEO_SERVER",
+        "friendly_name": "VIDEO_SERVER"
+      },
+      "offline_analytics_source": "",
+      "data": {
+        "name": "",
+        "phase": 0,
+        "plate": "YZ45246",
+        "list_id": "00000000-0000-0000-0000-000000000000",
+        "list_name": "",
+        "origin_id": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "Hypotheses": [
+          null
+        ],
+        "lists_Info": [],
+        "rectangles": null,
+        "description": "",
+        "extra_fields": null,
+        "detector_type": "listed_lpr_detected",
+        "listed_lpr_id": "00000000-0000-0000-0000-000000000000",
+        "DetectorsGroup": [
+          "LprDetector"
+        ],
+        "PlateRectangle": [
+          0.275,
+          0.7703703703703704,
+          0.3260416666666667,
+          0.8009259259259259
+        ],
+        "matched_lpr_id": "0d4b5553-d2c2-4a52-9b56-625f3d2f52a5",
+        "plate_appeared_time": "20260308T224309.447000",
+        "external_system_type_name": "ngp",
+        "auto_recognition_result_ex": "{\"@type\":\"type.googleapis.com/axxonsoft.bl.events.DetectorEvent.AutoRecognitionResultEx\",\"timeBegin\":\"2026-03-08T22:43:09.447Z\",\"timeEnd\":\"2026-03-08T22:43:09.447Z\",\"hypotheses\":[{\"ocrQuality\":99,\"plateFull\":\"YZ45246\",\"plateRectangle\":{\"x\":0.275,\"y\":0.77037037037037037,\"w\":0.051041666666666652,\"h\":0.030555555555555558},\"timeBest\":\"20260308T224309.447000\",\"country\":\"Denmark\"}],\"direction\":{\"value\":\"Incoming\"},\"vehicleClass\":{\"value\":\"Car\"},\"vehicleColor\":{\"value\":\"Black\"},\"vehicleBrand\":{\"value\":\"Audi\"},\"vehicleModel\":{\"value\":\"A4\"},\"headlightsStatus\":{\"value\":\"Enabled\"},\"plateType\":{\"value\":\"EUnknownPlateType\"}}"
+      }
+    },
+    "subjects": [
+      "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "hosts/VIDEO_SERVER/RealtimeRecognizer.0/Recognizer"
+    ],
+    "external": false,
+    "localization": {
+      "text": "Camera \"Camera A\". LP recognized from list Not listed. LP YZ45246 Extended info: Event name \"Check in LP lists\"; "
+    },
+    "required_permissions": {
+      "required_object_permissions": [
+        {
+          "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+          "camera_access": "CAMERA_ACCESS_ONLY_ARCHIVE"
+        }
+      ],
+      "required_global_permissions": {
+        "unrestricted_access": "UNRESTRICTED_ACCESS_UNSPECIFIED",
+        "maps_access": "MAP_ACCESS_UNSPECIFIED",
+        "feature_access": [],
+        "alert_access": "ALERT_ACCESS_UNSPECIFIED",
+        "bookmark_access": "BOOKMARK_ACCESS_UNSPECIFIED",
+        "user_rights_setup_access": "USER_RIGHTS_SETUP_ACCESS_UNSPECIFIED",
+        "default_camera_access": "CAMERA_ACCESS_UNSPECIFIED",
+        "default_microphone_access": "MICROPHONE_ACCESS_UNSPECIFIED",
+        "default_archive_access": "ARCHIVE_ACCESS_UNSPECIFIED",
+        "default_videowall_access": "VIDEOWALL_ACCESS_UNSPECIFIED",
+        "default_telemetry_priority": "TELEMETRY_PRIORITY_UNSPECIFIED",
+        "default_macros_access": "MACROS_ACCESS_UNSPECIFIED",
+        "default_acfa_access": "ACFA_ACCESS_UNSPECIFIED",
+        "restrictions": {
+          "personal_data": {
+            "prohibit_license_plate_recognition": false,
+            "prohibit_vehicle_recognition": false
+          }
+        },
+        "default_plugin_access": "PLUGIN_ACCESS_UNSPECIFIED"
+      }
+    },
+    "event_name": "axxonsoft.bl.events.DetectorEvent"
+  },
+  {
+    "event_type": "ET_DetectorEvent",
+    "subject": "",
+    "body": {
+      "@type": "type.googleapis.com/axxonsoft.bl.events.DetectorEvent",
+      "guid": "08b57f83-cedd-4678-98b0-14b94be55c60",
+      "timestamp": "20260308T224310.007000",
+      "state": "HAPPENED",
+      "origin_deprecated": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "detector_deprecated": "hosts/VIDEO_SERVER/AVDetector.4/EventSupplier",
+      "event_type": "MetadetectorDescriptorEvent",
+      "details": [],
+      "multi_phase_id": "",
+      "detectors_group": [
+        "DG_AI_DETECTOR"
+      ],
+      "origin_ext": {
+        "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "friendly_name": "Camera A",
+        "group": ""
+      },
+      "detector_ext": {
+        "access_point": "hosts/VIDEO_SERVER/AVDetector.4/EventSupplier",
+        "friendly_name": "4.Meta-detector",
+        "group": ""
+      },
+      "node_info": {
+        "name": "VIDEO_SERVER",
+        "friendly_name": "VIDEO_SERVER"
+      },
+      "offline_analytics_source": "",
+      "data": {
+        "phase": 0,
+        "origin_id": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "Hypotheses": [
+          null
+        ],
+        "rectangles": null,
+        "module_name": "BlipDetector",
+        "detector_type": "MetadetectorDescriptorEvent",
+        "DetectorsGroup": [
+          "AIDetector"
+        ],
+        "ObjectDescriptorType": 1,
+        "ObjectDescriptorSubtype": "qweqwe",
+        "ObjectDescriptorVersion": 0
+      }
+    },
+    "subjects": [
+      "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "hosts/VIDEO_SERVER/AVDetector.4/EventSupplier"
+    ],
+    "external": false,
+    "localization": {
+      "text": "Camera \"Camera A\". Detector \"4.Meta-detector\" triggering Extended info: Event name \"Frame description saved\"; "
+    },
+    "required_permissions": {
+      "required_object_permissions": [
+        {
+          "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+          "camera_access": "CAMERA_ACCESS_ONLY_ARCHIVE"
+        }
+      ],
+      "required_global_permissions": {
+        "unrestricted_access": "UNRESTRICTED_ACCESS_UNSPECIFIED",
+        "maps_access": "MAP_ACCESS_UNSPECIFIED",
+        "feature_access": [],
+        "alert_access": "ALERT_ACCESS_UNSPECIFIED",
+        "bookmark_access": "BOOKMARK_ACCESS_UNSPECIFIED",
+        "user_rights_setup_access": "USER_RIGHTS_SETUP_ACCESS_UNSPECIFIED",
+        "default_camera_access": "CAMERA_ACCESS_UNSPECIFIED",
+        "default_microphone_access": "MICROPHONE_ACCESS_UNSPECIFIED",
+        "default_archive_access": "ARCHIVE_ACCESS_UNSPECIFIED",
+        "default_videowall_access": "VIDEOWALL_ACCESS_UNSPECIFIED",
+        "default_telemetry_priority": "TELEMETRY_PRIORITY_UNSPECIFIED",
+        "default_macros_access": "MACROS_ACCESS_UNSPECIFIED",
+        "default_acfa_access": "ACFA_ACCESS_UNSPECIFIED",
+        "restrictions": {
+          "personal_data": {
+            "prohibit_similarity_search": false
+          }
+        },
+        "default_plugin_access": "PLUGIN_ACCESS_UNSPECIFIED"
+      }
+    },
+    "event_name": "axxonsoft.bl.events.DetectorEvent"
+  },
+  {
+    "event_type": "ET_DetectorEvent",
+    "subject": "",
+    "body": {
+      "@type": "type.googleapis.com/axxonsoft.bl.events.DetectorEvent",
+      "guid": "a9b26a54-f548-4e66-8015-15fc2d449f08",
+      "timestamp": "20260308T224309.607000",
+      "state": "HAPPENED",
+      "origin_deprecated": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "detector_deprecated": "hosts/VIDEO_SERVER/AVDetector.3/EventSupplier",
+      "event_type": "VehicleTransitDetected",
+      "details": [
+        {
+          "rectangle": {
+            "x": 0.1633898099263509,
+            "y": 0.622500666865596,
+            "w": 0.2236712455749512,
+            "h": 0.29114815040870956,
+            "index": 0
+          }
+        },
+        {
+          "transit": {
+            "lanes_ids": [
+              "67f6c807-22ed-48fd-bedb-779c011d72e6"
+            ]
+          }
+        },
+        {
+          "auto_recognition_result_ex": {
+            "time_begin": "1970-01-01T00:00:00Z",
+            "time_end": "1970-01-01T00:00:00Z",
+            "hypotheses": [],
+            "vehicle_class": {
+              "value": "LightCommercialVehicle"
+            },
+            "vehicle_speed": {
+              "value": 36
+            },
+            "vehicle_subclass": {
+              "value": "CarSubclass"
+            }
+          }
+        },
+        {
+          "auto_recognition_result": {
+            "direction": "Unknown",
+            "time_begin": "",
+            "time_end": "",
+            "hypotheses": [],
+            "vehicle_class": "LightCommercialVehicle",
+            "vehicle_color": "",
+            "vehicle_brand": "",
+            "vehicle_model": "",
+            "headlights_status": "Undefined",
+            "vehicle_speed": 36,
+            "vehicle_speed_kmph": 36,
+            "plate_type": "EUnknownPlateType",
+            "vehicle_subclass": "CarSubclass"
+          }
+        }
+      ],
+      "multi_phase_id": "",
+      "detectors_group": [
+        "DG_VEHICLE_DETECTOR"
+      ],
+      "origin_ext": {
+        "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "friendly_name": "Camera A",
+        "group": ""
+      },
+      "detector_ext": {
+        "access_point": "hosts/VIDEO_SERVER/AVDetector.3/EventSupplier",
+        "friendly_name": "Traffic analyzer RR",
+        "group": ""
+      },
+      "node_info": {
+        "name": "VIDEO_SERVER",
+        "friendly_name": "VIDEO_SERVER"
+      },
+      "offline_analytics_source": "",
+      "data": {
+        "phase": 0,
+        "LanesIds": [
+          "67f6c807-22ed-48fd-bedb-779c011d72e6"
+        ],
+        "SpeedKmph": 36,
+        "origin_id": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "Hypotheses": [
+          null
+        ],
+        "rectangles": [
+          [
+            0.1633898099263509,
+            0.622500666865596,
+            0.3870610555013021,
+            0.9136488172743056,
+            0
+          ]
+        ],
+        "module_name": "RRTrafficAnalyzer",
+        "VehicleClass": 5,
+        "detector_type": "VehicleTransitDetected",
+        "DetectorsGroup": [
+          "VehicleDetector"
+        ],
+        "VehicleSubclass": 1
+      }
+    },
+    "subjects": [
+      "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "hosts/VIDEO_SERVER/AVDetector.3/EventSupplier"
+    ],
+    "external": false,
+    "localization": {
+      "text": "Camera \"Camera A\". Detector \"Traffic analyzer RR\" triggering, class \"Light Commercial Vehicle\", subclass \"Car Subclass\", speed \"36.000000 km/h\", Lanes Ids Extended info: Event name \"Vehicle transit detected\"; "
+    },
+    "required_permissions": {
+      "required_object_permissions": [
+        {
+          "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+          "camera_access": "CAMERA_ACCESS_ONLY_ARCHIVE"
+        }
+      ],
+      "required_global_permissions": {
+        "unrestricted_access": "UNRESTRICTED_ACCESS_UNSPECIFIED",
+        "maps_access": "MAP_ACCESS_UNSPECIFIED",
+        "feature_access": [],
+        "alert_access": "ALERT_ACCESS_UNSPECIFIED",
+        "bookmark_access": "BOOKMARK_ACCESS_UNSPECIFIED",
+        "user_rights_setup_access": "USER_RIGHTS_SETUP_ACCESS_UNSPECIFIED",
+        "default_camera_access": "CAMERA_ACCESS_UNSPECIFIED",
+        "default_microphone_access": "MICROPHONE_ACCESS_UNSPECIFIED",
+        "default_archive_access": "ARCHIVE_ACCESS_UNSPECIFIED",
+        "default_videowall_access": "VIDEOWALL_ACCESS_UNSPECIFIED",
+        "default_telemetry_priority": "TELEMETRY_PRIORITY_UNSPECIFIED",
+        "default_macros_access": "MACROS_ACCESS_UNSPECIFIED",
+        "default_acfa_access": "ACFA_ACCESS_UNSPECIFIED",
+        "restrictions": {
+          "personal_data": {
+            "prohibit_vehicle_recognition": false
+          }
+        },
+        "default_plugin_access": "PLUGIN_ACCESS_UNSPECIFIED"
+      }
+    },
+    "event_name": "axxonsoft.bl.events.DetectorEvent"
+  },
+  {
+    "event_type": "ET_DetectorEvent",
+    "subject": "",
+    "body": {
+      "@type": "type.googleapis.com/axxonsoft.bl.events.DetectorEvent",
+      "guid": "0d4b5553-d2c2-4a52-9b56-625f3d2f52a5",
+      "timestamp": "20260308T224309.447000",
+      "state": "HAPPENED",
+      "origin_deprecated": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "detector_deprecated": "hosts/VIDEO_SERVER/AVDetector.2/EventSupplier",
+      "event_type": "plateRecognized",
+      "details": [
+        {
+          "object_id": 61073
+        },
+        {
+          "auto_recognition_result_ex": {
+            "time_begin": "2026-03-08T22:43:09.447Z",
+            "time_end": "2026-03-08T22:43:09.447Z",
+            "hypotheses": [
+              {
+                "ocr_quality": 99,
+                "plate_full": "YZ45246",
+                "plate_rectangle": {
+                  "x": 0.275,
+                  "y": 0.7703703703703704,
+                  "w": 0.05104166666666665,
+                  "h": 0.030555555555555558,
+                  "index": 0
+                },
+                "time_best": "20260308T224309.447000",
+                "country": "Denmark",
+                "plate_state": ""
+              }
+            ],
+            "direction": {
+              "value": "Incoming"
+            },
+            "vehicle_class": {
+              "value": "Car"
+            },
+            "vehicle_color": {
+              "value": "Black"
+            },
+            "vehicle_brand": {
+              "value": "Audi"
+            },
+            "vehicle_model": {
+              "value": "A4"
+            },
+            "headlights_status": {
+              "value": "Enabled"
+            },
+            "plate_type": {
+              "value": "EUnknownPlateType"
+            }
+          }
+        },
+        {
+          "auto_recognition_result": {
+            "direction": "Incoming",
+            "time_begin": "20260308T224309.447000",
+            "time_end": "20260308T224309.447000",
+            "hypotheses": [
+              {
+                "ocr_quality": 99,
+                "plate_full": "YZ45246",
+                "plate_rectangle": {
+                  "x": 0.275,
+                  "y": 0.7703703703703704,
+                  "w": 0.05104166666666665,
+                  "h": 0.030555555555555558,
+                  "index": 0
+                },
+                "time_best": "20260308T224309.447000",
+                "country": "Denmark",
+                "plate_state": ""
+              }
+            ],
+            "vehicle_class": "Car",
+            "vehicle_color": "Black",
+            "vehicle_brand": "Audi",
+            "vehicle_model": "A4",
+            "headlights_status": "Enabled",
+            "vehicle_speed": 0,
+            "vehicle_speed_kmph": 0,
+            "plate_type": "EUnknownPlateType",
+            "vehicle_subclass": "VehicleSubclassUnknown"
+          }
+        }
+      ],
+      "multi_phase_id": "",
+      "detectors_group": [
+        "DG_LPR_DETECTOR"
+      ],
+      "origin_ext": {
+        "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "friendly_name": "Camera A",
+        "group": ""
+      },
+      "detector_ext": {
+        "access_point": "hosts/VIDEO_SERVER/AVDetector.2/EventSupplier",
+        "friendly_name": "License plate recognition RR",
+        "group": ""
+      },
+      "node_info": {
+        "name": "VIDEO_SERVER",
+        "friendly_name": "VIDEO_SERVER"
+      },
+      "offline_analytics_source": "",
+      "data": {
+        "phase": 0,
+        "TimeEnd": "20260308T224309.447000",
+        "ObjectId": 61073,
+        "Direction": 1,
+        "PlateType": 59,
+        "TimeBegin": "20260308T224309.447000",
+        "origin_id": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "Hypotheses": [
+          {
+            "TimeBest": "20260308T224309.447000",
+            "PlateFull": "YZ45246",
+            "OCRQuality": 99,
+            "PlateState": "",
+            "PlateCountry": "Denmark",
+            "PlateColorStr": "",
+            "PlateRectangle": [
+              0.275,
+              0.7703703703703704,
+              0.3260416666666667,
+              0.8009259259259259
+            ]
+          }
+        ],
+        "rectangles": null,
+        "module_name": "LprDetector_Roadar",
+        "VehicleBrand": "Audi",
+        "VehicleClass": 1,
+        "VehicleColor": "Black",
+        "VehicleModel": "A4",
+        "detector_type": "plateRecognized",
+        "DetectorsGroup": [
+          "LprDetector"
+        ],
+        "HeadlightsStatus": 1
+      }
+    },
+    "subjects": [
+      "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "hosts/VIDEO_SERVER/AVDetector.2/EventSupplier"
+    ],
+    "external": false,
+    "localization": {
+      "text": "Camera \"Camera A\". Detector \"License plate recognition RR\" triggering, LP \"YZ45246\", country \"Denmark\", class \"Car\", color \"Black\", brand \"Audi\", model \"A4\", headlights \"Enabled\" Extended info: Event name \"Recognized LP\"; "
+    },
+    "required_permissions": {
+      "required_object_permissions": [
+        {
+          "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+          "camera_access": "CAMERA_ACCESS_ONLY_ARCHIVE"
+        }
+      ],
+      "required_global_permissions": {
+        "unrestricted_access": "UNRESTRICTED_ACCESS_UNSPECIFIED",
+        "maps_access": "MAP_ACCESS_UNSPECIFIED",
+        "feature_access": [],
+        "alert_access": "ALERT_ACCESS_UNSPECIFIED",
+        "bookmark_access": "BOOKMARK_ACCESS_UNSPECIFIED",
+        "user_rights_setup_access": "USER_RIGHTS_SETUP_ACCESS_UNSPECIFIED",
+        "default_camera_access": "CAMERA_ACCESS_UNSPECIFIED",
+        "default_microphone_access": "MICROPHONE_ACCESS_UNSPECIFIED",
+        "default_archive_access": "ARCHIVE_ACCESS_UNSPECIFIED",
+        "default_videowall_access": "VIDEOWALL_ACCESS_UNSPECIFIED",
+        "default_telemetry_priority": "TELEMETRY_PRIORITY_UNSPECIFIED",
+        "default_macros_access": "MACROS_ACCESS_UNSPECIFIED",
+        "default_acfa_access": "ACFA_ACCESS_UNSPECIFIED",
+        "restrictions": {
+          "personal_data": {
+            "prohibit_license_plate_recognition": false,
+            "prohibit_vehicle_recognition": false
+          }
+        },
+        "default_plugin_access": "PLUGIN_ACCESS_UNSPECIFIED"
+      }
+    },
+    "event_name": "axxonsoft.bl.events.DetectorEvent"
+  },
+  {
+    "event_type": "ET_DetectorEvent",
+    "subject": "",
+    "body": {
+      "@type": "type.googleapis.com/axxonsoft.bl.events.DetectorEvent",
+      "guid": "9e7b2bca-1506-4cc6-9761-8d403c450bfd",
+      "timestamp": "20260308T224305.677000",
+      "state": "HAPPENED",
+      "origin_deprecated": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "detector_deprecated": "hosts/VIDEO_SERVER/AVDetector.3/EventSupplier",
+      "event_type": "StatisticsInfo",
+      "details": [],
+      "multi_phase_id": "",
+      "detectors_group": [
+        "DG_VEHICLE_DETECTOR"
+      ],
+      "origin_ext": {
+        "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "friendly_name": "Camera A",
+        "group": ""
+      },
+      "detector_ext": {
+        "access_point": "hosts/VIDEO_SERVER/AVDetector.3/EventSupplier",
+        "friendly_name": "Traffic analyzer RR",
+        "group": ""
+      },
+      "node_info": {
+        "name": "VIDEO_SERVER",
+        "friendly_name": "VIDEO_SERVER"
+      },
+      "offline_analytics_source": "",
+      "data": {
+        "phase": 0,
+        "LanesIds": [
+          "67f6c807-22ed-48fd-bedb-779c011d72e6"
+        ],
+        "origin_id": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "Hypotheses": [
+          null
+        ],
+        "rectangles": null,
+        "module_name": "RRTrafficAnalyzer",
+        "detector_type": "StatisticsInfo",
+        "DetectorsGroup": [
+          "VehicleDetector"
+        ],
+        "LaneVehicleCount": 1,
+        "VehicleTypesCount": [
+          [
+            5,
+            1
+          ]
+        ],
+        "LaneCurrentAverageSpeedKmph": 38
+      }
+    },
+    "subjects": [
+      "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "hosts/VIDEO_SERVER/AVDetector.3/EventSupplier"
+    ],
+    "external": false,
+    "localization": {
+      "text": "Camera \"Camera A\". Detector \"Traffic analyzer RR\" triggering Extended info: Event name \"Lane statistics\"; "
+    },
+    "required_permissions": {
+      "required_object_permissions": [
+        {
+          "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+          "camera_access": "CAMERA_ACCESS_ONLY_ARCHIVE"
+        }
+      ],
+      "required_global_permissions": {
+        "unrestricted_access": "UNRESTRICTED_ACCESS_UNSPECIFIED",
+        "maps_access": "MAP_ACCESS_UNSPECIFIED",
+        "feature_access": [],
+        "alert_access": "ALERT_ACCESS_UNSPECIFIED",
+        "bookmark_access": "BOOKMARK_ACCESS_UNSPECIFIED",
+        "user_rights_setup_access": "USER_RIGHTS_SETUP_ACCESS_UNSPECIFIED",
+        "default_camera_access": "CAMERA_ACCESS_UNSPECIFIED",
+        "default_microphone_access": "MICROPHONE_ACCESS_UNSPECIFIED",
+        "default_archive_access": "ARCHIVE_ACCESS_UNSPECIFIED",
+        "default_videowall_access": "VIDEOWALL_ACCESS_UNSPECIFIED",
+        "default_telemetry_priority": "TELEMETRY_PRIORITY_UNSPECIFIED",
+        "default_macros_access": "MACROS_ACCESS_UNSPECIFIED",
+        "default_acfa_access": "ACFA_ACCESS_UNSPECIFIED",
+        "restrictions": {
+          "personal_data": {}
+        },
+        "default_plugin_access": "PLUGIN_ACCESS_UNSPECIFIED"
+      }
+    },
+    "event_name": "axxonsoft.bl.events.DetectorEvent"
+  },
+  {
+    "event_type": "ET_DetectorEvent",
+    "subject": "",
+    "body": {
+      "@type": "type.googleapis.com/axxonsoft.bl.events.DetectorEvent",
+      "guid": "9fb893c1-d3ed-4533-9e2d-50ad1a36979c",
+      "timestamp": "20260308T224305.677000",
+      "state": "HAPPENED",
+      "origin_deprecated": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "detector_deprecated": "hosts/VIDEO_SERVER/AVDetector.3/EventSupplier",
+      "event_type": "StatisticsInfo",
+      "details": [],
+      "multi_phase_id": "",
+      "detectors_group": [
+        "DG_VEHICLE_DETECTOR"
+      ],
+      "origin_ext": {
+        "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "friendly_name": "Camera A",
+        "group": ""
+      },
+      "detector_ext": {
+        "access_point": "hosts/VIDEO_SERVER/AVDetector.3/EventSupplier",
+        "friendly_name": "Traffic analyzer RR",
+        "group": ""
+      },
+      "node_info": {
+        "name": "VIDEO_SERVER",
+        "friendly_name": "VIDEO_SERVER"
+      },
+      "offline_analytics_source": "",
+      "data": {
+        "phase": 0,
+        "LanesIds": [
+          "2d044d8d-fcb0-4206-873d-dabc19d5aee5"
+        ],
+        "origin_id": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "Hypotheses": [
+          null
+        ],
+        "rectangles": null,
+        "module_name": "RRTrafficAnalyzer",
+        "detector_type": "StatisticsInfo",
+        "DetectorsGroup": [
+          "VehicleDetector"
+        ],
+        "LaneVehicleCount": 0,
+        "VehicleTypesCount": [],
+        "LaneCurrentAverageSpeedKmph": 0
+      }
+    },
+    "subjects": [
+      "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "hosts/VIDEO_SERVER/AVDetector.3/EventSupplier"
+    ],
+    "external": false,
+    "localization": {
+      "text": "Camera \"Camera A\". Detector \"Traffic analyzer RR\" triggering Extended info: Event name \"Lane statistics\"; "
+    },
+    "required_permissions": {
+      "required_object_permissions": [
+        {
+          "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+          "camera_access": "CAMERA_ACCESS_ONLY_ARCHIVE"
+        }
+      ],
+      "required_global_permissions": {
+        "unrestricted_access": "UNRESTRICTED_ACCESS_UNSPECIFIED",
+        "maps_access": "MAP_ACCESS_UNSPECIFIED",
+        "feature_access": [],
+        "alert_access": "ALERT_ACCESS_UNSPECIFIED",
+        "bookmark_access": "BOOKMARK_ACCESS_UNSPECIFIED",
+        "user_rights_setup_access": "USER_RIGHTS_SETUP_ACCESS_UNSPECIFIED",
+        "default_camera_access": "CAMERA_ACCESS_UNSPECIFIED",
+        "default_microphone_access": "MICROPHONE_ACCESS_UNSPECIFIED",
+        "default_archive_access": "ARCHIVE_ACCESS_UNSPECIFIED",
+        "default_videowall_access": "VIDEOWALL_ACCESS_UNSPECIFIED",
+        "default_telemetry_priority": "TELEMETRY_PRIORITY_UNSPECIFIED",
+        "default_macros_access": "MACROS_ACCESS_UNSPECIFIED",
+        "default_acfa_access": "ACFA_ACCESS_UNSPECIFIED",
+        "restrictions": {
+          "personal_data": {}
+        },
+        "default_plugin_access": "PLUGIN_ACCESS_UNSPECIFIED"
+      }
+    },
+    "event_name": "axxonsoft.bl.events.DetectorEvent"
+  },
+  {
+    "event_type": "ET_DetectorEvent",
+    "subject": "",
+    "body": {
+      "@type": "type.googleapis.com/axxonsoft.bl.events.DetectorEvent",
+      "guid": "63f18ed5-7991-4852-9514-44293cdccc7d",
+      "timestamp": "20260308T224303.967000",
+      "state": "ENDED",
+      "origin_deprecated": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "detector_deprecated": "hosts/VIDEO_SERVER/AppDataDetector.1/EventSupplier",
+      "event_type": "moveInZone",
+      "details": [
+        {
+          "rectangle": {
+            "x": 0,
+            "y": 0,
+            "w": 1,
+            "h": 1,
+            "index": 134791
+          }
+        }
+      ],
+      "multi_phase_id": "116a9e90-9087-42d4-b7ab-a69899a3234d",
+      "detectors_group": [
+        "DG_SITUATION_DETECTOR"
+      ],
+      "origin_ext": {
+        "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "friendly_name": "Camera A",
+        "group": ""
+      },
+      "detector_ext": {
+        "access_point": "hosts/VIDEO_SERVER/AppDataDetector.1/EventSupplier",
+        "friendly_name": "Vehicle detector",
+        "group": ""
+      },
+      "node_info": {
+        "name": "VIDEO_SERVER",
+        "friendly_name": "VIDEO_SERVER"
+      },
+      "offline_analytics_source": "",
+      "data": {
+        "phase": 2,
+        "EventUuid": "116a9e90-9087-42d4-b7ab-a69899a3234d",
+        "origin_id": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "Hypotheses": [
+          null
+        ],
+        "rectangles": [
+          [
+            0,
+            0,
+            1,
+            1,
+            134791
+          ]
+        ],
+        "module_name": "SituationDetector",
+        "detector_type": "moveInZone",
+        "DetectorsGroup": [
+          "SituationDetector"
+        ],
+        "ObjectClassEnum": 10
+      }
+    },
+    "subjects": [
+      "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "hosts/VIDEO_SERVER/AppDataDetector.1/EventSupplier"
+    ],
+    "external": false,
+    "localization": {
+      "text": "Camera \"Camera A\". End of detector \"Vehicle detector\" triggering Extended info: Event name \"Object moving in area detected\"; "
+    },
+    "required_permissions": {
+      "required_object_permissions": [
+        {
+          "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+          "camera_access": "CAMERA_ACCESS_ONLY_ARCHIVE"
+        }
+      ],
+      "required_global_permissions": {
+        "unrestricted_access": "UNRESTRICTED_ACCESS_UNSPECIFIED",
+        "maps_access": "MAP_ACCESS_UNSPECIFIED",
+        "feature_access": [],
+        "alert_access": "ALERT_ACCESS_UNSPECIFIED",
+        "bookmark_access": "BOOKMARK_ACCESS_UNSPECIFIED",
+        "user_rights_setup_access": "USER_RIGHTS_SETUP_ACCESS_UNSPECIFIED",
+        "default_camera_access": "CAMERA_ACCESS_UNSPECIFIED",
+        "default_microphone_access": "MICROPHONE_ACCESS_UNSPECIFIED",
+        "default_archive_access": "ARCHIVE_ACCESS_UNSPECIFIED",
+        "default_videowall_access": "VIDEOWALL_ACCESS_UNSPECIFIED",
+        "default_telemetry_priority": "TELEMETRY_PRIORITY_UNSPECIFIED",
+        "default_macros_access": "MACROS_ACCESS_UNSPECIFIED",
+        "default_acfa_access": "ACFA_ACCESS_UNSPECIFIED",
+        "restrictions": {
+          "personal_data": {}
+        },
+        "default_plugin_access": "PLUGIN_ACCESS_UNSPECIFIED"
+      }
+    },
+    "event_name": "axxonsoft.bl.events.DetectorEvent"
+  },
+  {
+    "event_type": "ET_DetectorEvent",
+    "subject": "",
+    "body": {
+      "@type": "type.googleapis.com/axxonsoft.bl.events.DetectorEvent",
+      "guid": "d38cb2ad-3fd6-2142-88d1-a089ac3c1f37",
+      "timestamp": "20260308T224303.789245",
+      "state": "HAPPENED",
+      "origin_deprecated": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "detector_deprecated": "hosts/VIDEO_SERVER/RealtimeRecognizer.0/Recognizer",
+      "event_type": "listed_lpr_detected",
+      "details": [
+        {
+          "listed_item_detected_result": {
+            "list_id": "00000000-0000-0000-0000-000000000000",
+            "listed_item_id": "00000000-0000-0000-0000-000000000000",
+            "matched_event_id": "04d306c4-4877-4b9e-a72a-886621b7d914",
+            "matched_event_time": "20260308T224303.287000",
+            "list_name": "",
+            "name": "",
+            "lists_info": [],
+            "age": 0,
+            "gender": "UNKNOWN",
+            "listed_plate_info": {
+              "plate": "AV69365",
+              "extra_data": {
+                "external_system_type_name": "ngp",
+                "additional_info": {
+                  "description": ""
+                }
+              }
+            }
+          }
+        },
+        {
+          "rectangle": {
+            "x": 0.10260416666666666,
+            "y": 0.9601851851851851,
+            "w": 0.06197916666666667,
+            "h": 0.03981481481481486,
+            "index": 0
+          }
+        },
+        {
+          "auto_recognition_result_ex": {
+            "time_begin": "2026-03-08T22:43:03.207Z",
+            "time_end": "2026-03-08T22:43:03.287Z",
+            "hypotheses": [
+              {
+                "ocr_quality": 97,
+                "plate_full": "AV69365",
+                "plate_rectangle": {
+                  "x": 0.10260416666666666,
+                  "y": 0.9601851851851851,
+                  "w": 0.06197916666666667,
+                  "h": 0.03981481481481486,
+                  "index": 0
+                },
+                "time_best": "20260308T224303.287000",
+                "country": "Denmark",
+                "plate_state": ""
+              }
+            ],
+            "direction": {
+              "value": "Incoming"
+            },
+            "vehicle_class": {
+              "value": "Car"
+            },
+            "vehicle_color": {
+              "value": "Purple"
+            },
+            "vehicle_brand": {
+              "value": "Volkswagen"
+            },
+            "vehicle_model": {
+              "value": "Golf"
+            },
+            "headlights_status": {
+              "value": "Enabled"
+            },
+            "plate_type": {
+              "value": "EUnknownPlateType"
+            }
+          }
+        }
+      ],
+      "multi_phase_id": "",
+      "detectors_group": [
+        "DG_LPR_DETECTOR"
+      ],
+      "origin_ext": {
+        "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "friendly_name": "Camera A",
+        "group": ""
+      },
+      "detector_ext": {
+        "access_point": "hosts/VIDEO_SERVER/RealtimeRecognizer.0/Recognizer",
+        "friendly_name": "0.Real-time recognizer",
+        "group": ""
+      },
+      "node_info": {
+        "name": "VIDEO_SERVER",
+        "friendly_name": "VIDEO_SERVER"
+      },
+      "offline_analytics_source": "",
+      "data": {
+        "name": "",
+        "phase": 0,
+        "plate": "AV69365",
+        "list_id": "00000000-0000-0000-0000-000000000000",
+        "list_name": "",
+        "origin_id": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "Hypotheses": [
+          null
+        ],
+        "lists_Info": [],
+        "rectangles": null,
+        "description": "",
+        "extra_fields": null,
+        "detector_type": "listed_lpr_detected",
+        "listed_lpr_id": "00000000-0000-0000-0000-000000000000",
+        "DetectorsGroup": [
+          "LprDetector"
+        ],
+        "PlateRectangle": [
+          0.10260416666666666,
+          0.9601851851851851,
+          0.16458333333333333,
+          1
+        ],
+        "matched_lpr_id": "04d306c4-4877-4b9e-a72a-886621b7d914",
+        "plate_appeared_time": "20260308T224303.287000",
+        "external_system_type_name": "ngp",
+        "auto_recognition_result_ex": "{\"@type\":\"type.googleapis.com/axxonsoft.bl.events.DetectorEvent.AutoRecognitionResultEx\",\"timeBegin\":\"2026-03-08T22:43:03.207Z\",\"timeEnd\":\"2026-03-08T22:43:03.287Z\",\"hypotheses\":[{\"ocrQuality\":97,\"plateFull\":\"AV69365\",\"plateRectangle\":{\"x\":0.10260416666666666,\"y\":0.96018518518518514,\"w\":0.061979166666666669,\"h\":0.039814814814814858},\"timeBest\":\"20260308T224303.287000\",\"country\":\"Denmark\"}],\"direction\":{\"value\":\"Incoming\"},\"vehicleClass\":{\"value\":\"Car\"},\"vehicleColor\":{\"value\":\"Purple\"},\"vehicleBrand\":{\"value\":\"Volkswagen\"},\"vehicleModel\":{\"value\":\"Golf\"},\"headlightsStatus\":{\"value\":\"Enabled\"},\"plateType\":{\"value\":\"EUnknownPlateType\"}}"
+      }
+    },
+    "subjects": [
+      "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "hosts/VIDEO_SERVER/RealtimeRecognizer.0/Recognizer"
+    ],
+    "external": false,
+    "localization": {
+      "text": "Camera \"Camera A\". LP recognized from list Not listed. LP AV69365 Extended info: Event name \"Check in LP lists\"; "
+    },
+    "required_permissions": {
+      "required_object_permissions": [
+        {
+          "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+          "camera_access": "CAMERA_ACCESS_ONLY_ARCHIVE"
+        }
+      ],
+      "required_global_permissions": {
+        "unrestricted_access": "UNRESTRICTED_ACCESS_UNSPECIFIED",
+        "maps_access": "MAP_ACCESS_UNSPECIFIED",
+        "feature_access": [],
+        "alert_access": "ALERT_ACCESS_UNSPECIFIED",
+        "bookmark_access": "BOOKMARK_ACCESS_UNSPECIFIED",
+        "user_rights_setup_access": "USER_RIGHTS_SETUP_ACCESS_UNSPECIFIED",
+        "default_camera_access": "CAMERA_ACCESS_UNSPECIFIED",
+        "default_microphone_access": "MICROPHONE_ACCESS_UNSPECIFIED",
+        "default_archive_access": "ARCHIVE_ACCESS_UNSPECIFIED",
+        "default_videowall_access": "VIDEOWALL_ACCESS_UNSPECIFIED",
+        "default_telemetry_priority": "TELEMETRY_PRIORITY_UNSPECIFIED",
+        "default_macros_access": "MACROS_ACCESS_UNSPECIFIED",
+        "default_acfa_access": "ACFA_ACCESS_UNSPECIFIED",
+        "restrictions": {
+          "personal_data": {
+            "prohibit_license_plate_recognition": false,
+            "prohibit_vehicle_recognition": false
+          }
+        },
+        "default_plugin_access": "PLUGIN_ACCESS_UNSPECIFIED"
+      }
+    },
+    "event_name": "axxonsoft.bl.events.DetectorEvent"
+  },
+  {
+    "event_type": "ET_DetectorEvent",
+    "subject": "",
+    "body": {
+      "@type": "type.googleapis.com/axxonsoft.bl.events.DetectorEvent",
+      "guid": "04d306c4-4877-4b9e-a72a-886621b7d914",
+      "timestamp": "20260308T224303.287000",
+      "state": "HAPPENED",
+      "origin_deprecated": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "detector_deprecated": "hosts/VIDEO_SERVER/AVDetector.2/EventSupplier",
+      "event_type": "plateRecognized",
+      "details": [
+        {
+          "object_id": 61072
+        },
+        {
+          "auto_recognition_result_ex": {
+            "time_begin": "2026-03-08T22:43:03.207Z",
+            "time_end": "2026-03-08T22:43:03.287Z",
+            "hypotheses": [
+              {
+                "ocr_quality": 97,
+                "plate_full": "AV69365",
+                "plate_rectangle": {
+                  "x": 0.10260416666666666,
+                  "y": 0.9601851851851851,
+                  "w": 0.06197916666666667,
+                  "h": 0.03981481481481486,
+                  "index": 0
+                },
+                "time_best": "20260308T224303.287000",
+                "country": "Denmark",
+                "plate_state": ""
+              }
+            ],
+            "direction": {
+              "value": "Incoming"
+            },
+            "vehicle_class": {
+              "value": "Car"
+            },
+            "vehicle_color": {
+              "value": "Purple"
+            },
+            "vehicle_brand": {
+              "value": "Volkswagen"
+            },
+            "vehicle_model": {
+              "value": "Golf"
+            },
+            "headlights_status": {
+              "value": "Enabled"
+            },
+            "plate_type": {
+              "value": "EUnknownPlateType"
+            }
+          }
+        },
+        {
+          "auto_recognition_result": {
+            "direction": "Incoming",
+            "time_begin": "20260308T224303.207000",
+            "time_end": "20260308T224303.287000",
+            "hypotheses": [
+              {
+                "ocr_quality": 97,
+                "plate_full": "AV69365",
+                "plate_rectangle": {
+                  "x": 0.10260416666666666,
+                  "y": 0.9601851851851851,
+                  "w": 0.06197916666666667,
+                  "h": 0.03981481481481486,
+                  "index": 0
+                },
+                "time_best": "20260308T224303.287000",
+                "country": "Denmark",
+                "plate_state": ""
+              }
+            ],
+            "vehicle_class": "Car",
+            "vehicle_color": "Purple",
+            "vehicle_brand": "Volkswagen",
+            "vehicle_model": "Golf",
+            "headlights_status": "Enabled",
+            "vehicle_speed": 0,
+            "vehicle_speed_kmph": 0,
+            "plate_type": "EUnknownPlateType",
+            "vehicle_subclass": "VehicleSubclassUnknown"
+          }
+        }
+      ],
+      "multi_phase_id": "",
+      "detectors_group": [
+        "DG_LPR_DETECTOR"
+      ],
+      "origin_ext": {
+        "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "friendly_name": "Camera A",
+        "group": ""
+      },
+      "detector_ext": {
+        "access_point": "hosts/VIDEO_SERVER/AVDetector.2/EventSupplier",
+        "friendly_name": "License plate recognition RR",
+        "group": ""
+      },
+      "node_info": {
+        "name": "VIDEO_SERVER",
+        "friendly_name": "VIDEO_SERVER"
+      },
+      "offline_analytics_source": "",
+      "data": {
+        "phase": 0,
+        "TimeEnd": "20260308T224303.287000",
+        "ObjectId": 61072,
+        "Direction": 1,
+        "PlateType": 59,
+        "TimeBegin": "20260308T224303.207000",
+        "origin_id": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "Hypotheses": [
+          {
+            "TimeBest": "20260308T224303.287000",
+            "PlateFull": "AV69365",
+            "OCRQuality": 97,
+            "PlateState": "",
+            "PlateCountry": "Denmark",
+            "PlateColorStr": "",
+            "PlateRectangle": [
+              0.10260416666666666,
+              0.9601851851851851,
+              0.16458333333333333,
+              1
+            ]
+          }
+        ],
+        "rectangles": null,
+        "module_name": "LprDetector_Roadar",
+        "VehicleBrand": "Volkswagen",
+        "VehicleClass": 1,
+        "VehicleColor": "Purple",
+        "VehicleModel": "Golf",
+        "detector_type": "plateRecognized",
+        "DetectorsGroup": [
+          "LprDetector"
+        ],
+        "HeadlightsStatus": 1
+      }
+    },
+    "subjects": [
+      "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "hosts/VIDEO_SERVER/AVDetector.2/EventSupplier"
+    ],
+    "external": false,
+    "localization": {
+      "text": "Camera \"Camera A\". Detector \"License plate recognition RR\" triggering, LP \"AV69365\", country \"Denmark\", class \"Car\", color \"Purple\", brand \"Volkswagen\", model \"Golf\", headlights \"Enabled\" Extended info: Event name \"Recognized LP\"; "
+    },
+    "required_permissions": {
+      "required_object_permissions": [
+        {
+          "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+          "camera_access": "CAMERA_ACCESS_ONLY_ARCHIVE"
+        }
+      ],
+      "required_global_permissions": {
+        "unrestricted_access": "UNRESTRICTED_ACCESS_UNSPECIFIED",
+        "maps_access": "MAP_ACCESS_UNSPECIFIED",
+        "feature_access": [],
+        "alert_access": "ALERT_ACCESS_UNSPECIFIED",
+        "bookmark_access": "BOOKMARK_ACCESS_UNSPECIFIED",
+        "user_rights_setup_access": "USER_RIGHTS_SETUP_ACCESS_UNSPECIFIED",
+        "default_camera_access": "CAMERA_ACCESS_UNSPECIFIED",
+        "default_microphone_access": "MICROPHONE_ACCESS_UNSPECIFIED",
+        "default_archive_access": "ARCHIVE_ACCESS_UNSPECIFIED",
+        "default_videowall_access": "VIDEOWALL_ACCESS_UNSPECIFIED",
+        "default_telemetry_priority": "TELEMETRY_PRIORITY_UNSPECIFIED",
+        "default_macros_access": "MACROS_ACCESS_UNSPECIFIED",
+        "default_acfa_access": "ACFA_ACCESS_UNSPECIFIED",
+        "restrictions": {
+          "personal_data": {
+            "prohibit_license_plate_recognition": false,
+            "prohibit_vehicle_recognition": false
+          }
+        },
+        "default_plugin_access": "PLUGIN_ACCESS_UNSPECIFIED"
+      }
+    },
+    "event_name": "axxonsoft.bl.events.DetectorEvent"
+  },
+  {
+    "event_type": "ET_DetectorEvent",
+    "subject": "",
+    "body": {
+      "@type": "type.googleapis.com/axxonsoft.bl.events.DetectorEvent",
+      "guid": "f1dee937-6b78-43f4-b50e-95789fa78993",
+      "timestamp": "20260308T224303.047000",
+      "state": "HAPPENED",
+      "origin_deprecated": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "detector_deprecated": "hosts/VIDEO_SERVER/AVDetector.3/EventSupplier",
+      "event_type": "VehicleTransitDetected",
+      "details": [
+        {
+          "rectangle": {
+            "x": 0.204541810353597,
+            "y": 0.6396308051215278,
+            "w": 0.219374148050944,
+            "h": 0.27502085367838536,
+            "index": 0
+          }
+        },
+        {
+          "transit": {
+            "lanes_ids": [
+              "67f6c807-22ed-48fd-bedb-779c011d72e6"
+            ]
+          }
+        },
+        {
+          "auto_recognition_result_ex": {
+            "time_begin": "1970-01-01T00:00:00Z",
+            "time_end": "1970-01-01T00:00:00Z",
+            "hypotheses": [],
+            "vehicle_class": {
+              "value": "LightCommercialVehicle"
+            },
+            "vehicle_speed": {
+              "value": 38
+            },
+            "vehicle_subclass": {
+              "value": "CarSubclass"
+            }
+          }
+        },
+        {
+          "auto_recognition_result": {
+            "direction": "Unknown",
+            "time_begin": "",
+            "time_end": "",
+            "hypotheses": [],
+            "vehicle_class": "LightCommercialVehicle",
+            "vehicle_color": "",
+            "vehicle_brand": "",
+            "vehicle_model": "",
+            "headlights_status": "Undefined",
+            "vehicle_speed": 38,
+            "vehicle_speed_kmph": 38,
+            "plate_type": "EUnknownPlateType",
+            "vehicle_subclass": "CarSubclass"
+          }
+        }
+      ],
+      "multi_phase_id": "",
+      "detectors_group": [
+        "DG_VEHICLE_DETECTOR"
+      ],
+      "origin_ext": {
+        "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "friendly_name": "Camera A",
+        "group": ""
+      },
+      "detector_ext": {
+        "access_point": "hosts/VIDEO_SERVER/AVDetector.3/EventSupplier",
+        "friendly_name": "Traffic analyzer RR",
+        "group": ""
+      },
+      "node_info": {
+        "name": "VIDEO_SERVER",
+        "friendly_name": "VIDEO_SERVER"
+      },
+      "offline_analytics_source": "",
+      "data": {
+        "phase": 0,
+        "LanesIds": [
+          "67f6c807-22ed-48fd-bedb-779c011d72e6"
+        ],
+        "SpeedKmph": 38,
+        "origin_id": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "Hypotheses": [
+          null
+        ],
+        "rectangles": [
+          [
+            0.204541810353597,
+            0.6396308051215278,
+            0.423915958404541,
+            0.9146516587999132,
+            0
+          ]
+        ],
+        "module_name": "RRTrafficAnalyzer",
+        "VehicleClass": 5,
+        "detector_type": "VehicleTransitDetected",
+        "DetectorsGroup": [
+          "VehicleDetector"
+        ],
+        "VehicleSubclass": 1
+      }
+    },
+    "subjects": [
+      "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "hosts/VIDEO_SERVER/AVDetector.3/EventSupplier"
+    ],
+    "external": false,
+    "localization": {
+      "text": "Camera \"Camera A\". Detector \"Traffic analyzer RR\" triggering, class \"Light Commercial Vehicle\", subclass \"Car Subclass\", speed \"38.000000 km/h\", Lanes Ids Extended info: Event name \"Vehicle transit detected\"; "
+    },
+    "required_permissions": {
+      "required_object_permissions": [
+        {
+          "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+          "camera_access": "CAMERA_ACCESS_ONLY_ARCHIVE"
+        }
+      ],
+      "required_global_permissions": {
+        "unrestricted_access": "UNRESTRICTED_ACCESS_UNSPECIFIED",
+        "maps_access": "MAP_ACCESS_UNSPECIFIED",
+        "feature_access": [],
+        "alert_access": "ALERT_ACCESS_UNSPECIFIED",
+        "bookmark_access": "BOOKMARK_ACCESS_UNSPECIFIED",
+        "user_rights_setup_access": "USER_RIGHTS_SETUP_ACCESS_UNSPECIFIED",
+        "default_camera_access": "CAMERA_ACCESS_UNSPECIFIED",
+        "default_microphone_access": "MICROPHONE_ACCESS_UNSPECIFIED",
+        "default_archive_access": "ARCHIVE_ACCESS_UNSPECIFIED",
+        "default_videowall_access": "VIDEOWALL_ACCESS_UNSPECIFIED",
+        "default_telemetry_priority": "TELEMETRY_PRIORITY_UNSPECIFIED",
+        "default_macros_access": "MACROS_ACCESS_UNSPECIFIED",
+        "default_acfa_access": "ACFA_ACCESS_UNSPECIFIED",
+        "restrictions": {
+          "personal_data": {
+            "prohibit_vehicle_recognition": false
+          }
+        },
+        "default_plugin_access": "PLUGIN_ACCESS_UNSPECIFIED"
+      }
+    },
+    "event_name": "axxonsoft.bl.events.DetectorEvent"
+  },
+  {
+    "event_type": "ET_DetectorEvent",
+    "subject": "",
+    "body": {
+      "@type": "type.googleapis.com/axxonsoft.bl.events.DetectorEvent",
+      "guid": "292e8255-7615-4bee-9834-e8bd4609391f",
+      "timestamp": "20260308T224301.047000",
+      "state": "BEGAN",
+      "origin_deprecated": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "detector_deprecated": "hosts/VIDEO_SERVER/AppDataDetector.1/EventSupplier",
+      "event_type": "moveInZone",
+      "details": [
+        {
+          "rectangle": {
+            "x": 0.783203125,
+            "y": 0.322021484375,
+            "w": 0.0283203125,
+            "h": 0.040771484375,
+            "index": 134794
+          }
+        }
+      ],
+      "multi_phase_id": "5879d8b2-ba7f-468e-b823-88b2851466ce",
+      "detectors_group": [
+        "DG_SITUATION_DETECTOR"
+      ],
+      "origin_ext": {
+        "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "friendly_name": "Camera A",
+        "group": ""
+      },
+      "detector_ext": {
+        "access_point": "hosts/VIDEO_SERVER/AppDataDetector.1/EventSupplier",
+        "friendly_name": "Vehicle detector",
+        "group": ""
+      },
+      "node_info": {
+        "name": "VIDEO_SERVER",
+        "friendly_name": "VIDEO_SERVER"
+      },
+      "offline_analytics_source": "",
+      "data": {
+        "phase": 1,
+        "EventUuid": "5879d8b2-ba7f-468e-b823-88b2851466ce",
+        "origin_id": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "Hypotheses": [
+          null
+        ],
+        "rectangles": [
+          [
+            0.783203125,
+            0.322021484375,
+            0.8115234375,
+            0.36279296875,
+            134794
+          ]
+        ],
+        "module_name": "SituationDetector",
+        "detector_type": "moveInZone",
+        "DetectorsGroup": [
+          "SituationDetector"
+        ],
+        "ObjectClassEnum": 10
+      }
+    },
+    "subjects": [
+      "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "hosts/VIDEO_SERVER/AppDataDetector.1/EventSupplier"
+    ],
+    "external": false,
+    "localization": {
+      "text": "Camera \"Camera A\". Beginning of detector \"Vehicle detector\" triggering Extended info: Event name \"Object moving in area detected\"; "
+    },
+    "required_permissions": {
+      "required_object_permissions": [
+        {
+          "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+          "camera_access": "CAMERA_ACCESS_ONLY_ARCHIVE"
+        }
+      ],
+      "required_global_permissions": {
+        "unrestricted_access": "UNRESTRICTED_ACCESS_UNSPECIFIED",
+        "maps_access": "MAP_ACCESS_UNSPECIFIED",
+        "feature_access": [],
+        "alert_access": "ALERT_ACCESS_UNSPECIFIED",
+        "bookmark_access": "BOOKMARK_ACCESS_UNSPECIFIED",
+        "user_rights_setup_access": "USER_RIGHTS_SETUP_ACCESS_UNSPECIFIED",
+        "default_camera_access": "CAMERA_ACCESS_UNSPECIFIED",
+        "default_microphone_access": "MICROPHONE_ACCESS_UNSPECIFIED",
+        "default_archive_access": "ARCHIVE_ACCESS_UNSPECIFIED",
+        "default_videowall_access": "VIDEOWALL_ACCESS_UNSPECIFIED",
+        "default_telemetry_priority": "TELEMETRY_PRIORITY_UNSPECIFIED",
+        "default_macros_access": "MACROS_ACCESS_UNSPECIFIED",
+        "default_acfa_access": "ACFA_ACCESS_UNSPECIFIED",
+        "restrictions": {
+          "personal_data": {}
+        },
+        "default_plugin_access": "PLUGIN_ACCESS_UNSPECIFIED"
+      }
+    },
+    "event_name": "axxonsoft.bl.events.DetectorEvent"
+  },
+  {
+    "event_type": "ET_DetectorEvent",
+    "subject": "",
+    "body": {
+      "@type": "type.googleapis.com/axxonsoft.bl.events.DetectorEvent",
+      "guid": "b00b8ff6-b675-4400-9aa6-0836ac11537a",
+      "timestamp": "20260308T224256.047000",
+      "state": "BEGAN",
+      "origin_deprecated": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "detector_deprecated": "hosts/VIDEO_SERVER/AppDataDetector.1/EventSupplier",
+      "event_type": "moveInZone",
+      "details": [
+        {
+          "rectangle": {
+            "x": 0.77294921875,
+            "y": 0.326904296875,
+            "w": 0.02978515625,
+            "h": 0.040283203125,
+            "index": 134791
+          }
+        }
+      ],
+      "multi_phase_id": "116a9e90-9087-42d4-b7ab-a69899a3234d",
+      "detectors_group": [
+        "DG_SITUATION_DETECTOR"
+      ],
+      "origin_ext": {
+        "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "friendly_name": "Camera A",
+        "group": ""
+      },
+      "detector_ext": {
+        "access_point": "hosts/VIDEO_SERVER/AppDataDetector.1/EventSupplier",
+        "friendly_name": "Vehicle detector",
+        "group": ""
+      },
+      "node_info": {
+        "name": "VIDEO_SERVER",
+        "friendly_name": "VIDEO_SERVER"
+      },
+      "offline_analytics_source": "",
+      "data": {
+        "phase": 1,
+        "EventUuid": "116a9e90-9087-42d4-b7ab-a69899a3234d",
+        "origin_id": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "Hypotheses": [
+          null
+        ],
+        "rectangles": [
+          [
+            0.77294921875,
+            0.326904296875,
+            0.802734375,
+            0.3671875,
+            134791
+          ]
+        ],
+        "module_name": "SituationDetector",
+        "detector_type": "moveInZone",
+        "DetectorsGroup": [
+          "SituationDetector"
+        ],
+        "ObjectClassEnum": 10
+      }
+    },
+    "subjects": [
+      "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "hosts/VIDEO_SERVER/AppDataDetector.1/EventSupplier"
+    ],
+    "external": false,
+    "localization": {
+      "text": "Camera \"Camera A\". Beginning of detector \"Vehicle detector\" triggering Extended info: Event name \"Object moving in area detected\"; "
+    },
+    "required_permissions": {
+      "required_object_permissions": [
+        {
+          "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+          "camera_access": "CAMERA_ACCESS_ONLY_ARCHIVE"
+        }
+      ],
+      "required_global_permissions": {
+        "unrestricted_access": "UNRESTRICTED_ACCESS_UNSPECIFIED",
+        "maps_access": "MAP_ACCESS_UNSPECIFIED",
+        "feature_access": [],
+        "alert_access": "ALERT_ACCESS_UNSPECIFIED",
+        "bookmark_access": "BOOKMARK_ACCESS_UNSPECIFIED",
+        "user_rights_setup_access": "USER_RIGHTS_SETUP_ACCESS_UNSPECIFIED",
+        "default_camera_access": "CAMERA_ACCESS_UNSPECIFIED",
+        "default_microphone_access": "MICROPHONE_ACCESS_UNSPECIFIED",
+        "default_archive_access": "ARCHIVE_ACCESS_UNSPECIFIED",
+        "default_videowall_access": "VIDEOWALL_ACCESS_UNSPECIFIED",
+        "default_telemetry_priority": "TELEMETRY_PRIORITY_UNSPECIFIED",
+        "default_macros_access": "MACROS_ACCESS_UNSPECIFIED",
+        "default_acfa_access": "ACFA_ACCESS_UNSPECIFIED",
+        "restrictions": {
+          "personal_data": {}
+        },
+        "default_plugin_access": "PLUGIN_ACCESS_UNSPECIFIED"
+      }
+    },
+    "event_name": "axxonsoft.bl.events.DetectorEvent"
+  },
+  {
+    "event_type": "ET_DetectorEvent",
+    "subject": "",
+    "body": {
+      "@type": "type.googleapis.com/axxonsoft.bl.events.DetectorEvent",
+      "guid": "d9d17f90-03c8-47fd-9b8c-fda3ec01c714",
+      "timestamp": "20260308T224255.637000",
+      "state": "HAPPENED",
+      "origin_deprecated": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "detector_deprecated": "hosts/VIDEO_SERVER/AVDetector.3/EventSupplier",
+      "event_type": "StatisticsInfo",
+      "details": [],
+      "multi_phase_id": "",
+      "detectors_group": [
+        "DG_VEHICLE_DETECTOR"
+      ],
+      "origin_ext": {
+        "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "friendly_name": "Camera A",
+        "group": ""
+      },
+      "detector_ext": {
+        "access_point": "hosts/VIDEO_SERVER/AVDetector.3/EventSupplier",
+        "friendly_name": "Traffic analyzer RR",
+        "group": ""
+      },
+      "node_info": {
+        "name": "VIDEO_SERVER",
+        "friendly_name": "VIDEO_SERVER"
+      },
+      "offline_analytics_source": "",
+      "data": {
+        "phase": 0,
+        "LanesIds": [
+          "2d044d8d-fcb0-4206-873d-dabc19d5aee5"
+        ],
+        "origin_id": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "Hypotheses": [
+          null
+        ],
+        "rectangles": null,
+        "module_name": "RRTrafficAnalyzer",
+        "detector_type": "StatisticsInfo",
+        "DetectorsGroup": [
+          "VehicleDetector"
+        ],
+        "LaneVehicleCount": 0,
+        "VehicleTypesCount": [],
+        "LaneCurrentAverageSpeedKmph": 0
+      }
+    },
+    "subjects": [
+      "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "hosts/VIDEO_SERVER/AVDetector.3/EventSupplier"
+    ],
+    "external": false,
+    "localization": {
+      "text": "Camera \"Camera A\". Detector \"Traffic analyzer RR\" triggering Extended info: Event name \"Lane statistics\"; "
+    },
+    "required_permissions": {
+      "required_object_permissions": [
+        {
+          "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+          "camera_access": "CAMERA_ACCESS_ONLY_ARCHIVE"
+        }
+      ],
+      "required_global_permissions": {
+        "unrestricted_access": "UNRESTRICTED_ACCESS_UNSPECIFIED",
+        "maps_access": "MAP_ACCESS_UNSPECIFIED",
+        "feature_access": [],
+        "alert_access": "ALERT_ACCESS_UNSPECIFIED",
+        "bookmark_access": "BOOKMARK_ACCESS_UNSPECIFIED",
+        "user_rights_setup_access": "USER_RIGHTS_SETUP_ACCESS_UNSPECIFIED",
+        "default_camera_access": "CAMERA_ACCESS_UNSPECIFIED",
+        "default_microphone_access": "MICROPHONE_ACCESS_UNSPECIFIED",
+        "default_archive_access": "ARCHIVE_ACCESS_UNSPECIFIED",
+        "default_videowall_access": "VIDEOWALL_ACCESS_UNSPECIFIED",
+        "default_telemetry_priority": "TELEMETRY_PRIORITY_UNSPECIFIED",
+        "default_macros_access": "MACROS_ACCESS_UNSPECIFIED",
+        "default_acfa_access": "ACFA_ACCESS_UNSPECIFIED",
+        "restrictions": {
+          "personal_data": {}
+        },
+        "default_plugin_access": "PLUGIN_ACCESS_UNSPECIFIED"
+      }
+    },
+    "event_name": "axxonsoft.bl.events.DetectorEvent"
+  },
+  {
+    "event_type": "ET_DetectorEvent",
+    "subject": "",
+    "body": {
+      "@type": "type.googleapis.com/axxonsoft.bl.events.DetectorEvent",
+      "guid": "594ff355-77e0-4de1-ae8b-1c4dfe188242",
+      "timestamp": "20260308T224255.637000",
+      "state": "HAPPENED",
+      "origin_deprecated": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "detector_deprecated": "hosts/VIDEO_SERVER/AVDetector.3/EventSupplier",
+      "event_type": "StatisticsInfo",
+      "details": [],
+      "multi_phase_id": "",
+      "detectors_group": [
+        "DG_VEHICLE_DETECTOR"
+      ],
+      "origin_ext": {
+        "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "friendly_name": "Camera A",
+        "group": ""
+      },
+      "detector_ext": {
+        "access_point": "hosts/VIDEO_SERVER/AVDetector.3/EventSupplier",
+        "friendly_name": "Traffic analyzer RR",
+        "group": ""
+      },
+      "node_info": {
+        "name": "VIDEO_SERVER",
+        "friendly_name": "VIDEO_SERVER"
+      },
+      "offline_analytics_source": "",
+      "data": {
+        "phase": 0,
+        "LanesIds": [
+          "67f6c807-22ed-48fd-bedb-779c011d72e6"
+        ],
+        "origin_id": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "Hypotheses": [
+          null
+        ],
+        "rectangles": null,
+        "module_name": "RRTrafficAnalyzer",
+        "detector_type": "StatisticsInfo",
+        "DetectorsGroup": [
+          "VehicleDetector"
+        ],
+        "LaneVehicleCount": 0,
+        "VehicleTypesCount": [],
+        "LaneCurrentAverageSpeedKmph": 0
+      }
+    },
+    "subjects": [
+      "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "hosts/VIDEO_SERVER/AVDetector.3/EventSupplier"
+    ],
+    "external": false,
+    "localization": {
+      "text": "Camera \"Camera A\". Detector \"Traffic analyzer RR\" triggering Extended info: Event name \"Lane statistics\"; "
+    },
+    "required_permissions": {
+      "required_object_permissions": [
+        {
+          "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+          "camera_access": "CAMERA_ACCESS_ONLY_ARCHIVE"
+        }
+      ],
+      "required_global_permissions": {
+        "unrestricted_access": "UNRESTRICTED_ACCESS_UNSPECIFIED",
+        "maps_access": "MAP_ACCESS_UNSPECIFIED",
+        "feature_access": [],
+        "alert_access": "ALERT_ACCESS_UNSPECIFIED",
+        "bookmark_access": "BOOKMARK_ACCESS_UNSPECIFIED",
+        "user_rights_setup_access": "USER_RIGHTS_SETUP_ACCESS_UNSPECIFIED",
+        "default_camera_access": "CAMERA_ACCESS_UNSPECIFIED",
+        "default_microphone_access": "MICROPHONE_ACCESS_UNSPECIFIED",
+        "default_archive_access": "ARCHIVE_ACCESS_UNSPECIFIED",
+        "default_videowall_access": "VIDEOWALL_ACCESS_UNSPECIFIED",
+        "default_telemetry_priority": "TELEMETRY_PRIORITY_UNSPECIFIED",
+        "default_macros_access": "MACROS_ACCESS_UNSPECIFIED",
+        "default_acfa_access": "ACFA_ACCESS_UNSPECIFIED",
+        "restrictions": {
+          "personal_data": {}
+        },
+        "default_plugin_access": "PLUGIN_ACCESS_UNSPECIFIED"
+      }
+    },
+    "event_name": "axxonsoft.bl.events.DetectorEvent"
+  },
+  {
+    "event_type": "ET_DetectorEvent",
+    "subject": "",
+    "body": {
+      "@type": "type.googleapis.com/axxonsoft.bl.events.DetectorEvent",
+      "guid": "663a9fa3-859a-4b97-b215-782c451309fd",
+      "timestamp": "20260308T224255.407000",
+      "state": "ENDED",
+      "origin_deprecated": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "detector_deprecated": "hosts/VIDEO_SERVER/AppDataDetector.1/EventSupplier",
+      "event_type": "moveInZone",
+      "details": [
+        {
+          "rectangle": {
+            "x": 0,
+            "y": 0,
+            "w": 1,
+            "h": 1,
+            "index": 134787
+          }
+        }
+      ],
+      "multi_phase_id": "6abcb721-e135-4d60-bf12-fbb56fbac1d1",
+      "detectors_group": [
+        "DG_SITUATION_DETECTOR"
+      ],
+      "origin_ext": {
+        "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "friendly_name": "Camera A",
+        "group": ""
+      },
+      "detector_ext": {
+        "access_point": "hosts/VIDEO_SERVER/AppDataDetector.1/EventSupplier",
+        "friendly_name": "Vehicle detector",
+        "group": ""
+      },
+      "node_info": {
+        "name": "VIDEO_SERVER",
+        "friendly_name": "VIDEO_SERVER"
+      },
+      "offline_analytics_source": "",
+      "data": {
+        "phase": 2,
+        "EventUuid": "6abcb721-e135-4d60-bf12-fbb56fbac1d1",
+        "origin_id": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "Hypotheses": [
+          null
+        ],
+        "rectangles": [
+          [
+            0,
+            0,
+            1,
+            1,
+            134787
+          ]
+        ],
+        "module_name": "SituationDetector",
+        "detector_type": "moveInZone",
+        "DetectorsGroup": [
+          "SituationDetector"
+        ],
+        "ObjectClassEnum": 10
+      }
+    },
+    "subjects": [
+      "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "hosts/VIDEO_SERVER/AppDataDetector.1/EventSupplier"
+    ],
+    "external": false,
+    "localization": {
+      "text": "Camera \"Camera A\". End of detector \"Vehicle detector\" triggering Extended info: Event name \"Object moving in area detected\"; "
+    },
+    "required_permissions": {
+      "required_object_permissions": [
+        {
+          "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+          "camera_access": "CAMERA_ACCESS_ONLY_ARCHIVE"
+        }
+      ],
+      "required_global_permissions": {
+        "unrestricted_access": "UNRESTRICTED_ACCESS_UNSPECIFIED",
+        "maps_access": "MAP_ACCESS_UNSPECIFIED",
+        "feature_access": [],
+        "alert_access": "ALERT_ACCESS_UNSPECIFIED",
+        "bookmark_access": "BOOKMARK_ACCESS_UNSPECIFIED",
+        "user_rights_setup_access": "USER_RIGHTS_SETUP_ACCESS_UNSPECIFIED",
+        "default_camera_access": "CAMERA_ACCESS_UNSPECIFIED",
+        "default_microphone_access": "MICROPHONE_ACCESS_UNSPECIFIED",
+        "default_archive_access": "ARCHIVE_ACCESS_UNSPECIFIED",
+        "default_videowall_access": "VIDEOWALL_ACCESS_UNSPECIFIED",
+        "default_telemetry_priority": "TELEMETRY_PRIORITY_UNSPECIFIED",
+        "default_macros_access": "MACROS_ACCESS_UNSPECIFIED",
+        "default_acfa_access": "ACFA_ACCESS_UNSPECIFIED",
+        "restrictions": {
+          "personal_data": {}
+        },
+        "default_plugin_access": "PLUGIN_ACCESS_UNSPECIFIED"
+      }
+    },
+    "event_name": "axxonsoft.bl.events.DetectorEvent"
+  },
+  {
+    "event_type": "ET_DetectorEvent",
+    "subject": "",
+    "body": {
+      "@type": "type.googleapis.com/axxonsoft.bl.events.DetectorEvent",
+      "guid": "cd144a0a-e82f-4230-9750-c44750a77ba1",
+      "timestamp": "20260308T224253.287000",
+      "state": "ENDED",
+      "origin_deprecated": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "detector_deprecated": "hosts/VIDEO_SERVER/AppDataDetector.1/EventSupplier",
+      "event_type": "moveInZone",
+      "details": [
+        {
+          "rectangle": {
+            "x": 0,
+            "y": 0,
+            "w": 1,
+            "h": 1,
+            "index": 134782
+          }
+        }
+      ],
+      "multi_phase_id": "8300dbb4-d661-4fb1-b69a-cfd95efc3e8e",
+      "detectors_group": [
+        "DG_SITUATION_DETECTOR"
+      ],
+      "origin_ext": {
+        "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "friendly_name": "Camera A",
+        "group": ""
+      },
+      "detector_ext": {
+        "access_point": "hosts/VIDEO_SERVER/AppDataDetector.1/EventSupplier",
+        "friendly_name": "Vehicle detector",
+        "group": ""
+      },
+      "node_info": {
+        "name": "VIDEO_SERVER",
+        "friendly_name": "VIDEO_SERVER"
+      },
+      "offline_analytics_source": "",
+      "data": {
+        "phase": 2,
+        "EventUuid": "8300dbb4-d661-4fb1-b69a-cfd95efc3e8e",
+        "origin_id": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "Hypotheses": [
+          null
+        ],
+        "rectangles": [
+          [
+            0,
+            0,
+            1,
+            1,
+            134782
+          ]
+        ],
+        "module_name": "SituationDetector",
+        "detector_type": "moveInZone",
+        "DetectorsGroup": [
+          "SituationDetector"
+        ],
+        "ObjectClassEnum": 10
+      }
+    },
+    "subjects": [
+      "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "hosts/VIDEO_SERVER/AppDataDetector.1/EventSupplier"
+    ],
+    "external": false,
+    "localization": {
+      "text": "Camera \"Camera A\". End of detector \"Vehicle detector\" triggering Extended info: Event name \"Object moving in area detected\"; "
+    },
+    "required_permissions": {
+      "required_object_permissions": [
+        {
+          "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+          "camera_access": "CAMERA_ACCESS_ONLY_ARCHIVE"
+        }
+      ],
+      "required_global_permissions": {
+        "unrestricted_access": "UNRESTRICTED_ACCESS_UNSPECIFIED",
+        "maps_access": "MAP_ACCESS_UNSPECIFIED",
+        "feature_access": [],
+        "alert_access": "ALERT_ACCESS_UNSPECIFIED",
+        "bookmark_access": "BOOKMARK_ACCESS_UNSPECIFIED",
+        "user_rights_setup_access": "USER_RIGHTS_SETUP_ACCESS_UNSPECIFIED",
+        "default_camera_access": "CAMERA_ACCESS_UNSPECIFIED",
+        "default_microphone_access": "MICROPHONE_ACCESS_UNSPECIFIED",
+        "default_archive_access": "ARCHIVE_ACCESS_UNSPECIFIED",
+        "default_videowall_access": "VIDEOWALL_ACCESS_UNSPECIFIED",
+        "default_telemetry_priority": "TELEMETRY_PRIORITY_UNSPECIFIED",
+        "default_macros_access": "MACROS_ACCESS_UNSPECIFIED",
+        "default_acfa_access": "ACFA_ACCESS_UNSPECIFIED",
+        "restrictions": {
+          "personal_data": {}
+        },
+        "default_plugin_access": "PLUGIN_ACCESS_UNSPECIFIED"
+      }
+    },
+    "event_name": "axxonsoft.bl.events.DetectorEvent"
+  },
+  {
+    "event_type": "ET_DetectorEvent",
+    "subject": "",
+    "body": {
+      "@type": "type.googleapis.com/axxonsoft.bl.events.DetectorEvent",
+      "guid": "0d8366e3-0cca-4d43-8774-7479254789fc",
+      "timestamp": "20260308T224247.927000",
+      "state": "ENDED",
+      "origin_deprecated": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "detector_deprecated": "hosts/VIDEO_SERVER/AppDataDetector.1/EventSupplier",
+      "event_type": "moveInZone",
+      "details": [
+        {
+          "rectangle": {
+            "x": 0,
+            "y": 0,
+            "w": 1,
+            "h": 1,
+            "index": 134765
+          }
+        }
+      ],
+      "multi_phase_id": "46cbc34c-0bd4-42e7-8bb4-f58135950826",
+      "detectors_group": [
+        "DG_SITUATION_DETECTOR"
+      ],
+      "origin_ext": {
+        "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "friendly_name": "Camera A",
+        "group": ""
+      },
+      "detector_ext": {
+        "access_point": "hosts/VIDEO_SERVER/AppDataDetector.1/EventSupplier",
+        "friendly_name": "Vehicle detector",
+        "group": ""
+      },
+      "node_info": {
+        "name": "VIDEO_SERVER",
+        "friendly_name": "VIDEO_SERVER"
+      },
+      "offline_analytics_source": "",
+      "data": {
+        "phase": 2,
+        "EventUuid": "46cbc34c-0bd4-42e7-8bb4-f58135950826",
+        "origin_id": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "Hypotheses": [
+          null
+        ],
+        "rectangles": [
+          [
+            0,
+            0,
+            1,
+            1,
+            134765
+          ]
+        ],
+        "module_name": "SituationDetector",
+        "detector_type": "moveInZone",
+        "DetectorsGroup": [
+          "SituationDetector"
+        ],
+        "ObjectClassEnum": 10
+      }
+    },
+    "subjects": [
+      "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "hosts/VIDEO_SERVER/AppDataDetector.1/EventSupplier"
+    ],
+    "external": false,
+    "localization": {
+      "text": "Camera \"Camera A\". End of detector \"Vehicle detector\" triggering Extended info: Event name \"Object moving in area detected\"; "
+    },
+    "required_permissions": {
+      "required_object_permissions": [
+        {
+          "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+          "camera_access": "CAMERA_ACCESS_ONLY_ARCHIVE"
+        }
+      ],
+      "required_global_permissions": {
+        "unrestricted_access": "UNRESTRICTED_ACCESS_UNSPECIFIED",
+        "maps_access": "MAP_ACCESS_UNSPECIFIED",
+        "feature_access": [],
+        "alert_access": "ALERT_ACCESS_UNSPECIFIED",
+        "bookmark_access": "BOOKMARK_ACCESS_UNSPECIFIED",
+        "user_rights_setup_access": "USER_RIGHTS_SETUP_ACCESS_UNSPECIFIED",
+        "default_camera_access": "CAMERA_ACCESS_UNSPECIFIED",
+        "default_microphone_access": "MICROPHONE_ACCESS_UNSPECIFIED",
+        "default_archive_access": "ARCHIVE_ACCESS_UNSPECIFIED",
+        "default_videowall_access": "VIDEOWALL_ACCESS_UNSPECIFIED",
+        "default_telemetry_priority": "TELEMETRY_PRIORITY_UNSPECIFIED",
+        "default_macros_access": "MACROS_ACCESS_UNSPECIFIED",
+        "default_acfa_access": "ACFA_ACCESS_UNSPECIFIED",
+        "restrictions": {
+          "personal_data": {}
+        },
+        "default_plugin_access": "PLUGIN_ACCESS_UNSPECIFIED"
+      }
+    },
+    "event_name": "axxonsoft.bl.events.DetectorEvent"
+  },
+  {
+    "event_type": "ET_DetectorEvent",
+    "subject": "",
+    "body": {
+      "@type": "type.googleapis.com/axxonsoft.bl.events.DetectorEvent",
+      "guid": "481b8c5b-e012-41e0-a5f0-de19bfaa56ff",
+      "timestamp": "20260308T224247.167000",
+      "state": "ENDED",
+      "origin_deprecated": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "detector_deprecated": "hosts/VIDEO_SERVER/AppDataDetector.1/EventSupplier",
+      "event_type": "moveInZone",
+      "details": [
+        {
+          "rectangle": {
+            "x": 0,
+            "y": 0,
+            "w": 1,
+            "h": 1,
+            "index": 134777
+          }
+        }
+      ],
+      "multi_phase_id": "3548f48a-c29e-4ba7-aaf3-1bfb28ee0c07",
+      "detectors_group": [
+        "DG_SITUATION_DETECTOR"
+      ],
+      "origin_ext": {
+        "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "friendly_name": "Camera A",
+        "group": ""
+      },
+      "detector_ext": {
+        "access_point": "hosts/VIDEO_SERVER/AppDataDetector.1/EventSupplier",
+        "friendly_name": "Vehicle detector",
+        "group": ""
+      },
+      "node_info": {
+        "name": "VIDEO_SERVER",
+        "friendly_name": "VIDEO_SERVER"
+      },
+      "offline_analytics_source": "",
+      "data": {
+        "phase": 2,
+        "EventUuid": "3548f48a-c29e-4ba7-aaf3-1bfb28ee0c07",
+        "origin_id": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "Hypotheses": [
+          null
+        ],
+        "rectangles": [
+          [
+            0,
+            0,
+            1,
+            1,
+            134777
+          ]
+        ],
+        "module_name": "SituationDetector",
+        "detector_type": "moveInZone",
+        "DetectorsGroup": [
+          "SituationDetector"
+        ],
+        "ObjectClassEnum": 10
+      }
+    },
+    "subjects": [
+      "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "hosts/VIDEO_SERVER/AppDataDetector.1/EventSupplier"
+    ],
+    "external": false,
+    "localization": {
+      "text": "Camera \"Camera A\". End of detector \"Vehicle detector\" triggering Extended info: Event name \"Object moving in area detected\"; "
+    },
+    "required_permissions": {
+      "required_object_permissions": [
+        {
+          "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+          "camera_access": "CAMERA_ACCESS_ONLY_ARCHIVE"
+        }
+      ],
+      "required_global_permissions": {
+        "unrestricted_access": "UNRESTRICTED_ACCESS_UNSPECIFIED",
+        "maps_access": "MAP_ACCESS_UNSPECIFIED",
+        "feature_access": [],
+        "alert_access": "ALERT_ACCESS_UNSPECIFIED",
+        "bookmark_access": "BOOKMARK_ACCESS_UNSPECIFIED",
+        "user_rights_setup_access": "USER_RIGHTS_SETUP_ACCESS_UNSPECIFIED",
+        "default_camera_access": "CAMERA_ACCESS_UNSPECIFIED",
+        "default_microphone_access": "MICROPHONE_ACCESS_UNSPECIFIED",
+        "default_archive_access": "ARCHIVE_ACCESS_UNSPECIFIED",
+        "default_videowall_access": "VIDEOWALL_ACCESS_UNSPECIFIED",
+        "default_telemetry_priority": "TELEMETRY_PRIORITY_UNSPECIFIED",
+        "default_macros_access": "MACROS_ACCESS_UNSPECIFIED",
+        "default_acfa_access": "ACFA_ACCESS_UNSPECIFIED",
+        "restrictions": {
+          "personal_data": {}
+        },
+        "default_plugin_access": "PLUGIN_ACCESS_UNSPECIFIED"
+      }
+    },
+    "event_name": "axxonsoft.bl.events.DetectorEvent"
+  },
+  {
+    "event_type": "ET_DetectorEvent",
+    "subject": "",
+    "body": {
+      "@type": "type.googleapis.com/axxonsoft.bl.events.DetectorEvent",
+      "guid": "1f84ca28-e29b-4994-b3da-721bf4a29dfc",
+      "timestamp": "20260308T224246.847000",
+      "state": "BEGAN",
+      "origin_deprecated": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "detector_deprecated": "hosts/VIDEO_SERVER/AppDataDetector.1/EventSupplier",
+      "event_type": "moveInZone",
+      "details": [
+        {
+          "rectangle": {
+            "x": 0.75244140625,
+            "y": 0.33740234375,
+            "w": 0.033203125,
+            "h": 0.049560546875,
+            "index": 134787
+          }
+        }
+      ],
+      "multi_phase_id": "6abcb721-e135-4d60-bf12-fbb56fbac1d1",
+      "detectors_group": [
+        "DG_SITUATION_DETECTOR"
+      ],
+      "origin_ext": {
+        "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "friendly_name": "Camera A",
+        "group": ""
+      },
+      "detector_ext": {
+        "access_point": "hosts/VIDEO_SERVER/AppDataDetector.1/EventSupplier",
+        "friendly_name": "Vehicle detector",
+        "group": ""
+      },
+      "node_info": {
+        "name": "VIDEO_SERVER",
+        "friendly_name": "VIDEO_SERVER"
+      },
+      "offline_analytics_source": "",
+      "data": {
+        "phase": 1,
+        "EventUuid": "6abcb721-e135-4d60-bf12-fbb56fbac1d1",
+        "origin_id": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "Hypotheses": [
+          null
+        ],
+        "rectangles": [
+          [
+            0.75244140625,
+            0.33740234375,
+            0.78564453125,
+            0.386962890625,
+            134787
+          ]
+        ],
+        "module_name": "SituationDetector",
+        "detector_type": "moveInZone",
+        "DetectorsGroup": [
+          "SituationDetector"
+        ],
+        "ObjectClassEnum": 10
+      }
+    },
+    "subjects": [
+      "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+      "hosts/VIDEO_SERVER/AppDataDetector.1/EventSupplier"
+    ],
+    "external": false,
+    "localization": {
+      "text": "Camera \"Camera A\". Beginning of detector \"Vehicle detector\" triggering Extended info: Event name \"Object moving in area detected\"; "
+    },
+    "required_permissions": {
+      "required_object_permissions": [
+        {
+          "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+          "camera_access": "CAMERA_ACCESS_ONLY_ARCHIVE"
+        }
+      ],
+      "required_global_permissions": {
+        "unrestricted_access": "UNRESTRICTED_ACCESS_UNSPECIFIED",
+        "maps_access": "MAP_ACCESS_UNSPECIFIED",
+        "feature_access": [],
+        "alert_access": "ALERT_ACCESS_UNSPECIFIED",
+        "bookmark_access": "BOOKMARK_ACCESS_UNSPECIFIED",
+        "user_rights_setup_access": "USER_RIGHTS_SETUP_ACCESS_UNSPECIFIED",
+        "default_camera_access": "CAMERA_ACCESS_UNSPECIFIED",
+        "default_microphone_access": "MICROPHONE_ACCESS_UNSPECIFIED",
+        "default_archive_access": "ARCHIVE_ACCESS_UNSPECIFIED",
+        "default_videowall_access": "VIDEOWALL_ACCESS_UNSPECIFIED",
+        "default_telemetry_priority": "TELEMETRY_PRIORITY_UNSPECIFIED",
+        "default_macros_access": "MACROS_ACCESS_UNSPECIFIED",
+        "default_acfa_access": "ACFA_ACCESS_UNSPECIFIED",
+        "restrictions": {
+          "personal_data": {}
+        },
+        "default_plugin_access": "PLUGIN_ACCESS_UNSPECIFIED"
+      }
+    },
+    "event_name": "axxonsoft.bl.events.DetectorEvent"
+  }
+]

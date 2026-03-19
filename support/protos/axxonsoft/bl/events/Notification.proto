@@ -1,0 +1,238 @@
+syntax = "proto3";
+
+package axxonsoft.bl.events;
+
+import "axxonsoft/bl/events/Events.proto";
+import "axxonsoft/bl/security/EventPermissions.proto";
+import "google/api/annotations.proto";
+import "google/protobuf/any.proto";
+
+option go_package = "bitbucket.org/Axxonsoft/bl/events";
+
+message Localization
+{
+    string text = 1;
+}
+
+message EventFilter
+{
+    // Required. Specifies required event type
+    EEventType event_type = 1;
+
+    // Associated object service name, binding or association
+    string subject = 2;
+
+    // Indicates that client requires events from current node only.
+    // Make sense only for DomainNotifier (making it work like NodeNotifier).
+    bool current_node_events_only = 3;
+
+    // Indicates that client requires events from all nodes in the domain.
+    // When it is setup, 'subject' field will be ignored.
+    //
+    // Why this field is deprecated:
+    //      This field is ignored by new servers but it is kept for backward compatibility with old servers.
+    //      New servers implement that behavior by default. 
+    bool domain_wide = 4 [deprecated = true];
+}
+
+message Details
+{
+    message OrdinaryEvent {
+    }
+
+    oneof subtype {
+        OrdinaryEvent       ordinary = 1;
+        CacheableEvent      cacheable = 2;
+        WithdrawCachedEvent withdraw = 4;
+    }
+
+    reserved 3;
+    reserved "renew";
+}
+
+message Event
+{
+    EEventType event_type = 1;
+
+    string subject = 2 [deprecated = true];
+    repeated string subjects = 4;
+
+    // Full qualified event name contained in 'body'.
+    string event_name = 20;
+
+    google.protobuf.Any body = 3;
+	
+    // Shows whether event originates
+    // from outer or current node.
+    bool external = 5;
+    Localization localization = 11;
+	
+    security.EventPermissions required_permissions = 12;
+
+    // Only for PullDetailedEvents method
+    Details details = 15;
+}
+
+message Events
+{
+    repeated Event items = 1;
+}
+
+message CacheableEvent
+{
+    string tag = 1;
+    bool is_retransmit = 2;
+    bool is_transient = 3;
+    string id = 4;
+}
+
+message RenewCachedEvent
+{
+    string tag = 1 ;
+    bool is_transient = 2;
+    string id = 3;
+    Event original = 4;
+}
+
+message WithdrawCachedEvent
+{
+    string tag = 1 ;
+    string id = 2;
+}
+
+message EventFilters
+{
+    //  Initial filters list.
+    repeated EventFilter include = 1;
+
+    repeated EventFilter exclude = 2;
+}
+
+message PullEventsRequest
+{
+    // Unique id provided by client. Using this id 
+    // client can adjust events filter list on-the-fly.
+    string subscription_id = 1;
+
+    //  Initial filters list.
+    EventFilters filters = 2;
+}
+
+message UpdateSubscriptionRequest
+{
+    // Id of event stream
+    string subscription_id = 1;
+
+    //  New filters list.
+    EventFilters filters = 2;
+}
+
+message DisconnectEventChannelRequest
+{
+    // Id of event stream
+    string subscription_id = 1;
+}
+
+message UpdateSubscriptionResponse
+{
+}
+
+message DisconnectEventChannelResponse
+{
+}
+
+message PushDiagnosticEventsRequest
+{
+    repeated DiagnosticAlertEvent alerts = 1;
+    repeated DiagnosticActionEvent actions = 2;
+}
+
+message PushDiagnosticEventsResponse
+{
+}
+
+message PingRequest
+{
+    option deprecated = true;
+    int32 timeoutMs = 1;
+}
+
+message PingResponse
+{
+    option deprecated = true;
+}
+
+service DomainNotifier
+{
+    rpc PullEvents(PullEventsRequest) returns (stream Events) {
+        option (google.api.http) = {
+            post: "/v1/notifier/subscriptions"
+            body: "*"
+        };
+    }
+
+    // Pull events.
+    // NOTES:
+    // - All `RenewCachedEvent` events are filtered out (never sent).
+    rpc PullDetailedEvents(PullEventsRequest) returns (stream Events) {
+        option (google.api.http) = {
+            post: "/v1/notifier/subscriptions:pull"
+            body: "*"
+        };
+    }
+
+    rpc UpdateSubscription(UpdateSubscriptionRequest) returns (UpdateSubscriptionResponse) {
+        option (google.api.http) = {
+            post: "/v1/notifier/subscriptions:update"
+            body: "*"
+        };
+    }
+
+    rpc DisconnectEventChannel(DisconnectEventChannelRequest) returns (DisconnectEventChannelResponse) {
+        option (google.api.http) = {
+            post: "/v1/notifier/subscriptions:disconnect"
+            body: "*"
+        };
+    }
+    
+    rpc PushDiagnosticEvents(PushDiagnosticEventsRequest) returns (PushDiagnosticEventsResponse);
+}
+
+service NodeNotifier
+{
+    rpc PullEvents(PullEventsRequest) returns (stream Events) {
+        option (google.api.http) = {
+            post: "/v1/node-notifier/subscriptions"
+            body: "*"
+        };
+    }
+
+    rpc PullDetailedEvents(PullEventsRequest) returns (stream Events) {
+        option (google.api.http) = {
+            post: "/v1/node-notifier/subscriptions:pull"
+            body: "*"
+        };
+    }
+
+    rpc UpdateSubscription(UpdateSubscriptionRequest) returns (UpdateSubscriptionResponse) {
+        option (google.api.http) = {
+            post: "/v1/node-notifier/subscriptions:update"
+            body: "*"
+        };
+    }
+
+    rpc DisconnectEventChannel(DisconnectEventChannelRequest) returns (DisconnectEventChannelResponse) {
+        option (google.api.http) = {
+            post: "/v1/node-notifier/subscriptions:disconnect"
+            body: "*"
+        };
+    }
+
+    rpc PushDiagnosticEvents(PushDiagnosticEventsRequest) returns (PushDiagnosticEventsResponse);
+
+    // Node status check
+    rpc Ping (PingRequest) returns (stream PingResponse) {
+        option deprecated = true;
+        // Deprecated: use standard Health Checking Protocol (gprc/health/v1/health.proto)
+    }
+}

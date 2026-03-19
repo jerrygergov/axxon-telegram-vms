@@ -1,0 +1,1435 @@
+[2026-03-09 21:11:00 UTC] watchdog tick
+git_status:
+ M README.md
+ M scripts/self_check.sh
+?? .automation/
+?? axxon_telegram_vms/
+?? support/docs/ARCHITECTURE_FOUNDATION.md
+?? support/docs/IMPLEMENTATION_PLAN_NEXT.md
+?? support/docs/REGRESSION_CHECKLIST.md
+?? support/docs/RUNTIME_BASELINE.md
+?? scripts/automation/
+?? tests/test_architecture_foundation.py
+
+[2026-03-09 21:15:01 UTC] watchdog tick
+git_status:
+ M README.md
+ M scripts/self_check.sh
+?? .automation/
+?? axxon_telegram_vms/
+?? support/docs/ARCHITECTURE_FOUNDATION.md
+?? support/docs/IMPLEMENTATION_PLAN_NEXT.md
+?? support/docs/REGRESSION_CHECKLIST.md
+?? support/docs/RUNTIME_BASELINE.md
+?? scripts/automation/
+?? tests/test_architecture_foundation.py
+
+[2026-03-09 21:30:01 UTC] watchdog tick
+git_status:
+ M README.md
+ M scripts/self_check.sh
+?? .automation/
+?? axxon_telegram_vms/
+?? support/docs/ARCHITECTURE_FOUNDATION.md
+?? support/docs/IMPLEMENTATION_PLAN_NEXT.md
+?? support/docs/REGRESSION_CHECKLIST.md
+?? support/docs/RUNTIME_BASELINE.md
+?? scripts/automation/
+?? tests/test_architecture_foundation.py
+
+[2026-03-09 21:45:01 UTC] watchdog tick
+git_status:
+ M README.md
+ M scripts/self_check.sh
+?? .automation/
+?? axxon_telegram_vms/
+?? support/docs/ARCHITECTURE_FOUNDATION.md
+?? support/docs/IMPLEMENTATION_PLAN_NEXT.md
+?? support/docs/REGRESSION_CHECKLIST.md
+?? support/docs/RUNTIME_BASELINE.md
+?? scripts/automation/
+?? tests/test_architecture_foundation.py
+
+[2026-03-09 22:00:01 UTC] watchdog tick
+git_status:
+ M README.md
+ M scripts/self_check.sh
+?? .automation/
+?? axxon_telegram_vms/
+?? support/docs/ARCHITECTURE_FOUNDATION.md
+?? support/docs/IMPLEMENTATION_PLAN_NEXT.md
+?? support/docs/REGRESSION_CHECKLIST.md
+?? support/docs/RUNTIME_BASELINE.md
+?? scripts/automation/
+?? tests/test_architecture_foundation.py
+
+[2026-03-09 22:15:01 UTC] watchdog tick
+git_status:
+ M README.md
+ M scripts/self_check.sh
+?? .automation/
+?? axxon_telegram_vms/
+?? support/docs/ARCHITECTURE_FOUNDATION.md
+?? support/docs/IMPLEMENTATION_PLAN_NEXT.md
+?? support/docs/REGRESSION_CHECKLIST.md
+?? support/docs/RUNTIME_BASELINE.md
+?? scripts/automation/
+?? tests/test_architecture_foundation.py
+
+[2026-03-09 22:30:01 UTC] watchdog tick
+git_status:
+ M README.md
+ M scripts/self_check.sh
+?? .automation/
+?? axxon_telegram_vms/
+?? support/docs/ARCHITECTURE_FOUNDATION.md
+?? support/docs/IMPLEMENTATION_PLAN_NEXT.md
+?? support/docs/REGRESSION_CHECKLIST.md
+?? support/docs/RUNTIME_BASELINE.md
+?? scripts/automation/
+?? tests/test_architecture_foundation.py
+
+[2026-03-09 22:45:01 UTC] watchdog tick
+git_status:
+ M README.md
+ M scripts/self_check.sh
+?? .automation/
+?? axxon_telegram_vms/
+?? support/docs/ARCHITECTURE_FOUNDATION.md
+?? support/docs/IMPLEMENTATION_PLAN_NEXT.md
+?? support/docs/REGRESSION_CHECKLIST.md
+?? support/docs/RUNTIME_BASELINE.md
+?? scripts/automation/
+?? tests/test_architecture_foundation.py
+
+[2026-03-09 23:00:01 UTC] watchdog tick
+git_status:
+ M README.md
+ M scripts/self_check.sh
+?? .automation/
+?? axxon_telegram_vms/
+?? support/docs/ARCHITECTURE_FOUNDATION.md
+?? support/docs/IMPLEMENTATION_PLAN_NEXT.md
+?? support/docs/REGRESSION_CHECKLIST.md
+?? support/docs/RUNTIME_BASELINE.md
+?? scripts/automation/
+?? tests/test_architecture_foundation.py
+
+[2026-03-09 23:15:01 UTC] watchdog tick
+git_status:
+ M README.md
+ M scripts/self_check.sh
+?? .automation/
+?? axxon_telegram_vms/
+?? support/docs/ARCHITECTURE_FOUNDATION.md
+?? support/docs/IMPLEMENTATION_PLAN_NEXT.md
+?? support/docs/REGRESSION_CHECKLIST.md
+?? support/docs/RUNTIME_BASELINE.md
+?? scripts/automation/
+?? tests/test_architecture_foundation.py
+
+[2026-03-09 23:30:01 UTC] watchdog tick
+git_status:
+ M README.md
+ M support/docs/MIGRATION_PARITY.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_web_api.py
+ M scripts/config_loader.py
+ M scripts/self_check.sh
+ M scripts/unification_helpers.py
+?? .automation/
+?? axxon_telegram_vms/
+?? support/docs/ARCHITECTURE_FOUNDATION.md
+?? support/docs/EXECUTION_MODE.md
+?? support/docs/IMPLEMENTATION_PLAN_NEXT.md
+?? support/docs/REGRESSION_CHECKLIST.md
+?? support/docs/RUNTIME_BASELINE.md
+?? scripts/automation/
+?? tests/test_architecture_foundation.py
+?? tests/test_client_foundation.py
+?? tests/test_models_normalization.py
+
+[2026-03-09 23:45:01 UTC] watchdog tick
+git_status:
+ M README.md
+ M support/docs/MIGRATION_PARITY.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_web_api.py
+ M scripts/config_loader.py
+ M scripts/self_check.sh
+ M scripts/unification_helpers.py
+?? .automation/
+?? axxon_telegram_vms/
+?? support/docs/ARCHITECTURE_FOUNDATION.md
+?? support/docs/EXECUTION_MODE.md
+?? support/docs/IMPLEMENTATION_PLAN_NEXT.md
+?? support/docs/REGRESSION_CHECKLIST.md
+?? support/docs/RUNTIME_BASELINE.md
+?? scripts/automation/
+?? tests/test_architecture_foundation.py
+?? tests/test_client_foundation.py
+?? tests/test_models_normalization.py
+
+[2026-03-10 00:00:01 UTC] watchdog tick
+git_status:
+ M README.md
+ M support/docs/MIGRATION_PARITY.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M scripts/axxon_web_api.py
+ M scripts/config_loader.py
+ M scripts/live_session_runtime.py
+ M scripts/self_check.sh
+ M scripts/unification_helpers.py
+?? .automation/
+?? axxon_telegram_vms/
+?? support/docs/ARCHITECTURE_FOUNDATION.md
+?? support/docs/EXECUTION_MODE.md
+?? support/docs/IMPLEMENTATION_PLAN_NEXT.md
+?? support/docs/REGRESSION_CHECKLIST.md
+?? support/docs/RUNTIME_BASELINE.md
+?? scripts/automation/
+?? scripts/subscription_services.py
+?? tests/test_architecture_foundation.py
+?? tests/test_client_foundation.py
+?? tests/test_models_normalization.py
+?? tests/test_services_jobs_foundation.py
+
+[2026-03-10 00:15:02 UTC] watchdog tick
+git_status:
+ M README.md
+ M support/docs/MIGRATION_PARITY.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M scripts/axxon_tg_ui.py
+ M scripts/axxon_web_api.py
+ M scripts/config_loader.py
+ M scripts/legacy_compat.py
+ M scripts/live_session_runtime.py
+ M scripts/self_check.sh
+ M scripts/tg_camera_ui.py
+ M scripts/unification_helpers.py
+ M tests/test_ui_payloads.py
+?? .automation/
+?? axxon_telegram_vms/
+?? support/docs/ARCHITECTURE_FOUNDATION.md
+?? support/docs/EXECUTION_MODE.md
+?? support/docs/IMPLEMENTATION_PLAN_NEXT.md
+?? support/docs/REGRESSION_CHECKLIST.md
+?? support/docs/RUNTIME_BASELINE.md
+?? support/references/web-bundles-raw/
+?? scripts/automation/
+?? scripts/subscription_services.py
+?? tests/test_architecture_foundation.py
+?? tests/test_client_foundation.py
+?? tests/test_models_normalization.py
+?? tests/test_services_jobs_foundation.py
+
+[2026-03-10 00:30:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/client/__init__.py
+ M axxon_telegram_vms/foundation.py
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/MIGRATION_PARITY.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M tests/test_architecture_foundation.py
+?? .automation/
+?? axxon_telegram_vms/client/runtime_cache.py
+?? tests/test_runtime_read_cache.py
+
+[2026-03-10 00:45:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/client/__init__.py
+ M axxon_telegram_vms/foundation.py
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/MIGRATION_PARITY.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M tests/test_architecture_foundation.py
+?? .automation/
+?? axxon_telegram_vms/client/runtime_cache.py
+?? tests/test_runtime_read_cache.py
+
+[2026-03-10 01:00:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/client/__init__.py
+ M axxon_telegram_vms/foundation.py
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/MIGRATION_PARITY.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M tests/test_architecture_foundation.py
+?? .automation/
+?? axxon_telegram_vms/client/runtime_cache.py
+?? tests/test_runtime_read_cache.py
+
+[2026-03-10 01:15:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/client/__init__.py
+ M axxon_telegram_vms/foundation.py
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/MIGRATION_PARITY.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M tests/test_architecture_foundation.py
+?? .automation/
+?? axxon_telegram_vms/client/runtime_cache.py
+?? tests/test_runtime_read_cache.py
+
+[2026-03-10 01:30:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/client/__init__.py
+ M axxon_telegram_vms/foundation.py
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/MIGRATION_PARITY.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M tests/test_architecture_foundation.py
+?? .automation/
+?? axxon_telegram_vms/client/runtime_cache.py
+?? tests/test_runtime_read_cache.py
+
+[2026-03-10 01:45:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/client/__init__.py
+ M axxon_telegram_vms/foundation.py
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/MIGRATION_PARITY.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M tests/test_architecture_foundation.py
+?? .automation/
+?? axxon_telegram_vms/client/runtime_cache.py
+?? tests/test_runtime_read_cache.py
+
+[2026-03-10 02:00:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/client/__init__.py
+ M axxon_telegram_vms/foundation.py
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/MIGRATION_PARITY.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M tests/test_architecture_foundation.py
+?? .automation/
+?? axxon_telegram_vms/client/runtime_cache.py
+?? tests/test_runtime_read_cache.py
+
+[2026-03-10 02:15:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/client/__init__.py
+ M axxon_telegram_vms/foundation.py
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/MIGRATION_PARITY.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M tests/test_architecture_foundation.py
+?? .automation/
+?? axxon_telegram_vms/client/runtime_cache.py
+?? tests/test_runtime_read_cache.py
+
+[2026-03-10 02:30:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/client/__init__.py
+ M axxon_telegram_vms/foundation.py
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/MIGRATION_PARITY.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M tests/test_architecture_foundation.py
+?? .automation/
+?? axxon_telegram_vms/client/runtime_cache.py
+?? tests/test_runtime_read_cache.py
+
+[2026-03-10 02:45:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/client/__init__.py
+ M axxon_telegram_vms/foundation.py
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/MIGRATION_PARITY.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M tests/test_architecture_foundation.py
+?? .automation/
+?? axxon_telegram_vms/client/runtime_cache.py
+?? tests/test_runtime_read_cache.py
+
+[2026-03-10 03:00:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/client/__init__.py
+ M axxon_telegram_vms/foundation.py
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/MIGRATION_PARITY.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M tests/test_architecture_foundation.py
+?? .automation/
+?? axxon_telegram_vms/client/runtime_cache.py
+?? tests/test_runtime_read_cache.py
+
+[2026-03-10 03:15:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/client/__init__.py
+ M axxon_telegram_vms/foundation.py
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/MIGRATION_PARITY.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M tests/test_architecture_foundation.py
+?? .automation/
+?? axxon_telegram_vms/client/runtime_cache.py
+?? tests/test_runtime_read_cache.py
+
+[2026-03-10 03:30:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/client/__init__.py
+ M axxon_telegram_vms/foundation.py
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/MIGRATION_PARITY.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M tests/test_architecture_foundation.py
+?? .automation/
+?? axxon_telegram_vms/client/runtime_cache.py
+?? tests/test_runtime_read_cache.py
+
+[2026-03-10 03:45:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/client/__init__.py
+ M axxon_telegram_vms/foundation.py
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/MIGRATION_PARITY.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M tests/test_architecture_foundation.py
+?? .automation/
+?? axxon_telegram_vms/client/runtime_cache.py
+?? tests/test_runtime_read_cache.py
+
+[2026-03-10 04:00:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/client/__init__.py
+ M axxon_telegram_vms/foundation.py
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/MIGRATION_PARITY.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M tests/test_architecture_foundation.py
+?? .automation/
+?? axxon_telegram_vms/client/runtime_cache.py
+?? tests/test_runtime_read_cache.py
+
+[2026-03-10 04:15:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/client/__init__.py
+ M axxon_telegram_vms/foundation.py
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/MIGRATION_PARITY.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M tests/test_architecture_foundation.py
+?? .automation/
+?? axxon_telegram_vms/client/runtime_cache.py
+?? tests/test_runtime_read_cache.py
+
+[2026-03-10 04:30:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/client/__init__.py
+ M axxon_telegram_vms/foundation.py
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/MIGRATION_PARITY.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M tests/test_architecture_foundation.py
+?? .automation/
+?? axxon_telegram_vms/client/runtime_cache.py
+?? tests/test_runtime_read_cache.py
+
+[2026-03-10 04:45:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/client/__init__.py
+ M axxon_telegram_vms/foundation.py
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/MIGRATION_PARITY.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M tests/test_architecture_foundation.py
+?? .automation/
+?? axxon_telegram_vms/client/runtime_cache.py
+?? tests/test_runtime_read_cache.py
+
+[2026-03-10 05:00:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/client/__init__.py
+ M axxon_telegram_vms/foundation.py
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/MIGRATION_PARITY.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M tests/test_architecture_foundation.py
+?? .automation/
+?? axxon_telegram_vms/client/runtime_cache.py
+?? tests/test_runtime_read_cache.py
+
+[2026-03-10 05:15:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/client/__init__.py
+ M axxon_telegram_vms/foundation.py
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/MIGRATION_PARITY.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M tests/test_architecture_foundation.py
+?? .automation/
+?? axxon_telegram_vms/client/runtime_cache.py
+?? tests/test_runtime_read_cache.py
+
+[2026-03-10 05:30:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/client/__init__.py
+ M axxon_telegram_vms/foundation.py
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/MIGRATION_PARITY.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M tests/test_architecture_foundation.py
+?? .automation/
+?? axxon_telegram_vms/client/runtime_cache.py
+?? tests/test_runtime_read_cache.py
+
+[2026-03-10 05:45:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/client/__init__.py
+ M axxon_telegram_vms/foundation.py
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/MIGRATION_PARITY.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M tests/test_architecture_foundation.py
+?? .automation/
+?? axxon_telegram_vms/client/runtime_cache.py
+?? tests/test_runtime_read_cache.py
+
+[2026-03-10 06:00:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/client/__init__.py
+ M axxon_telegram_vms/foundation.py
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/MIGRATION_PARITY.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M tests/test_architecture_foundation.py
+?? .automation/
+?? axxon_telegram_vms/client/runtime_cache.py
+?? tests/test_runtime_read_cache.py
+
+[2026-03-10 06:15:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/client/__init__.py
+ M axxon_telegram_vms/foundation.py
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/MIGRATION_PARITY.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M tests/test_architecture_foundation.py
+?? .automation/
+?? axxon_telegram_vms/client/runtime_cache.py
+?? tests/test_runtime_read_cache.py
+
+[2026-03-10 06:30:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/client/__init__.py
+ M axxon_telegram_vms/foundation.py
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/MIGRATION_PARITY.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M tests/test_architecture_foundation.py
+?? .automation/
+?? axxon_telegram_vms/client/runtime_cache.py
+?? tests/test_runtime_read_cache.py
+
+[2026-03-10 06:45:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/client/__init__.py
+ M axxon_telegram_vms/foundation.py
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/MIGRATION_PARITY.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M tests/test_architecture_foundation.py
+?? .automation/
+?? axxon_telegram_vms/client/runtime_cache.py
+?? tests/test_runtime_read_cache.py
+
+[2026-03-10 07:00:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/client/__init__.py
+ M axxon_telegram_vms/foundation.py
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/MIGRATION_PARITY.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M tests/test_architecture_foundation.py
+?? .automation/
+?? axxon_telegram_vms/client/runtime_cache.py
+?? tests/test_runtime_read_cache.py
+
+[2026-03-10 07:15:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/client/__init__.py
+ M axxon_telegram_vms/foundation.py
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/MIGRATION_PARITY.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M tests/test_architecture_foundation.py
+?? .automation/
+?? axxon_telegram_vms/client/runtime_cache.py
+?? tests/test_runtime_read_cache.py
+
+[2026-03-10 07:30:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/client/__init__.py
+ M axxon_telegram_vms/foundation.py
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/MIGRATION_PARITY.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M tests/test_architecture_foundation.py
+?? .automation/
+?? axxon_telegram_vms/client/runtime_cache.py
+?? tests/test_runtime_read_cache.py
+
+[2026-03-10 07:45:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/client/__init__.py
+ M axxon_telegram_vms/foundation.py
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/MIGRATION_PARITY.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M tests/test_architecture_foundation.py
+?? .automation/
+?? axxon_telegram_vms/client/runtime_cache.py
+?? tests/test_runtime_read_cache.py
+
+[2026-03-10 08:00:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/client/__init__.py
+ M axxon_telegram_vms/foundation.py
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/MIGRATION_PARITY.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M tests/test_architecture_foundation.py
+?? .automation/
+?? axxon_telegram_vms/client/runtime_cache.py
+?? tests/test_runtime_read_cache.py
+
+[2026-03-10 08:15:01 UTC] watchdog tick
+git_status:
+?? .automation/
+
+[2026-03-10 08:30:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/foundation.py
+ M axxon_telegram_vms/models/__init__.py
+ M axxon_telegram_vms/services/__init__.py
+ M axxon_telegram_vms/services/subscriptions.py
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/WORKLOG.md
+ M scripts/subscription_services.py
+ M tests/test_architecture_foundation.py
+ M tests/test_services_jobs_foundation.py
+?? .automation/
+?? axxon_telegram_vms/models/query_filters.py
+?? tests/test_query_filters.py
+
+[2026-03-10 08:45:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/foundation.py
+ M axxon_telegram_vms/models/__init__.py
+ M axxon_telegram_vms/services/__init__.py
+ M axxon_telegram_vms/services/subscriptions.py
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/WORKLOG.md
+ M scripts/subscription_services.py
+ M tests/test_architecture_foundation.py
+ M tests/test_services_jobs_foundation.py
+?? .automation/
+?? axxon_telegram_vms/models/query_filters.py
+?? tests/test_query_filters.py
+
+[2026-03-10 09:00:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/foundation.py
+ M axxon_telegram_vms/models/__init__.py
+ M axxon_telegram_vms/services/__init__.py
+ M axxon_telegram_vms/services/subscriptions.py
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/WORKLOG.md
+ M scripts/subscription_services.py
+ M tests/test_architecture_foundation.py
+ M tests/test_services_jobs_foundation.py
+?? .automation/
+?? axxon_telegram_vms/models/query_filters.py
+?? tests/test_query_filters.py
+
+[2026-03-10 09:15:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/models/query_filters.py
+?? .automation/
+
+[2026-03-10 09:30:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/foundation.py
+ M axxon_telegram_vms/models/query_filters.py
+ M axxon_telegram_vms/services/__init__.py
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M scripts/axxon_tg_ui.py
+ M scripts/axxon_web_api.py
+ M tests/test_architecture_foundation.py
+ M tests/test_query_filters.py
+ M tests/test_telegram_commands_menu.py
+ M tests/test_ui_payloads.py
+ M tests/test_web_api_surface.py
+?? .automation/
+?? axxon_telegram_vms/services/event_search.py
+?? tests/test_event_search_service.py
+
+[2026-03-10 09:45:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/foundation.py
+ M axxon_telegram_vms/models/query_filters.py
+ M axxon_telegram_vms/services/__init__.py
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M scripts/axxon_tg_ui.py
+ M scripts/axxon_web_api.py
+ M tests/test_architecture_foundation.py
+ M tests/test_query_filters.py
+ M tests/test_telegram_commands_menu.py
+ M tests/test_ui_payloads.py
+ M tests/test_web_api_surface.py
+?? .automation/
+?? axxon_telegram_vms/services/event_search.py
+?? tests/test_event_search_service.py
+
+[2026-03-10 10:00:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/foundation.py
+ M axxon_telegram_vms/models/query_filters.py
+ M axxon_telegram_vms/services/__init__.py
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M scripts/axxon_tg_ui.py
+ M scripts/axxon_web_api.py
+ M tests/test_architecture_foundation.py
+ M tests/test_query_filters.py
+ M tests/test_telegram_commands_menu.py
+ M tests/test_ui_payloads.py
+ M tests/test_web_api_surface.py
+?? .automation/
+?? axxon_telegram_vms/services/event_search.py
+?? tests/test_event_search_service.py
+
+[2026-03-10 10:15:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/foundation.py
+ M axxon_telegram_vms/models/query_filters.py
+ M axxon_telegram_vms/services/__init__.py
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M scripts/axxon_tg_ui.py
+ M scripts/axxon_web_api.py
+ M tests/test_architecture_foundation.py
+ M tests/test_query_filters.py
+ M tests/test_telegram_commands_menu.py
+ M tests/test_ui_payloads.py
+ M tests/test_web_api_surface.py
+?? .automation/
+?? axxon_telegram_vms/services/event_search.py
+?? tests/test_event_search_service.py
+
+[2026-03-10 10:30:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/foundation.py
+ M axxon_telegram_vms/models/query_filters.py
+ M axxon_telegram_vms/services/__init__.py
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M scripts/axxon_tg_ui.py
+ M scripts/axxon_web_api.py
+ M tests/test_architecture_foundation.py
+ M tests/test_query_filters.py
+ M tests/test_telegram_commands_menu.py
+ M tests/test_ui_payloads.py
+ M tests/test_web_api_surface.py
+?? .automation/
+?? axxon_telegram_vms/services/event_search.py
+?? tests/test_event_search_service.py
+
+[2026-03-10 10:45:01 UTC] watchdog tick
+git_status:
+?? .automation/
+
+[2026-03-10 11:00:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/services/__init__.py
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M scripts/axxon_tg_ui.py
+ M scripts/axxon_web_api.py
+ M tests/test_telegram_commands_menu.py
+ M tests/test_ui_payloads.py
+ M tests/test_web_api_surface.py
+?? .automation/
+?? axxon_telegram_vms/services/archive_jump.py
+?? tests/test_archive_jump_service.py
+
+[2026-03-10 11:15:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/services/__init__.py
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M scripts/axxon_tg_ui.py
+ M scripts/axxon_web_api.py
+ M tests/test_telegram_commands_menu.py
+ M tests/test_ui_payloads.py
+ M tests/test_web_api_surface.py
+?? .automation/
+?? axxon_telegram_vms/services/archive_jump.py
+?? tests/test_archive_jump_service.py
+
+[2026-03-10 11:30:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/services/__init__.py
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M scripts/axxon_tg_ui.py
+ M scripts/axxon_web_api.py
+ M tests/test_telegram_commands_menu.py
+ M tests/test_ui_payloads.py
+ M tests/test_web_api_surface.py
+?? .automation/
+?? axxon_telegram_vms/services/single_camera_export.py
+?? tests/test_single_camera_export_service.py
+
+[2026-03-10 11:45:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/foundation.py
+ M axxon_telegram_vms/services/__init__.py
+?? .automation/
+?? axxon_telegram_vms/services/multi_camera_export.py
+
+[2026-03-10 12:00:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/foundation.py
+ M axxon_telegram_vms/services/__init__.py
+ M support/docs/WORKLOG.md
+ M scripts/axxon_web_api.py
+ M tests/test_architecture_foundation.py
+ M tests/test_web_api_surface.py
+?? .automation/
+?? axxon_telegram_vms/services/multi_camera_export.py
+?? tests/test_multi_camera_export_service.py
+
+[2026-03-10 12:15:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/foundation.py
+ M axxon_telegram_vms/services/__init__.py
+ M support/docs/WORKLOG.md
+ M scripts/axxon_web_api.py
+ M tests/test_architecture_foundation.py
+ M tests/test_web_api_surface.py
+?? .automation/
+?? axxon_telegram_vms/services/multi_camera_export.py
+?? tests/test_multi_camera_export_service.py
+
+[2026-03-10 12:30:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/foundation.py
+ M axxon_telegram_vms/services/__init__.py
+ M support/docs/WORKLOG.md
+ M scripts/axxon_web_api.py
+ M tests/test_architecture_foundation.py
+ M tests/test_web_api_surface.py
+?? .automation/
+?? axxon_telegram_vms/services/multi_camera_export.py
+?? tests/test_multi_camera_export_service.py
+
+[2026-03-10 12:45:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/foundation.py
+ M axxon_telegram_vms/services/__init__.py
+ M support/docs/WORKLOG.md
+ M scripts/axxon_web_api.py
+ M tests/test_architecture_foundation.py
+ M tests/test_web_api_surface.py
+?? .automation/
+?? axxon_telegram_vms/services/multi_camera_export.py
+?? tests/test_multi_camera_export_service.py
+
+[2026-03-10 13:00:01 UTC] watchdog tick
+git_status:
+?? .automation/
+
+[2026-03-10 13:15:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/foundation.py
+ M axxon_telegram_vms/services/__init__.py
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M scripts/axxon_tg_ui.py
+ M scripts/axxon_web_api.py
+ M tests/test_architecture_foundation.py
+ M tests/test_telegram_commands_menu.py
+ M tests/test_ui_payloads.py
+ M tests/test_web_api_surface.py
+?? .automation/
+?? axxon_telegram_vms/services/license_plate_search.py
+?? tests/test_license_plate_search_service.py
+
+[2026-03-10 13:30:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/foundation.py
+ M axxon_telegram_vms/services/__init__.py
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M scripts/axxon_tg_ui.py
+ M scripts/axxon_web_api.py
+ M tests/test_architecture_foundation.py
+ M tests/test_telegram_commands_menu.py
+ M tests/test_ui_payloads.py
+ M tests/test_web_api_surface.py
+?? .automation/
+?? axxon_telegram_vms/services/license_plate_search.py
+?? tests/test_license_plate_search_service.py
+
+[2026-03-10 13:45:01 UTC] watchdog tick
+git_status:
+?? .automation/
+
+[2026-03-10 14:00:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/foundation.py
+ M axxon_telegram_vms/services/__init__.py
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M scripts/axxon_tg_ui.py
+ M scripts/axxon_web_api.py
+ M tests/test_architecture_foundation.py
+ M tests/test_telegram_commands_menu.py
+ M tests/test_ui_payloads.py
+ M tests/test_web_api_surface.py
+?? .automation/
+?? axxon_telegram_vms/services/face_search.py
+?? tests/test_face_search_service.py
+
+[2026-03-10 14:15:01 UTC] watchdog tick
+git_status:
+?? .automation/
+
+[2026-03-10 14:30:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/client/__init__.py
+ M axxon_telegram_vms/client/config.py
+ M axxon_telegram_vms/foundation.py
+ M axxon_telegram_vms/services/__init__.py
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M scripts/axxon_tg_ui.py
+ M scripts/axxon_web_api.py
+ M scripts/config_loader.py
+ M tests/test_architecture_foundation.py
+ M tests/test_config_loader.py
+ M tests/test_telegram_commands_menu.py
+ M tests/test_ui_payloads.py
+ M tests/test_web_api_surface.py
+?? .automation/
+?? axxon_telegram_vms/services/macro_execution.py
+?? tests/test_macro_execution_service.py
+
+[2026-03-10 14:45:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/client/config.py
+ M axxon_telegram_vms/foundation.py
+ M axxon_telegram_vms/services/__init__.py
+ M scripts/axxon_tg_bot.py
+ M scripts/axxon_tg_ui.py
+ M scripts/axxon_web_api.py
+?? .automation/
+?? axxon_telegram_vms/services/ptz_control.py
+
+[2026-03-10 15:00:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/client/config.py
+ M axxon_telegram_vms/foundation.py
+ M axxon_telegram_vms/services/__init__.py
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M scripts/axxon_tg_ui.py
+ M scripts/axxon_web_api.py
+ M tests/test_architecture_foundation.py
+ M tests/test_config_loader.py
+ M tests/test_telegram_commands_menu.py
+ M tests/test_ui_payloads.py
+ M tests/test_web_api_surface.py
+?? .automation/
+?? axxon_telegram_vms/services/ptz_control.py
+?? tests/test_ptz_control_service.py
+
+[2026-03-10 15:15:01 UTC] watchdog tick
+git_status:
+?? .automation/
+
+[2026-03-10 15:30:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/client/runtime_cache.py
+ M axxon_telegram_vms/foundation.py
+ M axxon_telegram_vms/services/__init__.py
+ M scripts/axxon_tg_bot.py
+ M scripts/axxon_tg_ui.py
+ M scripts/axxon_web_api.py
+?? .automation/
+?? axxon_telegram_vms/services/admin_view.py
+?? scripts/tg_admin_ui.py
+
+[2026-03-10 15:45:01 UTC] watchdog tick
+git_status:
+?? .automation/
+
+[2026-03-10 16:00:01 UTC] watchdog tick
+git_status:
+ M axxon_telegram_vms/client/__init__.py
+ M axxon_telegram_vms/foundation.py
+ M axxon_telegram_vms/jobs/__init__.py
+ M axxon_telegram_vms/models/__init__.py
+ M axxon_telegram_vms/services/__init__.py
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/WORKLOG.md
+ M tests/test_architecture_foundation.py
+?? .automation/
+?? axxon_telegram_vms/client/session.py
+?? axxon_telegram_vms/jobs/external_analysis.py
+?? axxon_telegram_vms/models/request_envelopes.py
+?? axxon_telegram_vms/services/external_analysis.py
+?? support/docs/FUTURE_EXTENSION_FOUNDATION.md
+?? tests/test_external_analysis_jobs.py
+?? tests/test_external_analysis_service.py
+?? tests/test_request_envelopes.py
+?? tests/test_session_contracts.py
+
+[2026-03-10 16:15:01 UTC] watchdog tick
+git_status:
+?? .automation/
+
+[2026-03-10 16:30:01 UTC] watchdog tick
+git_status:
+ M README.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M scripts/axxon_tg_ui.py
+ M tests/test_ui_payloads.py
+?? .automation/
+?? support/docs/MIDPLAN_NUANCE_AUDIT_2026-03-10.md
+?? support/docs/ROADMAP_AUDIT_2026-03-10.md
+
+[2026-03-10 16:45:01 UTC] watchdog tick
+git_status:
+ M README.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M scripts/axxon_tg_ui.py
+ M tests/test_ui_payloads.py
+?? .automation/
+?? support/docs/MIDPLAN_NUANCE_AUDIT_2026-03-10.md
+?? support/docs/ROADMAP_AUDIT_2026-03-10.md
+
+[2026-03-10 17:00:01 UTC] watchdog tick
+git_status:
+ M README.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M scripts/axxon_tg_ui.py
+ M tests/test_ui_payloads.py
+?? .automation/
+?? support/docs/MIDPLAN_NUANCE_AUDIT_2026-03-10.md
+?? support/docs/ROADMAP_AUDIT_2026-03-10.md
+?? scripts/smoke_test.py
+?? smoke_test_results.json
+
+[2026-03-10 17:15:01 UTC] watchdog tick
+git_status:
+ M README.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M scripts/axxon_tg_ui.py
+ M tests/test_ui_payloads.py
+?? .automation/
+?? support/docs/MIDPLAN_NUANCE_AUDIT_2026-03-10.md
+?? support/docs/ROADMAP_AUDIT_2026-03-10.md
+?? scripts/smoke_test.py
+?? smoke_test_results.json
+
+[2026-03-10 17:30:01 UTC] watchdog tick
+git_status:
+ M README.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M scripts/axxon_tg_ui.py
+ M tests/test_ui_payloads.py
+?? .automation/
+?? support/docs/MIDPLAN_NUANCE_AUDIT_2026-03-10.md
+?? support/docs/ROADMAP_AUDIT_2026-03-10.md
+?? scripts/smoke_test.py
+?? smoke_test_results.json
+
+[2026-03-10 17:45:01 UTC] watchdog tick
+git_status:
+ M README.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M scripts/axxon_tg_ui.py
+ M tests/test_ui_payloads.py
+?? .automation/
+?? support/docs/MIDPLAN_NUANCE_AUDIT_2026-03-10.md
+?? support/docs/ROADMAP_AUDIT_2026-03-10.md
+?? scripts/smoke_test.py
+?? smoke_test_results.json
+
+[2026-03-10 18:00:01 UTC] watchdog tick
+git_status:
+ M README.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M scripts/axxon_tg_ui.py
+ M tests/test_ui_payloads.py
+?? .automation/
+?? support/docs/MIDPLAN_NUANCE_AUDIT_2026-03-10.md
+?? support/docs/ROADMAP_AUDIT_2026-03-10.md
+?? full_verification_results.json
+?? scripts/full_verification.py
+?? scripts/smoke_test.py
+?? smoke_test_results.json
+
+[2026-03-10 18:15:01 UTC] watchdog tick
+git_status:
+ M README.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M scripts/axxon_tg_ui.py
+ M tests/test_ui_payloads.py
+?? .automation/
+?? support/docs/MIDPLAN_NUANCE_AUDIT_2026-03-10.md
+?? support/docs/ROADMAP_AUDIT_2026-03-10.md
+?? full_verification_results.json
+?? scripts/full_verification.py
+?? scripts/smoke_test.py
+?? smoke_test_results.json
+
+[2026-03-10 18:30:01 UTC] watchdog tick
+git_status:
+ M README.md
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M scripts/axxon_tg_ui.py
+ M scripts/tg_admin_ui.py
+ M scripts/tg_server_ui.py
+ M tests/test_ui_payloads.py
+?? .automation/
+?? support/docs/MIDPLAN_NUANCE_AUDIT_2026-03-10.md
+?? support/docs/ROADMAP_AUDIT_2026-03-10.md
+?? full_verification_results.json
+?? scripts/full_verification.py
+?? scripts/smoke_test.py
+?? smoke_test_results.json
+
+[2026-03-10 18:45:01 UTC] watchdog tick
+git_status:
+ M README.md
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M scripts/axxon_tg_ui.py
+ M scripts/tg_admin_ui.py
+ M scripts/tg_server_ui.py
+ M tests/test_ui_payloads.py
+?? .automation/
+?? support/docs/MIDPLAN_NUANCE_AUDIT_2026-03-10.md
+?? support/docs/ROADMAP_AUDIT_2026-03-10.md
+?? full_verification_results.json
+?? scripts/full_verification.py
+?? scripts/smoke_test.py
+?? smoke_test_results.json
+
+[2026-03-10 19:00:01 UTC] watchdog tick
+git_status:
+ M README.md
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M scripts/axxon_tg_ui.py
+ M scripts/tg_admin_ui.py
+ M scripts/tg_server_ui.py
+ M tests/test_ui_payloads.py
+?? .automation/
+?? support/docs/MIDPLAN_NUANCE_AUDIT_2026-03-10.md
+?? support/docs/ROADMAP_AUDIT_2026-03-10.md
+?? full_verification_results.json
+?? scripts/full_verification.py
+?? scripts/smoke_test.py
+?? smoke_test_results.json
+
+[2026-03-10 19:15:01 UTC] watchdog tick
+git_status:
+ M README.md
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M scripts/axxon_tg_ui.py
+ M scripts/tg_admin_ui.py
+ M scripts/tg_server_ui.py
+ M tests/test_ui_payloads.py
+?? .automation/
+?? support/docs/MIDPLAN_NUANCE_AUDIT_2026-03-10.md
+?? support/docs/ROADMAP_AUDIT_2026-03-10.md
+?? full_verification_results.json
+?? scripts/full_verification.py
+?? scripts/smoke_test.py
+?? smoke_test_results.json
+
+[2026-03-10 19:30:01 UTC] watchdog tick
+git_status:
+ M .gitignore
+ M README.md
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M scripts/axxon_tg_ui.py
+ M scripts/tg_admin_ui.py
+ M scripts/tg_server_ui.py
+ M tests/test_ui_payloads.py
+?? .automation/
+?? support/docs/MIDPLAN_NUANCE_AUDIT_2026-03-10.md
+?? support/docs/ROADMAP_AUDIT_2026-03-10.md
+?? full_verification_results.json
+?? scripts/full_verification.py
+?? scripts/smoke_test.py
+?? smoke_test_results.json
+
+[2026-03-10 19:45:01 UTC] watchdog tick
+git_status:
+ M .gitignore
+ M README.md
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M scripts/axxon_tg_ui.py
+ M scripts/tg_admin_ui.py
+ M scripts/tg_server_ui.py
+ M tests/test_ui_payloads.py
+?? .automation/
+?? support/docs/MIDPLAN_NUANCE_AUDIT_2026-03-10.md
+?? support/docs/ROADMAP_AUDIT_2026-03-10.md
+?? full_verification_results.json
+?? scripts/full_verification.py
+?? scripts/smoke_test.py
+?? smoke_test_results.json
+
+[2026-03-10 20:00:01 UTC] watchdog tick
+git_status:
+ M .gitignore
+ M README.md
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/REGRESSION_CHECKLIST.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M scripts/axxon_tg_ui.py
+ M scripts/tg_admin_ui.py
+ M scripts/tg_server_ui.py
+ M tests/test_telegram_commands_menu.py
+ M tests/test_ui_payloads.py
+ M tests/test_unification_parity.py
+?? .automation/
+?? support/docs/MIDPLAN_NUANCE_AUDIT_2026-03-10.md
+?? support/docs/ROADMAP_AUDIT_2026-03-10.md
+?? full_verification_results.json
+?? scripts/full_verification.py
+?? scripts/smoke_test.py
+?? smoke_test_results.json
+
+[2026-03-10 20:15:01 UTC] watchdog tick
+git_status:
+ M .gitignore
+ M README.md
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/REGRESSION_CHECKLIST.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M scripts/axxon_tg_ui.py
+ M scripts/tg_admin_ui.py
+ M scripts/tg_server_ui.py
+ M tests/test_telegram_commands_menu.py
+ M tests/test_ui_payloads.py
+ M tests/test_unification_parity.py
+?? .automation/
+?? support/docs/MIDPLAN_NUANCE_AUDIT_2026-03-10.md
+?? support/docs/ROADMAP_AUDIT_2026-03-10.md
+?? full_verification_results.json
+?? scripts/full_verification.py
+?? scripts/smoke_test.py
+?? smoke_test_results.json
+
+[2026-03-10 20:30:01 UTC] watchdog tick
+git_status:
+ M .gitignore
+ M README.md
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/REGRESSION_CHECKLIST.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M scripts/axxon_tg_ui.py
+ M scripts/tg_admin_ui.py
+ M scripts/tg_server_ui.py
+ M tests/test_telegram_commands_menu.py
+ M tests/test_ui_payloads.py
+ M tests/test_unification_parity.py
+?? .automation/
+?? axxon_telegram_vms/ui/telegram_face_search.py
+?? support/docs/MIDPLAN_NUANCE_AUDIT_2026-03-10.md
+?? support/docs/ROADMAP_AUDIT_2026-03-10.md
+?? full_verification_results.json
+?? scripts/full_verification.py
+?? scripts/smoke_test.py
+?? smoke_test_results.json
+?? tests/test_telegram_face_search_helpers.py
+
+[2026-03-10 20:45:01 UTC] watchdog tick
+git_status:
+ M .gitignore
+ M README.md
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/REGRESSION_CHECKLIST.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M scripts/axxon_tg_ui.py
+ M scripts/tg_admin_ui.py
+ M scripts/tg_server_ui.py
+ M tests/test_telegram_commands_menu.py
+ M tests/test_ui_payloads.py
+ M tests/test_unification_parity.py
+?? .automation/
+?? axxon_telegram_vms/ui/telegram_face_search.py
+?? support/docs/MIDPLAN_NUANCE_AUDIT_2026-03-10.md
+?? support/docs/ROADMAP_AUDIT_2026-03-10.md
+?? full_verification_results.json
+?? scripts/full_verification.py
+?? scripts/smoke_test.py
+?? smoke_test_results.json
+?? tests/test_telegram_face_search_helpers.py
+
+[2026-03-10 21:00:01 UTC] watchdog tick
+git_status:
+ M .gitignore
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/REGRESSION_CHECKLIST.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/tg_admin_ui.py
+ M scripts/tg_server_ui.py
+ M tests/test_ui_payloads.py
+ M tests/test_unification_parity.py
+?? .automation/
+?? support/docs/MIDPLAN_NUANCE_AUDIT_2026-03-10.md
+?? support/docs/ROADMAP_AUDIT_2026-03-10.md
+?? full_verification_results.json
+?? scripts/full_verification.py
+?? scripts/smoke_test.py
+?? smoke_test_results.json
+
+[2026-03-10 21:15:01 UTC] watchdog tick
+git_status:
+ M .gitignore
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/REGRESSION_CHECKLIST.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M scripts/tg_admin_ui.py
+ M scripts/tg_server_ui.py
+ M tests/test_telegram_face_search_wizard_bot.py
+ M tests/test_ui_payloads.py
+ M tests/test_unification_parity.py
+?? .automation/
+?? support/docs/MIDPLAN_NUANCE_AUDIT_2026-03-10.md
+?? support/docs/ROADMAP_AUDIT_2026-03-10.md
+?? full_verification_results.json
+?? scripts/full_verification.py
+?? scripts/smoke_test.py
+?? smoke_test_results.json
+
+[2026-03-10 21:30:01 UTC] watchdog tick
+git_status:
+ M .gitignore
+ M support/docs/ARCHITECTURE_FOUNDATION.md
+ M support/docs/REGRESSION_CHECKLIST.md
+ M support/docs/RUNTIME_BASELINE.md
+ M support/docs/WORKLOG.md
+ M scripts/axxon_tg_bot.py
+ M scripts/tg_admin_ui.py
+ M scripts/tg_server_ui.py
+ M tests/test_ui_payloads.py
+ M tests/test_unification_parity.py
+?? .automation/
+?? support/docs/MIDPLAN_NUANCE_AUDIT_2026-03-10.md
+?? support/docs/ROADMAP_AUDIT_2026-03-10.md
+?? full_verification_results.json
+?? scripts/full_verification.py
+?? scripts/smoke_test.py
+?? smoke_test_results.json
+

@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package axxonsoft.bl.primitive;
+
+option go_package = "bitbucket.org/Axxonsoft/bl/primitive";
+
+import "axxonsoft/bl/primitive/Primitives.proto";
+import "axxonsoft/bl/primitive/KeyWords.proto";
+import "axxonsoft/bl/primitive/Font.proto";
+
+// On-Screen Display settings.
+message OSDSettings
+{
+    primitive.Rectangle position = 1;
+    double opacity = 2;
+    primitive.Font font = 3;
+    primitive.KeyWords key_words = 4;
+}

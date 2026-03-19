@@ -1,0 +1,438 @@
+[
+  {
+    "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+    "display_name": "Camera",
+    "display_id": "1",
+    "ip_address": "0.0.0.0",
+    "camera_access": "CAMERA_ACCESS_FULL",
+    "vendor": "Virtual",
+    "model": "Virtual",
+    "comment": "",
+    "armed": true,
+    "geo_location_latitude": "0.000000",
+    "geo_location_longitude": "0.000000",
+    "geo_location_azimuth": "0.000000",
+    "breaks_unused_connections": false,
+    "incomplete": false,
+    "video_streams": [
+      {
+        "stream_acess_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "decoder_acess_point": "hosts/VIDEO_SERVER/VideoDecoder.1/SourceEndpoint.video",
+        "enabled": true,
+        "display_name": "Main stream",
+        "display_id": "0",
+        "fps": 25,
+        "is_activated": true
+      }
+    ],
+    "microphones": [
+      {
+        "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.audio:0",
+        "display_name": "Microphone",
+        "display_id": "1.0",
+        "microphone_access": "MICROPHONE_ACCESS_FULL",
+        "is_activated": false,
+        "enabled": false
+      }
+    ],
+    "ptzs": [],
+    "archive_bindings": [
+      {
+        "name": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "storage": "hosts/VIDEO_SERVER/DeviceIpint.1/MultimediaStorage.0",
+        "archive": {
+          "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/MultimediaStorage.0",
+          "display_name": "Embedded storage",
+          "display_id": "1.0",
+          "is_embedded": true,
+          "archive_access": "ARCHIVE_ACCESS_FULL",
+          "incomplete": false,
+          "bindings": [],
+          "is_activated": false,
+          "enabled": true,
+          "storage_type": "ST_EMBEDDED"
+        },
+        "is_default": false,
+        "is_replica": false,
+        "is_permanent": false,
+        "has_live_sources": true,
+        "has_replica_sources": false,
+        "sources": [
+          {
+            "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/Sources/src.audio:0",
+            "storage": "hosts/VIDEO_SERVER/DeviceIpint.1/MultimediaStorage.0",
+            "binding": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+            "media_source": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.audio:0",
+            "origin": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.audio:0",
+            "mimetype": "application/audio",
+            "origin_storage": "",
+            "origin_storage_source": "",
+            "prerecording": 0
+          },
+          {
+            "access_point": "hosts/VIDEO_SERVER/DeviceIpint.1/Sources/src.0",
+            "storage": "hosts/VIDEO_SERVER/DeviceIpint.1/MultimediaStorage.0",
+            "binding": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+            "media_source": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+            "origin": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+            "mimetype": "video/h264",
+            "origin_storage": "",
+            "origin_storage_source": "",
+            "prerecording": 0
+          }
+        ]
+      },
+      {
+        "name": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+        "storage": "hosts/VIDEO_SERVER/MultimediaStorage.STORAGE_A/MultimediaStorage",
+        "archive": {
+          "access_point": "hosts/VIDEO_SERVER/MultimediaStorage.STORAGE_A/MultimediaStorage",
+          "display_name": "Archive STORAGE_A",
+          "display_id": "STORAGE_A",
+          "is_embedded": false,
+          "archive_access": "ARCHIVE_ACCESS_FULL",
+          "incomplete": false,
+          "bindings": [],
+          "is_activated": true,
+          "enabled": true,
+          "storage_type": "ST_BLOCK"
+        },
+        "is_default": false,
+        "is_replica": false,
+        "is_permanent": true,
+        "has_live_sources": true,
+        "has_replica_sources": false,
+        "sources": [
+          {
+            "access_point": "hosts/VIDEO_SERVER/MultimediaStorage.STORAGE_A/Sources/src.CAD55BE6-572F-A978-2ABF-BDF48959D6B5",
+            "storage": "hosts/VIDEO_SERVER/MultimediaStorage.STORAGE_A/MultimediaStorage",
+            "binding": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+            "media_source": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+            "origin": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+            "mimetype": "video/vc-raw",
+            "origin_storage": "",
+            "origin_storage_source": "",
+            "prerecording": 3000
+          },
+          {
+            "access_point": "hosts/VIDEO_SERVER/MultimediaStorage.STORAGE_A/Sources/src.1905ACEA-BDD6-9E3C-8D70-0BA91B0F1F38",
+            "storage": "hosts/VIDEO_SERVER/MultimediaStorage.STORAGE_A/MultimediaStorage",
+            "binding": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+            "media_source": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.audio:0",
+            "origin": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.audio:0",
+            "mimetype": "application/audio",
+            "origin_storage": "",
+            "origin_storage_source": "",
+            "prerecording": 3000
+          },
+          {
+            "access_point": "hosts/VIDEO_SERVER/MultimediaStorage.STORAGE_A/Sources/src.B7F3B627-12B0-9FB2-3E00-38441E85E5F7",
+            "storage": "hosts/VIDEO_SERVER/MultimediaStorage.STORAGE_A/MultimediaStorage",
+            "binding": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+            "media_source": "hosts/VIDEO_SERVER/AVDetector.1/SourceEndpoint.vmda",
+            "origin": "hosts/VIDEO_SERVER/AVDetector.1/SourceEndpoint.vmda",
+            "mimetype": "application/vmda",
+            "origin_storage": "",
+            "origin_storage_source": "",
+            "prerecording": 3000
+          },
+          {
+            "access_point": "hosts/VIDEO_SERVER/MultimediaStorage.STORAGE_A/Sources/src.B441B429-E93F-EBC5-AE8B-E9A3C5508F8D",
+            "storage": "hosts/VIDEO_SERVER/MultimediaStorage.STORAGE_A/MultimediaStorage",
+            "binding": "hosts/VIDEO_SERVER/DeviceIpint.1/SourceEndpoint.video:0:0",
+            "media_source": "hosts/VIDEO_SERVER/AVDetector.2/SourceEndpoint.vmda",
+            "origin": "hosts/VIDEO_SERVER/AVDetector.2/SourceEndpoint.vmda",
+            "mimetype": "application/vmda",
+            "origin_storage": "",
+            "origin_storage_source": "",
+            "prerecording": 3000
+          }
+        ]
+      }
+    ],
+    "ray": [],
+    "relay": [],
+    "detectors": [
+      {
+        "access_point": "hosts/VIDEO_SERVER/AVDetector.1/EventSupplier",
+        "display_name": "Neurotracker",
+        "display_id": "1",
+        "parent_detector": "",
+        "is_activated": true,
+        "groups": [
+          "DG_TRACKER",
+          "DG_FEATURE_EXTRACTOR",
+          "DG_AI_DETECTOR"
+        ],
+        "type": "NeuroTracker",
+        "type_name": "Neural tracker",
+        "scene_descriptions": [
+          {
+            "access_point": "hosts/VIDEO_SERVER/AVDetector.1/SourceEndpoint.vmda",
+            "mimetype": "application/vmda"
+          }
+        ],
+        "events": [
+          {
+            "id": "ObjectAttributesEvent",
+            "name": "Attributes recognized",
+            "event_type": "ONE_PHASE_EVENT_TYPE"
+          },
+          {
+            "id": "ObjectDescriptorEvent",
+            "name": "Similitude search",
+            "event_type": "ONE_PHASE_EVENT_TYPE"
+          },
+          {
+            "id": "TargetList",
+            "name": "TargetInfo",
+            "event_type": "PERIODICAL_EVENT_TYPE"
+          }
+        ],
+        "enabled": true,
+        "is_realtime_recognition_enabled": true,
+        "is_recording_objects_tracking_enabled": true,
+        "storyboard": "",
+        "is_biometric_recognition_enabled": false
+      },
+      {
+        "access_point": "hosts/VIDEO_SERVER/AppDataDetector.1/EventSupplier",
+        "display_name": "Vehicle",
+        "display_id": "1",
+        "parent_detector": "hosts/VIDEO_SERVER/AVDetector.1/EventSupplier",
+        "is_activated": true,
+        "groups": [
+          "DG_SITUATION_DETECTOR"
+        ],
+        "type": "MoveInZone",
+        "type_name": "Motion in area",
+        "scene_descriptions": [],
+        "events": [
+          {
+            "id": "moveInZone",
+            "name": "Object moving in area detected",
+            "event_type": "TWO_PHASE_EVENT_TYPE"
+          },
+          {
+            "id": "moveInZoneGroup",
+            "name": "Group of objects moving in area detected",
+            "event_type": "TWO_PHASE_EVENT_TYPE"
+          }
+        ],
+        "enabled": true,
+        "is_realtime_recognition_enabled": true,
+        "is_recording_objects_tracking_enabled": true,
+        "storyboard": ""
+      },
+      {
+        "access_point": "hosts/VIDEO_SERVER/AppDataDetector.2/EventSupplier",
+        "display_name": "Person",
+        "display_id": "2",
+        "parent_detector": "hosts/VIDEO_SERVER/AVDetector.1/EventSupplier",
+        "is_activated": true,
+        "groups": [
+          "DG_SITUATION_DETECTOR"
+        ],
+        "type": "MoveInZone",
+        "type_name": "Motion in area",
+        "scene_descriptions": [],
+        "events": [
+          {
+            "id": "moveInZone",
+            "name": "Object moving in area detected",
+            "event_type": "TWO_PHASE_EVENT_TYPE"
+          },
+          {
+            "id": "moveInZoneGroup",
+            "name": "Group of objects moving in area detected",
+            "event_type": "TWO_PHASE_EVENT_TYPE"
+          }
+        ],
+        "enabled": true,
+        "is_realtime_recognition_enabled": true,
+        "is_recording_objects_tracking_enabled": true,
+        "storyboard": ""
+      },
+      {
+        "access_point": "hosts/VIDEO_SERVER/AVDetector.2/EventSupplier",
+        "display_name": "License plate recognition RR",
+        "display_id": "2",
+        "parent_detector": "",
+        "is_activated": true,
+        "groups": [
+          "DG_LPR_DETECTOR"
+        ],
+        "type": "LprDetector_Roadar",
+        "type_name": "License plate recognition RR",
+        "scene_descriptions": [
+          {
+            "access_point": "hosts/VIDEO_SERVER/AVDetector.2/SourceEndpoint.vmda",
+            "mimetype": "application/vmda"
+          }
+        ],
+        "events": [
+          {
+            "id": "TargetList",
+            "name": "Detected LPs",
+            "event_type": "PERIODICAL_EVENT_TYPE"
+          },
+          {
+            "id": "plateRecognized",
+            "name": "Recognized LP",
+            "event_type": "ONE_PHASE_EVENT_TYPE"
+          },
+          {
+            "id": "plateUnrecognized",
+            "name": "Unrecognized LP",
+            "event_type": "ONE_PHASE_EVENT_TYPE"
+          }
+        ],
+        "enabled": true,
+        "is_realtime_recognition_enabled": true,
+        "is_recording_objects_tracking_enabled": true,
+        "storyboard": ""
+      },
+      {
+        "access_point": "hosts/VIDEO_SERVER/AVDetector.3/EventSupplier",
+        "display_name": "Traffic analyzer RR",
+        "display_id": "3",
+        "parent_detector": "",
+        "is_activated": true,
+        "groups": [
+          "DG_VEHICLE_DETECTOR"
+        ],
+        "type": "RRTrafficAnalyzer",
+        "type_name": "Traffic analyzer RR",
+        "scene_descriptions": [],
+        "events": [
+          {
+            "id": "LostCargoDetected",
+            "name": "Lost cargo detected",
+            "event_type": "TWO_PHASE_EVENT_TYPE"
+          },
+          {
+            "id": "OverspeedDetected",
+            "name": "Overspeed detected",
+            "event_type": "ONE_PHASE_EVENT_TYPE"
+          },
+          {
+            "id": "RoadAccidentDetected",
+            "name": "Road accident detected",
+            "event_type": "ONE_PHASE_EVENT_TYPE"
+          },
+          {
+            "id": "RoadIntrusionDetected",
+            "name": "Road obstruction detected.",
+            "event_type": "TWO_PHASE_EVENT_TYPE"
+          },
+          {
+            "id": "SpeedDecreaseDetected",
+            "name": "Speed decrease detected",
+            "event_type": "TWO_PHASE_EVENT_TYPE"
+          },
+          {
+            "id": "StatisticsInfo",
+            "name": "Lane statistics",
+            "event_type": "ONE_PHASE_EVENT_TYPE"
+          },
+          {
+            "id": "TrafficJamDetected",
+            "name": "Traffic jam detected",
+            "event_type": "TWO_PHASE_EVENT_TYPE"
+          },
+          {
+            "id": "VehicleStopDetected",
+            "name": "Vehicle stop detected",
+            "event_type": "TWO_PHASE_EVENT_TYPE"
+          },
+          {
+            "id": "VehicleTransitDetected",
+            "name": "Vehicle transit detected",
+            "event_type": "ONE_PHASE_EVENT_TYPE"
+          },
+          {
+            "id": "WrongDirectionDetected",
+            "name": "Movement in prohibited direction detected",
+            "event_type": "TWO_PHASE_EVENT_TYPE"
+          }
+        ],
+        "enabled": true,
+        "is_realtime_recognition_enabled": true,
+        "is_recording_objects_tracking_enabled": true,
+        "storyboard": ""
+      },
+      {
+        "access_point": "hosts/VIDEO_SERVER/AVDetector.4/EventSupplier",
+        "display_name": "Meta-detector",
+        "display_id": "4",
+        "parent_detector": "",
+        "is_activated": true,
+        "groups": [
+          "DG_AI_DETECTOR"
+        ],
+        "type": "BlipDetector",
+        "type_name": "Meta-detector",
+        "scene_descriptions": [],
+        "events": [
+          {
+            "id": "MetadetectorDescriptorEvent",
+            "name": "Frame description saved",
+            "event_type": "ONE_PHASE_EVENT_TYPE"
+          },
+          {
+            "id": "QueryDetected",
+            "name": "Match by text querу",
+            "event_type": "TWO_PHASE_EVENT_TYPE"
+          }
+        ],
+        "enabled": true,
+        "is_realtime_recognition_enabled": true,
+        "is_recording_objects_tracking_enabled": true,
+        "storyboard": "",
+        "report_image_descriptor": true
+      }
+    ],
+    "offline_detectors": [],
+    "group_ids": [
+      "e2f20843-7ce5-d04c-8a4f-826e8b16d39c"
+    ],
+    "is_activated": true,
+    "text_sources": [],
+    "speakers": [],
+    "enabled": true,
+    "panomorph": {
+      "enabled": false,
+      "fit_to_frame": false,
+      "camera_position": 0,
+      "view_type": 0,
+      "camera_lens": "FISH_EYE_LENS",
+      "fisheye_circles": {
+        "circle": [
+          {
+            "center": {
+              "x": 0,
+              "y": 0
+            },
+            "radius": 0
+          }
+        ]
+      }
+    },
+    "video_buffer_size": 50,
+    "video_buffer_enabled": false,
+    "alternative_view": {
+      "alternative_camera_name": "",
+      "second_alternative_camera_name": ""
+    },
+    "serial_number": "",
+    "firmware": "1.0.0",
+    "type": "",
+    "model_display_name": "Virtual",
+    "has_archive_bindings": true,
+    "privacy_mask": [],
+    "overlay_text_settings": {
+      "texts": []
+    },
+    "device_id": "hosts/VIDEO_SERVER/DeviceIpint.1"
+  }
+]

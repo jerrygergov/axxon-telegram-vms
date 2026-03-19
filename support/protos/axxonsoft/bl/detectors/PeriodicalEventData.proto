@@ -1,0 +1,18 @@
+syntax = "proto3";
+package axxonsoft.bl.detectors;
+
+import "axxonsoft/bl/detectors/Tracklet.proto";
+
+option go_package = "bitbucket.org/Axxonsoft/bl/detectors";
+
+message PeriodicalEventData
+{
+    message TargetList
+    {
+        repeated Tracklet tracklets = 1;
+    }
+
+    oneof type {
+        TargetList target_list = 1;
+    }
+}
