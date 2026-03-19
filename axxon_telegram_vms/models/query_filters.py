@@ -274,6 +274,7 @@ class EventScopeFilter:
     camera_access_points: tuple[str, ...] = ()
     detector_access_points: tuple[str, ...] = ()
     detector_names: tuple[str, ...] = ()
+    detector_types: tuple[str, ...] = ()
 
     def __post_init__(self) -> None:
         object.__setattr__(self, "hosts", _string_tuple(self.hosts))
@@ -283,6 +284,7 @@ class EventScopeFilter:
         object.__setattr__(self, "camera_access_points", _string_tuple(self.camera_access_points))
         object.__setattr__(self, "detector_access_points", _string_tuple(self.detector_access_points))
         object.__setattr__(self, "detector_names", _string_tuple(self.detector_names))
+        object.__setattr__(self, "detector_types", _string_tuple(self.detector_types))
 
     def all_subjects(self) -> tuple[str, ...]:
         return _string_tuple((*self.subjects, *self.camera_access_points, *self.detector_access_points))
@@ -297,6 +299,7 @@ class EventScopeFilter:
                 self.camera_access_points,
                 self.detector_access_points,
                 self.detector_names,
+                self.detector_types,
             )
         )
 
@@ -334,6 +337,11 @@ class EventScopeFilter:
 
         if self.detector_names and not _detector_name_matches(card, self.detector_names):
             return False
+
+        if self.detector_types:
+            detector_type = _text(card.get("detector_type"))
+            if _normalized_key(detector_type) not in {_normalized_key(value) for value in self.detector_types}:
+                return False
 
         return True
 
@@ -492,6 +500,7 @@ class EventQuery:
                 camera_access_points=_string_tuple(raw.get("camera_access_points") or raw.get("cameras")),
                 detector_access_points=_string_tuple(raw.get("detector_access_points") or raw.get("detectors")),
                 detector_names=_string_tuple(raw.get("detector_names")),
+                detector_types=_string_tuple(raw.get("detector_types") or raw.get("detector_type")),
             ),
             taxonomy=EventTaxonomyFilter(
                 categories=categories,
@@ -558,6 +567,8 @@ class EventQuery:
             out["detector_access_points"] = list(self.scope.detector_access_points)
         if self.scope.detector_names:
             out["detector_names"] = list(self.scope.detector_names)
+        if self.scope.detector_types:
+            out["detector_types"] = list(self.scope.detector_types)
         if self.taxonomy.categories:
             out["categories"] = list(self.taxonomy.categories)
         if self.taxonomy.event_types:

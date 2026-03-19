@@ -2889,7 +2889,7 @@ async def _handle_subscription_callback(update: Update, context: ContextTypes.DE
         if not selected_rows:
             await q.answer("Select at least one detector", show_alert=True)
             return True
-        detector_names = [str(x.get("name") or "") for x in selected_rows]
+        detector_types = [str(x.get("detector_type") or "") for x in selected_rows]
         detector_aps = [str(x.get("access_point") or "") for x in selected_rows]
         camera_aps = [str(x.get("camera_access_point") or "") for x in selected_rows]
         summary = f"detectors: {len(selected_rows)}"

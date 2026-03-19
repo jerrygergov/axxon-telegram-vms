@@ -92,6 +92,7 @@ class ServicesFoundationTests(unittest.TestCase):
                 "category": "motion",
                 "state": "BEGAN",
                 "detector": "Vehicle Detector",
+                "detector_type": "MoveInZone",
                 "detector_access_point": "det-1",
                 "camera_access_point": "cam-1",
             },
@@ -119,7 +120,7 @@ class ServicesFoundationTests(unittest.TestCase):
             cards,
             {
                 "categories": ["motion"],
-                "detector_names": ["Vehicle"],
+                "detector_types": ["MoveInZone"],
                 "camera_access_points": ["cam-1"],
             },
         )

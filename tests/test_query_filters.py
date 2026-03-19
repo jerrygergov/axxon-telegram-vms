@@ -49,6 +49,7 @@ class QueryFilterModelTests(unittest.TestCase):
             "camera_access_points": ["hosts/ServerA/DeviceIpint.7/SourceEndpoint.video:0:0"],
             "detector_access_points": ["hosts/ServerA/AVDetector.2/EventSupplier"],
             "detector_names": ["2.LPR"],
+            "detector_types": ["LicensePlateRecognition"],
             "categories": ["LPR", "lpr"],
             "event_type": "ET_DetectorEvent",
             "states": ["happened"],
@@ -70,6 +71,7 @@ class QueryFilterModelTests(unittest.TestCase):
         self.assertEqual(query.scope.camera_access_points, ("hosts/ServerA/DeviceIpint.7/SourceEndpoint.video:0:0",))
         self.assertEqual(query.scope.detector_access_points, ("hosts/ServerA/AVDetector.2/EventSupplier",))
         self.assertEqual(query.scope.detector_names, ("2.LPR",))
+        self.assertEqual(query.scope.detector_types, ("LicensePlateRecognition",))
         self.assertEqual(query.taxonomy.categories, ("lpr",))
         self.assertEqual(query.taxonomy.event_types, ("ET_DetectorEvent",))
         self.assertEqual(query.taxonomy.states, ("HAPPENED",))
@@ -94,6 +96,7 @@ class QueryFilterModelTests(unittest.TestCase):
                 "camera_access_points": ["hosts/ServerA/DeviceIpint.7/SourceEndpoint.video:0:0"],
                 "detector_access_points": ["hosts/ServerA/AVDetector.2/EventSupplier"],
                 "detector_names": ["2.LPR"],
+                "detector_types": ["LicensePlateRecognition"],
                 "categories": ["lpr"],
                 "event_type": "ET_DetectorEvent",
                 "states": ["HAPPENED"],

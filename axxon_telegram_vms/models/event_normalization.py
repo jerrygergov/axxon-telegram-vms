@@ -382,6 +382,7 @@ class NormalizedEvent:
     camera_access_point: str = ""
     detector: str = ""
     detector_access_point: str = ""
+    detector_type: str = ""
     text: str = ""
     localization_text: str = ""
     server: str = ""
@@ -413,6 +414,7 @@ class NormalizedEvent:
             "camera_access_point": self.camera_access_point,
             "detector": self.detector,
             "detector_access_point": self.detector_access_point,
+            "detector_type": self.detector_type,
             "text": self.text,
             "localization_text": self.localization_text,
             "phase_family": self.phase.family,
@@ -590,6 +592,11 @@ def _normalize_detector_event(event: dict[str, Any]) -> NormalizedEvent:
         camera_access_point=str((body.get("origin_ext") or {}).get("access_point") or "").strip(),
         detector=_event_detector_name(body),
         detector_access_point=str((body.get("detector_ext") or {}).get("access_point") or "").strip(),
+        detector_type=str(
+            ((body.get("detector_ext") or {}).get("type"))
+            or ((body.get("detector") or {}).get("type"))
+            or ""
+        ).strip(),
         text=localization_text,
         localization_text=localization_text,
         server=str((body.get("node_info") or {}).get("friendly_name") or "").strip(),
