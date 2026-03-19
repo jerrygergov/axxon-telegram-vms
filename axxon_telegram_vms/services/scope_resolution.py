@@ -95,7 +95,7 @@ def resolve_scope_subjects(
     include_detectors: bool = False,
 ) -> ResolvedScopeSubjects:
     rows = tuple(row for row in camera_rows if isinstance(row, Mapping))
-    detector_scope_requested = bool(scope.detector_names or scope.detector_access_points)
+    detector_scope_requested = bool(scope.detector_access_points or (scope.detector_names and not scope.camera_access_points))
 
     matched_cameras: list[str] = list(scope.camera_access_points) if not detector_scope_requested else []
     if not detector_scope_requested:

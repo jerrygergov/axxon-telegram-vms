@@ -303,14 +303,18 @@ def event_search_request_to_api_args(request: EventSearchRequest) -> list[str]:
         args.extend(["--scope-host", value])
     for value in request.query.scope.domains:
         args.extend(["--domain", value])
-    for value in request.query.scope.camera_names:
-        args.extend(["--camera", value])
-    for value in request.query.scope.camera_access_points:
-        args.extend(["--camera-ap", value])
-    for value in request.query.scope.detector_names:
-        args.extend(["--detector", value])
-    for value in request.query.scope.detector_access_points:
-        args.extend(["--detector-ap", value])
+    if request.query.scope.camera_access_points:
+        for value in request.query.scope.camera_access_points:
+            args.extend(["--camera-ap", value])
+    else:
+        for value in request.query.scope.camera_names:
+            args.extend(["--camera", value])
+    if request.query.scope.detector_access_points:
+        for value in request.query.scope.detector_access_points:
+            args.extend(["--detector-ap", value])
+    else:
+        for value in request.query.scope.detector_names:
+            args.extend(["--detector", value])
     for value in request.query.taxonomy.categories:
         args.extend(["--category", value])
     for value in request.query.taxonomy.event_types:

@@ -322,20 +322,18 @@ class EventScopeFilter:
             if not any(_subject_matches(card_subject, query_subject) for card_subject in card_subjects for query_subject in subjects):
                 return False
 
-        if self.camera_names and not _camera_name_matches(card, self.camera_names):
-            return False
-
         if self.camera_access_points:
             camera_ap = _text(card.get("camera_access_point"))
             if _normalized_key(camera_ap) not in {_normalized_key(value) for value in self.camera_access_points}:
                 return False
+        elif self.camera_names and not _camera_name_matches(card, self.camera_names):
+            return False
 
         if self.detector_access_points:
             detector_ap = _text(card.get("detector_access_point"))
             if _normalized_key(detector_ap) not in {_normalized_key(value) for value in self.detector_access_points}:
                 return False
-
-        if self.detector_names and not _detector_name_matches(card, self.detector_names):
+        elif self.detector_names and not _detector_name_matches(card, self.detector_names):
             return False
 
         if self.detector_types:

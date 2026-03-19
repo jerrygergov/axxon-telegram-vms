@@ -5,6 +5,7 @@ from pathlib import Path
 
 from axxon_telegram_vms.services import (
     build_face_search_backend_request,
+    build_face_search_request,
     detect_face_search_capability,
     face_search_request_to_api_args,
     load_face_search_reference_image,
@@ -139,6 +140,31 @@ class FaceSearchServiceTests(unittest.TestCase):
         self.assertGreater(reference.size_bytes, 10)
         self.assertTrue(reference.jpeg_base64)
         self.assertEqual(len(reference.sha256), 64)
+
+    def test_api_args_prefer_access_points_over_names(self):
+        request = build_face_search_request(
+            begin="20260310T100000",
+            end="20260310T110000",
+            camera_names=["Lobby"],
+            camera_access_points=["hosts/ServerA/DeviceIpint.10/SourceEndpoint.video:0:0"],
+            detector_names=["Face detection"],
+            detector_access_points=["hosts/ServerA/AVDetector.9/EventSupplier"],
+        )
+
+        self.assertEqual(
+            face_search_request_to_api_args(request, image_path="/tmp/reference.jpg"),
+            [
+                "--image", "/tmp/reference.jpg",
+                "--begin", "20260310T100000",
+                "--end", "20260310T110000",
+                "--page", "1",
+                "--page-size", "10",
+                "--scan-limit", "10",
+                "--accuracy", "0.900000",
+                "--camera-ap", "hosts/ServerA/DeviceIpint.10/SourceEndpoint.video:0:0",
+                "--detector-ap", "hosts/ServerA/AVDetector.9/EventSupplier",
+            ],
+        )
 
     def test_selection_reports_capability_and_builds_backend_request(self):
         request = parse_face_search_terms(

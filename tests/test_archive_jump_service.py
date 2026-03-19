@@ -87,6 +87,31 @@ class ArchiveJumpServiceTests(unittest.TestCase):
             ],
         )
 
+    def test_api_args_prefer_access_points_over_names(self):
+        request = build_archive_jump_request(
+            begin="20260310T100000",
+            end="20260310T110000",
+            camera_names=["Gate"],
+            camera_access_points=["hosts/ServerA/DeviceIpint.2/SourceEndpoint.video:0:0"],
+            detector_names=["LPR"],
+            detector_access_points=["hosts/ServerA/AVDetector.2/EventSupplier"],
+        )
+
+        self.assertEqual(
+            archive_jump_request_to_api_args(request),
+            [
+                "--begin", "20260310T100000",
+                "--end", "20260310T110000",
+                "--scan-limit", "400",
+                "--preview-width", "1280",
+                "--preview-height", "720",
+                "--preview-threshold-ms", "250",
+                "--context-window-sec", "300",
+                "--camera-ap", "hosts/ServerA/DeviceIpint.2/SourceEndpoint.video:0:0",
+                "--detector-ap", "hosts/ServerA/AVDetector.2/EventSupplier",
+            ],
+        )
+
     def test_selection_prefers_matching_event_when_range_search_has_results(self):
         request = build_archive_jump_request(
             begin="20260310T100000",

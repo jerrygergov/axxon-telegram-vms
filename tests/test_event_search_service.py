@@ -143,6 +143,30 @@ class EventSearchServiceTests(unittest.TestCase):
             },
         )
 
+    def test_api_args_prefer_access_points_over_names(self):
+        request = build_event_search_request(
+            begin="20260310T100000",
+            end="20260310T110000",
+            camera_names=["Gate"],
+            camera_access_points=["hosts/ServerA/DeviceIpint.2/SourceEndpoint.video:0:0"],
+            detector_names=["LPR"],
+            detector_access_points=["hosts/ServerA/AVDetector.2/EventSupplier"],
+        )
+
+        self.assertEqual(
+            event_search_request_to_api_args(request),
+            [
+                "--begin", "20260310T100000",
+                "--end", "20260310T110000",
+                "--mode", "summary",
+                "--page", "1",
+                "--page-size", "5",
+                "--scan-limit", "1200",
+                "--camera-ap", "hosts/ServerA/DeviceIpint.2/SourceEndpoint.video:0:0",
+                "--detector-ap", "hosts/ServerA/AVDetector.2/EventSupplier",
+            ],
+        )
+
     def test_backend_request_accepts_resolved_subject_override(self):
         request = build_event_search_request(
             begin="20260310T100000",

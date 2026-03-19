@@ -173,6 +173,28 @@ class QueryFilterModelTests(unittest.TestCase):
         self.assertTrue(query.matches_card(card))
         self.assertFalse(EventQuery(text=EventTextFilter(mask="AB*")).matches_card(card))
 
+    def test_access_points_take_priority_over_name_filters(self):
+        card = {
+            "timestamp": "20260310T101500",
+            "event_type": "ET_DetectorEvent",
+            "category": "lpr",
+            "state": "HAPPENED",
+            "camera": "Wrong camera label",
+            "camera_access_point": "hosts/ServerA/DeviceIpint.7/SourceEndpoint.video:0:0",
+            "detector": "Wrong detector label",
+            "detector_access_point": "hosts/ServerA/AVDetector.2/EventSupplier",
+        }
+        query = EventQuery(
+            scope=EventScopeFilter(
+                camera_names=("Gate",),
+                camera_access_points=("hosts/ServerA/DeviceIpint.7/SourceEndpoint.video:0:0",),
+                detector_names=("LPR",),
+                detector_access_points=("hosts/ServerA/AVDetector.2/EventSupplier",),
+            )
+        )
+
+        self.assertTrue(query.matches_card(card))
+
 
 if __name__ == "__main__":
     unittest.main()
