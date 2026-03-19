@@ -273,10 +273,10 @@ def parse_ptz_control_terms(terms: Iterable[object]) -> PtzControlRequest:
 
 def ptz_control_request_to_api_args(request: PtzControlRequest) -> list[str]:
     args: list[str] = []
-    if request.camera_name:
-        args.extend(["--camera", request.camera_name])
     if request.camera_access_point:
         args.extend(["--camera-ap", request.camera_access_point])
+    elif request.camera_name:
+        args.extend(["--camera", request.camera_name])
     if request.preset_label:
         args.extend(["--preset", request.preset_label])
     if request.preset_position is not None:

@@ -135,6 +135,40 @@ class PtzControlServiceTests(unittest.TestCase):
             },
         )
 
+    def test_request_api_args_prefer_camera_access_point(self):
+        parsed = parse_ptz_control_terms([
+            "camera_ap=hosts/ServerA/DeviceIpint.2/SourceEndpoint.video:0:0",
+            "position=12",
+            "speed=5",
+        ])
+
+        self.assertEqual(
+            ptz_control_request_to_api_args(parsed),
+            ["--camera-ap", "hosts/ServerA/DeviceIpint.2/SourceEndpoint.video:0:0", "--position", "12", "--speed", "5"],
+        )
+
+    def test_guardrails_prefer_access_point_allowlist_over_names(self):
+        request = parse_ptz_control_terms(["camera_ap=hosts/ServerA/DeviceIpint.2/SourceEndpoint.video:0:0", "position=12"])
+        camera = select_ptz_camera_record(request, CAMERAS)
+        preset = select_ptz_preset_record(request, PRESETS)
+        policy = build_ptz_control_policy(
+            control_enabled=True,
+            admin=True,
+            allowed_camera_access_points=[camera.camera_access_point],
+            allowed_camera_names=["Some Other Name"],
+        )
+
+        decision = evaluate_ptz_control_guardrails(
+            request,
+            camera,
+            preset,
+            policy,
+            position_info=POSITION_INFO,
+            preview_error=None,
+        )
+
+        self.assertTrue(decision.allowed)
+
     def test_shape_result_keeps_preview_and_execution_state(self):
         request = parse_ptz_control_terms(["camera=2.Gate PTZ", "preset=Home", "Position"])
         camera = select_ptz_camera_record(request, CAMERAS)
