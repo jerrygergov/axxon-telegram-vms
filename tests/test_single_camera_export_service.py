@@ -58,6 +58,25 @@ class SingleCameraExportServiceTests(unittest.TestCase):
         self.assertEqual(selection.target_timestamp, "20260310T105230")
         self.assertEqual(selection.timestamp_source, "range_midpoint")
 
+    def test_api_args_prefer_camera_access_point(self):
+        request = build_single_camera_export_request(
+            begin="20260310T105000",
+            end="20260310T105500",
+            camera_names=["Gate"],
+            camera_access_points=["hosts/ServerA/DeviceIpint.2/SourceEndpoint.video:0:0"],
+            waittimeout_ms=120000,
+        )
+
+        self.assertEqual(
+            single_camera_export_request_to_api_args(request),
+            [
+                "--begin", "20260310T105000",
+                "--end", "20260310T105500",
+                "--waittimeout-ms", "120000",
+                "--camera-ap", "hosts/ServerA/DeviceIpint.2/SourceEndpoint.video:0:0",
+            ],
+        )
+
     def test_shape_result_includes_artifact_and_status_summary(self):
         request = build_single_camera_export_request(
             begin="20260310T105000",

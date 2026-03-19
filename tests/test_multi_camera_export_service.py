@@ -46,8 +46,10 @@ class MultiCameraExportServiceTests(unittest.TestCase):
         request = build_multi_camera_export_request(
             begin="20260310T105000",
             end="20260310T105500",
-            camera_names=["Gate", "Yard"],
-            camera_access_points=["hosts/ServerA/DeviceIpint.2/SourceEndpoint.video:0:0"],
+            camera_access_points=[
+                "hosts/ServerA/DeviceIpint.2/SourceEndpoint.video:0:0",
+                "hosts/ServerA/DeviceIpint.1/SourceEndpoint.video:0:0",
+            ],
             waittimeout_ms=120000,
         )
 
@@ -67,6 +69,26 @@ class MultiCameraExportServiceTests(unittest.TestCase):
                 "format": "mp4",
             },
         )
+
+    def test_access_point_selectors_take_priority_over_names(self):
+        request = build_multi_camera_export_request(
+            begin="20260310T105000",
+            end="20260310T105500",
+            camera_names=["Gate", "Yard"],
+            camera_access_points=[
+                "hosts/ServerA/DeviceIpint.2/SourceEndpoint.video:0:0",
+                "hosts/ServerA/DeviceIpint.1/SourceEndpoint.video:0:0",
+            ],
+            waittimeout_ms=120000,
+        )
+
+        selection = resolve_multi_camera_export_selection(request, CAMERAS)
+
+        self.assertEqual(selection.camera_count, 2)
+        self.assertEqual([plan.camera_access_point for plan in selection.plans], [
+            "hosts/ServerA/DeviceIpint.2/SourceEndpoint.video:0:0",
+            "hosts/ServerA/DeviceIpint.1/SourceEndpoint.video:0:0",
+        ])
 
     def test_selection_enforces_safe_camera_cap(self):
         request = build_multi_camera_export_request(

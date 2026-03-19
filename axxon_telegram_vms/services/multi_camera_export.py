@@ -310,8 +310,9 @@ def resolve_multi_camera_export_selection(
 ) -> MultiCameraExportSelection:
     scope = request.query.scope
     selectors = (
-        tuple(("camera_name", value) for value in scope.camera_names)
-        + tuple(("camera_access_point", value) for value in scope.camera_access_points)
+        tuple(("camera_access_point", value) for value in scope.camera_access_points)
+        if scope.camera_access_points
+        else tuple(("camera_name", value) for value in scope.camera_names)
     )
 
     plans: list[MultiCameraExportPlan] = []

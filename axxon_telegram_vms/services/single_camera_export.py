@@ -70,7 +70,7 @@ class SingleCameraExportRequest:
         if export_format != SINGLE_CAMERA_EXPORT_FORMAT:
             raise ValueError(f"Unsupported export format: {self.export_format}")
         scope = self.archive_request.query.scope
-        camera_count = len(scope.camera_names) + len(scope.camera_access_points)
+        camera_count = len(scope.camera_access_points) if scope.camera_access_points else len(scope.camera_names)
         if camera_count != 1:
             raise ValueError("Single-camera export MVP requires exactly one camera selector.")
         time_range = self.archive_request.query.time_range
@@ -186,10 +186,12 @@ def single_camera_export_request_to_api_args(request: SingleCameraExportRequest)
     ]
     if request.archive_name:
         args.extend(["--archive", request.archive_name])
-    for value in request.query.scope.camera_names:
-        args.extend(["--camera", value])
-    for value in request.query.scope.camera_access_points:
-        args.extend(["--camera-ap", value])
+    if request.query.scope.camera_access_points:
+        for value in request.query.scope.camera_access_points:
+            args.extend(["--camera-ap", value])
+    else:
+        for value in request.query.scope.camera_names:
+            args.extend(["--camera", value])
     return args
 
 
