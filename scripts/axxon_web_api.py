@@ -2469,7 +2469,7 @@ def main():
                 begin=args.begin,
                 end=args.end,
                 at=args.at,
-                camera_names=args.camera,
+                camera_names=() if args.camera_ap else args.camera,
                 camera_access_points=args.camera_ap,
                 waittimeout_ms=args.waittimeout_ms,
                 archive_name=args.archive,
@@ -2928,6 +2928,11 @@ def main():
         out = c.export_clip(video_id, ts_compact(begin), ts_compact(end), Path(args.out))
         print(out)
         return
+
+
+if __name__ == "__main__":
+    main()
+eturn
 
 
 if __name__ == "__main__":
