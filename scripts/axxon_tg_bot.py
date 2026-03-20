@@ -3041,7 +3041,7 @@ async def _handle_subscription_callback(update: Update, context: ContextTypes.DE
                 await COUNTER_WATCH.start_subscription(rec, context.bot, row, message_id=int(placeholder.message_id))
             return ok, reason, rec
 
-        if regular_rows:
+        if regular_rows or not detector_rows:
             ok, reason, rec = await SUBSCRIPTIONS.create_subscription(
                 user_id=user_id,
                 bot=context.bot,

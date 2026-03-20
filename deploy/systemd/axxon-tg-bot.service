@@ -11,6 +11,7 @@ Environment=APP_DIR=%h/axxon-telegram-vms
 EnvironmentFile=%E{APP_DIR}/.env
 WorkingDirectory=%E{APP_DIR}
 Environment=AXXON_RELAY_AUTOSTART=0
+# Set AXXON_RELAY_PUBLIC_BASE in .env (or add a systemd override) so bot-generated relay links use the public address, not localhost.
 ExecStart=%E{APP_DIR}/scripts/run_axxon_tg_bot.sh
 Restart=always
 RestartSec=2
