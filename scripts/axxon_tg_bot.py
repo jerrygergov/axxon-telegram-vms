@@ -2897,7 +2897,7 @@ async def _handle_subscription_callback(update: Update, context: ContextTypes.DE
             "source": "detectors",
             "filters": {
                 "event_type": "ET_DetectorEvent",
-                "detector_names": detector_names,
+                "detector_types": detector_types,
                 "detector_access_points": detector_aps,
                 "camera_access_points": camera_aps,
                 "include": _build_detector_notifier_include(selected_rows),
@@ -3012,7 +3012,7 @@ async def _handle_subscription_callback(update: Update, context: ContextTypes.DE
             summary = f"counter: {row.get('name') or 'Detector'}"
             counter_filters = {
                 "event_type": "ET_DetectorEvent",
-                "detector_names": [str(row.get("name") or "")],
+                "detector_types": [str(row.get("detector_type") or "")],
                 "detector_access_points": [str(row.get("access_point") or "")],
                 "camera_access_points": [str(row.get("camera_access_point") or "")],
                 "include": _build_detector_notifier_include([row]),
